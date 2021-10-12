@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd"
+ xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
+   <Election ObjectId="some-id">
+      <Candidate ObjectId="can11349">
+         <Name>
+          JOHN A. MIRISCH
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11345">
+         <Name>
+          LES FRIEDMAN
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11351">
+         <Name>
+          ROBERT (BOB) WUNDERLICH
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11346">
+         <Name>
+          NANCY KRASNE
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11344">
+         <Name>
+          ELIOT FINKEL
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11348">
+         <Name>
+          VERA MARKOWITZ
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11343">
+         <Name>
+          FRANCES BILAK
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11413">
+         <Name>
+          JIM WAYNE
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11342">
+         <Name>
+          HOWARD S. FISHER
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Contest ObjectId="cc4969" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11349" xsi:type="CandidateSelection">
+            <CandidateIds>can11349</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11345" xsi:type="CandidateSelection">
+            <CandidateIds>can11345</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11351" xsi:type="CandidateSelection">
+            <CandidateIds>can11351</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11346" xsi:type="CandidateSelection">
+            <CandidateIds>can11346</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11344" xsi:type="CandidateSelection">
+            <CandidateIds>can11344</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11348" xsi:type="CandidateSelection">
+            <CandidateIds>can11348</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11343" xsi:type="CandidateSelection">
+            <CandidateIds>can11343</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11413" xsi:type="CandidateSelection">
+            <CandidateIds>can11413</CandidateIds>
+         </ContestSelection>
+         <Name>BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Name>
+      </Contest>
+      <Contest ObjectId="cc4970" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11342" xsi:type="CandidateSelection">
+            <CandidateIds>can11342</CandidateIds>
+         </ContestSelection>
+         <Name>BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Name>
+      </Contest>
+      <ElectionScopeId>GpU08BP0</ElectionScopeId>
+   </Election>
+   <GeneratedDate>2017-03-21T10:45:22Z</GeneratedDate>
+   <GpUnit ObjectId="GpU08BP0">
+      <Name>CITY OF BEVERLY HILLS</Name>
+      <Type>other</Type>
+      <OtherType>city</OtherType>
+      
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900001B">
+      <Name>6005 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900004A">
+      <Name>0112 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900005A">
+      <Name>0113 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900006B">
+      <Name>6006 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900010A">
+      <Name>0114 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900016A">
+      <Name>0115 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900020A">
+      <Name>0116 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900025A">
+      <Name>0117 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900026A">
+      <Name>0118 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900037A">
+      <Name>0119 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0900046A">
+      <Name>0120 - BEVERLY HILLS</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_9990045A">
+      <Name>8045 - Ballot Group 45</Name>
+      <Type>other</Type>
+      <OtherType>ballot-batch</OtherType>
+   </GpUnit>
+   <GpUnit ObjectId="pre_9990046A">
+      <Name>8046 - Ballot Group 46</Name>
+      <Type>other</Type>
+      <OtherType>ballot-batch</OtherType>
+   </GpUnit>
+   <Party ObjectId="Party-0">
+      <Name>
+        Non Partisan
+      </Name>
+   </Party>
+   <Party ObjectId="Party-1">
+      <Name>
+        Democratic
+      </Name>
+   </Party>
+   <Party ObjectId="Party-2">
+      <Name>
+        Republican
+      </Name>
+   </Party>
+   <Party ObjectId="Party-3">
+      <Name>
+        American Independent
+      </Name>
+   </Party>
+   <Party ObjectId="Party-4">
+      <Name>
+        Green
+      </Name>
+   </Party>
+   <Party ObjectId="Party-5">
+      <Name>
+        Libertarian
+      </Name>
+   </Party>
+   <Party ObjectId="Party-6">
+      <Name>
+        Peace and Freedom
+      </Name>
+   </Party>
+   <ReportGeneratingDeviceIds>simulated-1</ReportGeneratingDeviceIds>
+   <ReportingDevice ObjectId="simulated-1">
+      <Application>Ballot Marking application</Application>
+      <Manufacturer>Trust the Vote</Manufacturer>
+      <Model>some-model-number</Model>
+      <SerialNumber>some-serial-number</SerialNumber>
+   </ReportingDevice>
+   <ReportType>originating-device-export</ReportType>
+   <Version>1.0.0</Version>
+</CastVoteRecordReport>
