@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Election ObjectId="some-id">
+      <Candidate ObjectId="can11431">
+         <Name>
+          JORGE A. MARQUEZ
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11427">
+         <Name>
+          JOHN C. KING
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11429">
+         <Name>
+          VICTOR LINARES
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11432">
+         <Name>
+          NEIL L. POLZIN
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11434">
+         <Name>
+          MARY LOU WALCZAK
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11433">
+         <Name>
+          GEOFFREY COBBETT
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Contest ObjectId="cc4954" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11431" xsi:type="CandidateSelection">
+            <CandidateIds>can11431</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11427" xsi:type="CandidateSelection">
+            <CandidateIds>can11427</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11429" xsi:type="CandidateSelection">
+            <CandidateIds>can11429</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11432" xsi:type="CandidateSelection">
+            <CandidateIds>can11432</CandidateIds>
+         </ContestSelection>
+         <Name>COVINA CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Name>
+      </Contest>
+      <Contest ObjectId="cc4962" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11434" xsi:type="CandidateSelection">
+            <CandidateIds>can11434</CandidateIds>
+         </ContestSelection>
+         <Name>COVINA CITY GENERAL MUNICIPAL ELECTION, City Clerk</Name>
+      </Contest>
+      <Contest ObjectId="cc4963" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11433" xsi:type="CandidateSelection">
+            <CandidateIds>can11433</CandidateIds>
+         </ContestSelection>
+         <Name>COVINA CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Name>
+      </Contest>
+      <Contest ObjectId="bmc4953" xsi:type="BallotMeasureContest">
+         <ContestSelection ObjectId="bms4953a" xsi:type="BallotMeasureSelection"/>
+         <ContestSelection ObjectId="bms4953b" xsi:type="BallotMeasureSelection"/>
+         <Name>COVINA CITY SPECIAL MUNICIPAL ELECTION - MEASURE CC</Name>
+      </Contest>
+      <ElectionScopeId>GpU08CQ0</ElectionScopeId>
+   </Election>
+   <GeneratedDate>2017-03-21T10:45:22Z</GeneratedDate>
+   <GpUnit ObjectId="GpU08CQ0">
+      <Name>CITY OF COVINA</Name>
+      <Type>other</Type>
+      <OtherType>city</OtherType>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500012A">
+      <Name>0235 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500014A">
+      <Name>0236 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500022A">
+      <Name>0237 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500024A">
+      <Name>0238 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500029A">
+      <Name>0239 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500035A">
+      <Name>0240 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500037A">
+      <Name>0241 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500084A">
+      <Name>0242 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500087A">
+      <Name>0243 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500089A">
+      <Name>0244 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_1500093A">
+      <Name>0245 - COVINA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_9990048A">
+      <Name>8048 - Ballot Group 48</Name>
+      <Type>other</Type>
+      <OtherType>ballot-batch</OtherType>
+   </GpUnit>
+   <Party ObjectId="Party-0">
+      <Name>
+        Non Partisan
+      </Name>
+   </Party>
+   <Party ObjectId="Party-1">
+      <Name>
+        Democratic
+      </Name>
+   </Party>
+   <Party ObjectId="Party-2">
+      <Name>
+        Republican
+      </Name>
+   </Party>
+   <Party ObjectId="Party-3">
+      <Name>
+        American Independent
+      </Name>
+   </Party>
+   <Party ObjectId="Party-4">
+      <Name>
+        Green
+      </Name>
+   </Party>
+   <Party ObjectId="Party-5">
+      <Name>
+        Libertarian
+      </Name>
+   </Party>
+   <Party ObjectId="Party-6">
+      <Name>
+        Peace and Freedom
+      </Name>
+   </Party>
+   <ReportGeneratingDeviceIds>simulated-1</ReportGeneratingDeviceIds>
+   <ReportingDevice ObjectId="simulated-1">
+      <Application>Ballot Marking application</Application>
+      <Manufacturer>Trust the Vote</Manufacturer>
+      <Model>some-model-number</Model>
+      <SerialNumber>some-serial-number</SerialNumber>
+   </ReportingDevice>
+   <ReportType>originating-device-export</ReportType>
+   <Version>1.0.0</Version>
+</CastVoteRecordReport>

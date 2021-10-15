@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd"
- xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Election ObjectId="some-id">
       <Candidate ObjectId="can11349">
          <Name>
@@ -97,7 +96,6 @@
       <Name>CITY OF BEVERLY HILLS</Name>
       <Type>other</Type>
       <OtherType>city</OtherType>
-      
    </GpUnit>
    <GpUnit ObjectId="pre_0900001B">
       <Name>6005 - BEVERLY HILLS</Name>

@@ -1,0 +1,427 @@
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="NIST_V1_election_results.xsd" xsi:schemaLocation="NIST_V1_election_results.xsd ../schemas/NIST_V1_election_resultsV50.xsd">
+    <Election>
+        <CandidateCollection>
+            <Candidate objectId="can11369">
+        <BallotName>
+          <Text language="en">JOSEPH ROMERO ROCHA</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11369</PersonId>
+      </Candidate>
+            <Candidate objectId="can11370">
+        <BallotName>
+          <Text language="en">URIEL EDWARD MACIAS</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11370</PersonId>
+      </Candidate>
+            <Candidate objectId="can11371">
+        <BallotName>
+          <Text language="en">RUSSELL BRYAN RENTSCHLER</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11371</PersonId>
+      </Candidate>
+            <Candidate objectId="can11372">
+        <BallotName>
+          <Text language="en">ROBERT GONZALES</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11372</PersonId>
+      </Candidate>
+            <Candidate objectId="can11373">
+        <BallotName>
+          <Text language="en">EDWARD J. ALVAREZ</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11373</PersonId>
+      </Candidate>
+            <Candidate objectId="can11375">
+        <BallotName>
+          <Text language="en">ANDREW N. MENDEZ</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11375</PersonId>
+      </Candidate>
+            <Candidate objectId="can11382">
+        <BallotName>
+          <Text language="en">JEFFREY LAWRENCE CORNEJO JR.</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11382</PersonId>
+      </Candidate>
+            <Candidate objectId="can11376">
+        <BallotName>
+          <Text language="en">ARTHUR M. VASQUEZ JR.</Text>
+        </BallotName>
+        <IsIncumbent>false</IsIncumbent>
+        <PartyId>Party-0</PartyId>
+        <PersonId>per11376</PersonId>
+      </Candidate>
+        </CandidateCollection>
+        <ContestCollection>
+            <Contest objectId="cc4980" xsi:type="CandidateContest">
+        <BallotSelection objectId="cs11369" xsi:type="CandidateSelection">
+          <SequenceOrder>1</SequenceOrder>
+          
+          <CandidateIds>can11369</CandidateIds>
+        </BallotSelection>
+        <BallotSelection objectId="cs11370" xsi:type="CandidateSelection">
+          <SequenceOrder>2</SequenceOrder>
+          
+          <CandidateIds>can11370</CandidateIds>
+        </BallotSelection>
+        <BallotSelection objectId="cs11371" xsi:type="CandidateSelection">
+          <SequenceOrder>3</SequenceOrder>
+          
+          <CandidateIds>can11371</CandidateIds>
+        </BallotSelection>
+        <BallotTitle>
+          <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor</Text>
+        </BallotTitle>
+        <ElectoralDistrictId>GpU08AZ0</ElectoralDistrictId>
+        <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor</Name>
+        <SubUnitsReported>7</SubUnitsReported>
+        <SummaryCounts>
+          <GpUnitId>GpU08AZ0</GpUnitId>
+          <Type>total</Type>
+          <BallotsCast>3439</BallotsCast>
+        </SummaryCounts>
+        <TotalSubUnits>7</TotalSubUnits>
+        <OfficeIds>off4980</OfficeIds>
+        <VotesAllowed>1</VotesAllowed>
+      </Contest>
+            <Contest objectId="cc4977" xsi:type="CandidateContest">
+        <BallotSelection objectId="cs11372" xsi:type="CandidateSelection">
+          <SequenceOrder>1</SequenceOrder>
+          
+          <CandidateIds>can11372</CandidateIds>
+        </BallotSelection>
+        <BallotSelection objectId="cs11373" xsi:type="CandidateSelection">
+          <SequenceOrder>2</SequenceOrder>
+          
+          <CandidateIds>can11373</CandidateIds>
+        </BallotSelection>
+        <BallotSelection objectId="cs11375" xsi:type="CandidateSelection">
+          <SequenceOrder>3</SequenceOrder>
+          
+          <CandidateIds>can11375</CandidateIds>
+        </BallotSelection>
+        <BallotTitle>
+          <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Text>
+        </BallotTitle>
+        <ElectoralDistrictId>GpU08AZ0</ElectoralDistrictId>
+        <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Name>
+        <SubUnitsReported>7</SubUnitsReported>
+        <SummaryCounts>
+          <GpUnitId>GpU08AZ0</GpUnitId>
+          <Type>total</Type>
+          <BallotsCast>3439</BallotsCast>
+        </SummaryCounts>
+        <TotalSubUnits>7</TotalSubUnits>
+        <OfficeIds>off4977</OfficeIds>
+        <VotesAllowed>2</VotesAllowed>
+      </Contest>
+            <Contest objectId="cc4981" xsi:type="CandidateContest">
+        <BallotSelection objectId="cs11382" xsi:type="CandidateSelection">
+          <SequenceOrder>1</SequenceOrder>
+          
+          <CandidateIds>can11382</CandidateIds>
+        </BallotSelection>
+        <BallotTitle>
+          <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk</Text>
+        </BallotTitle>
+        <ElectoralDistrictId>GpU08AZ0</ElectoralDistrictId>
+        <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk</Name>
+        <SubUnitsReported>7</SubUnitsReported>
+        <SummaryCounts>
+          <GpUnitId>GpU08AZ0</GpUnitId>
+          <Type>total</Type>
+          <BallotsCast>3439</BallotsCast>
+        </SummaryCounts>
+        <TotalSubUnits>7</TotalSubUnits>
+        <OfficeIds>off4981</OfficeIds>
+        <VotesAllowed>1</VotesAllowed>
+      </Contest>
+            <Contest objectId="cc4982" xsi:type="CandidateContest">
+        <BallotSelection objectId="cs11376" xsi:type="CandidateSelection">
+          <SequenceOrder>1</SequenceOrder>
+          
+          <CandidateIds>can11376</CandidateIds>
+        </BallotSelection>
+        <BallotTitle>
+          <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Text>
+        </BallotTitle>
+        <ElectoralDistrictId>GpU08AZ0</ElectoralDistrictId>
+        <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Name>
+        <SubUnitsReported>7</SubUnitsReported>
+        <SummaryCounts>
+          <GpUnitId>GpU08AZ0</GpUnitId>
+          <Type>total</Type>
+          <BallotsCast>3439</BallotsCast>
+        </SummaryCounts>
+        <TotalSubUnits>7</TotalSubUnits>
+        <OfficeIds>off4982</OfficeIds>
+        <VotesAllowed>1</VotesAllowed>
+      </Contest>
+        </ContestCollection>
+        <ElectionScopeId>GpU08AZ0</ElectionScopeId>
+        <Name>
+      <Text language="en">CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS</Text>
+    </Name>
+        <StartDate>2017-03-07</StartDate>
+        <EndDate>2017-03-07</EndDate>
+        <Type>special</Type>
+    </Election>
+    <Format>precinct-level</Format>
+    <GeneratedDate>2017-03-21T10:45:22</GeneratedDate>
+    <GpUnitCollection>
+        <GpUnit xsi:type="ReportingUnit" objectId="GpU08AZ0">
+      <ComposingGpUnitIds>pre_0550008A pre_0550012A pre_0550025A pre_0550074A pre_0550080A pre_0550084B pre_0550085A pre_9990042A</ComposingGpUnitIds>
+      <ExternalIdentifiers>
+        <ExternalIdentifier>
+          <Type>ocd-id</Type>
+          <Value>ocd-division/country:us/state:ca/place:azusa</Value>
+        </ExternalIdentifier>
+      </ExternalIdentifiers>
+      <Name>CITY OF AZUSA</Name>
+      <Type>city</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550008A">
+      <Name>0056 - AZUSA</Name>
+      <Number>0056</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550012A">
+      <Name>0057 - AZUSA</Name>
+      <Number>0057</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550025A">
+      <Name>0058 - AZUSA</Name>
+      <Number>0058</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550074A">
+      <Name>0059 - AZUSA</Name>
+      <Number>0059</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550080A">
+      <Name>0060 - AZUSA</Name>
+      <Number>0060</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550084B">
+      <Name>0061 - AZUSA</Name>
+      <Number>0061</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_0550085A">
+      <Name>0062 - AZUSA</Name>
+      <Number>0062</Number>
+      
+      
+      
+      
+      
+      
+      
+      <Type>precinct</Type>
+    </GpUnit>
+        <GpUnit xsi:type="ReportingUnit" objectId="pre_9990042A">
+      <Name>8042 - Ballot Group 42</Name>
+      <Number>8042</Number>
+      <Type>ballot-batch</Type>
+    </GpUnit>
+    </GpUnitCollection>
+    <Issuer>Los Angeles County Registrar-Recorder/County Clerk</Issuer>
+    <IssuerAbbreviation>LA RR/CC</IssuerAbbreviation>
+    <OfficeCollection>
+        <Office objectId="off4980">
+      <IsPartisan>false</IsPartisan>
+      <Name>
+        <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor</Text>
+      </Name>
+    </Office>
+        <Office objectId="off4977">
+      <IsPartisan>false</IsPartisan>
+      <Name>
+        <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Text>
+      </Name>
+    </Office>
+        <Office objectId="off4981">
+      <IsPartisan>false</IsPartisan>
+      <Name>
+        <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk</Text>
+      </Name>
+    </Office>
+        <Office objectId="off4982">
+      <IsPartisan>false</IsPartisan>
+      <Name>
+        <Text language="en">AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Text>
+      </Name>
+    </Office>
+    </OfficeCollection>
+    <PartyCollection/>
+    <PersonCollection>
+        <Person objectId="per11369">
+      <FirstName>JOSEPH</FirstName>
+      <FullName>
+        <Text language="en">JOSEPH ROMERO ROCHA</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>ROCHA</LastName>
+      <MiddleName>ROMERO</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Mayor</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11370">
+      <FirstName>URIEL</FirstName>
+      <FullName>
+        <Text language="en">URIEL EDWARD MACIAS</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>MACIAS</LastName>
+      <MiddleName>EDWARD</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Councilmember/Financial Officer</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11371">
+      <FirstName>RUSSELL</FirstName>
+      <FullName>
+        <Text language="en">RUSSELL BRYAN RENTSCHLER</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>RENTSCHLER</LastName>
+      <MiddleName>BRYAN</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Pest Control</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11372">
+      <FirstName>ROBERT</FirstName>
+      <FullName>
+        <Text language="en">ROBERT GONZALES</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>GONZALES</LastName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Councilmember</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11373">
+      <FirstName>EDWARD</FirstName>
+      <FullName>
+        <Text language="en">EDWARD J. ALVAREZ</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>ALVAREZ</LastName>
+      <MiddleName>J</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Councilmember/Federal Auditor</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11375">
+      <FirstName>ANDREW</FirstName>
+      <FullName>
+        <Text language="en">ANDREW N. MENDEZ</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>MENDEZ</LastName>
+      <MiddleName>N</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">Businessman/Realtor</Text>
+      </Profession>
+    </Person>
+        <Person objectId="per11382">
+      <FirstName>JEFFREY</FirstName>
+      <FullName>
+        <Text language="en">JEFFREY LAWRENCE CORNEJO JR.</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>CORNEJO</LastName>
+      <MiddleName>LAWRENCE</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">City Clerk</Text>
+      </Profession>
+      <Suffix>JR</Suffix>
+    </Person>
+        <Person objectId="per11376">
+      <FirstName>ARTHUR</FirstName>
+      <FullName>
+        <Text language="en">ARTHUR M. VASQUEZ JR.</Text>
+      </FullName>
+      <Gender>Male</Gender>
+      <LastName>VASQUEZ</LastName>
+      <MiddleName>M</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+        <Text language="en">City Treasurer</Text>
+      </Profession>
+      <Suffix>JR</Suffix>
+    </Person>
+    </PersonCollection>
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>certified</Status>
+    <VendorApplicationId>Auto-Generated v0.1</VendorApplicationId>
+</ElectionReport>

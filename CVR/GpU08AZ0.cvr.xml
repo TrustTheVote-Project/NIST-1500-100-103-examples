@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Election ObjectId="some-id">
+      <Candidate ObjectId="can11369">
+         <Name>
+          JOSEPH ROMERO ROCHA
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11370">
+         <Name>
+          URIEL EDWARD MACIAS
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11371">
+         <Name>
+          RUSSELL BRYAN RENTSCHLER
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11372">
+         <Name>
+          ROBERT GONZALES
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11373">
+         <Name>
+          EDWARD J. ALVAREZ
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11375">
+         <Name>
+          ANDREW N. MENDEZ
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11382">
+         <Name>
+          JEFFREY LAWRENCE CORNEJO JR.
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Candidate ObjectId="can11376">
+         <Name>
+          ARTHUR M. VASQUEZ JR.
+        </Name>
+         <PartyId>Party-0</PartyId>
+      </Candidate>
+      <Contest ObjectId="cc4980" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11369" xsi:type="CandidateSelection">
+            <CandidateIds>can11369</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11370" xsi:type="CandidateSelection">
+            <CandidateIds>can11370</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11371" xsi:type="CandidateSelection">
+            <CandidateIds>can11371</CandidateIds>
+         </ContestSelection>
+         <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor</Name>
+      </Contest>
+      <Contest ObjectId="cc4977" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11372" xsi:type="CandidateSelection">
+            <CandidateIds>can11372</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11373" xsi:type="CandidateSelection">
+            <CandidateIds>can11373</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11375" xsi:type="CandidateSelection">
+            <CandidateIds>can11375</CandidateIds>
+         </ContestSelection>
+         <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Name>
+      </Contest>
+      <Contest ObjectId="cc4981" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11382" xsi:type="CandidateSelection">
+            <CandidateIds>can11382</CandidateIds>
+         </ContestSelection>
+         <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk</Name>
+      </Contest>
+      <Contest ObjectId="cc4982" xsi:type="CandidateContest">
+         <ContestSelection ObjectId="cs11376" xsi:type="CandidateSelection">
+            <CandidateIds>can11376</CandidateIds>
+         </ContestSelection>
+         <Name>AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer</Name>
+      </Contest>
+      <ElectionScopeId>GpU08AZ0</ElectionScopeId>
+   </Election>
+   <GeneratedDate>2017-03-21T10:45:22</GeneratedDate>
+   <GpUnit ObjectId="GpU08AZ0">
+      <Name>CITY OF AZUSA</Name>
+      <Type>other</Type>
+      <OtherType>city</OtherType>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550008A">
+      <Name>0056 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550012A">
+      <Name>0057 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550025A">
+      <Name>0058 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550074A">
+      <Name>0059 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550080A">
+      <Name>0060 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550084B">
+      <Name>0061 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0550085A">
+      <Name>0062 - AZUSA</Name>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_9990042A">
+      <Name>8042 - Ballot Group 42</Name>
+      <Type>other</Type>
+      <OtherType>ballot-batch</OtherType>
+   </GpUnit>
+   <ReportGeneratingDeviceIds>simulated-1</ReportGeneratingDeviceIds>
+   <ReportingDevice ObjectId="simulated-1">
+      <Application>Ballot Marking application</Application>
+      <Manufacturer>Trust the Vote</Manufacturer>
+      <Model>some-model-number</Model>
+      <SerialNumber>some-serial-number</SerialNumber>
+   </ReportingDevice>
+   <ReportType>originating-device-export</ReportType>
+   <Version>1.0.0</Version>
+</CastVoteRecordReport>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Election>
+      <Candidate ObjectId="can11480">
+         <BallotName>
+            <Text Language="en">ALICIA ROMERO</Text>
+         </BallotName>
+         <IsIncumbent>false</IsIncumbent>
+         <PartyId>Party-0</PartyId>
+         <PersonId>per11480</PersonId>
+      </Candidate>
+      <Candidate ObjectId="can11481">
+         <BallotName>
+            <Text Language="en">ANA MARIA QUINTANA</Text>
+         </BallotName>
+         <IsIncumbent>false</IsIncumbent>
+         <PartyId>Party-0</PartyId>
+         <PersonId>per11481</PersonId>
+      </Candidate>
+      <Candidate ObjectId="can11479">
+         <BallotName>
+            <Text Language="en">VIOLETA ALVAREZ</Text>
+         </BallotName>
+         <IsIncumbent>false</IsIncumbent>
+         <PartyId>Party-0</PartyId>
+         <PersonId>per11479</PersonId>
+      </Candidate>
+      <Candidate ObjectId="can11482">
+         <BallotName>
+            <Text Language="en">SUSANA LOPEZ</Text>
+         </BallotName>
+         <IsIncumbent>false</IsIncumbent>
+         <PartyId>Party-0</PartyId>
+         <PersonId>per11482</PersonId>
+      </Candidate>
+      <Contest ObjectId="cc4978" xsi:type="CandidateContest">
+         <BallotTitle>
+            <Text Language="en">BELL CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Text>
+         </BallotTitle>
+         <ContestSelection ObjectId="cs11480" xsi:type="CandidateSelection">
+            <SequenceOrder>1</SequenceOrder>
+            <CandidateIds>can11480</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11481" xsi:type="CandidateSelection">
+            <SequenceOrder>2</SequenceOrder>
+            <CandidateIds>can11481</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11479" xsi:type="CandidateSelection">
+            <SequenceOrder>3</SequenceOrder>
+            <CandidateIds>can11479</CandidateIds>
+         </ContestSelection>
+         <ContestSelection ObjectId="cs11482" xsi:type="CandidateSelection">
+            <SequenceOrder>4</SequenceOrder>
+            <CandidateIds>can11482</CandidateIds>
+         </ContestSelection>
+         <CountStatus>
+            <Status>unknown</Status>
+            <Type>other</Type>
+         </CountStatus>
+         <ElectionDistrictId>GpU08BE0</ElectionDistrictId>
+         <Name>BELL CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Name>
+         <SubUnitsReported>4</SubUnitsReported>
+         <TotalSubUnits>4</TotalSubUnits>
+         <OfficeIds>off4978</OfficeIds>
+         <VotesAllowed>2</VotesAllowed>
+      </Contest>
+      <Contest ObjectId="bmc4979" xsi:type="BallotMeasureContest">
+         <BallotTitle>
+            <Text Language="en">BELL CITY SPECIAL MUNICIPAL ELECTION - MEASURE T</Text>
+         </BallotTitle>
+         <ContestSelection ObjectId="bms4979a" xsi:type="BallotMeasureSelection">
+            <SequenceOrder>1</SequenceOrder>
+            <Selection Label="bms4979at">
+               <Text Language="en">YES</Text>
+            </Selection>
+         </ContestSelection>
+         <ContestSelection ObjectId="bms4979b" xsi:type="BallotMeasureSelection">
+            <SequenceOrder>2</SequenceOrder>
+            <Selection Label="bms4979bt">
+               <Text Language="en">NO</Text>
+            </Selection>
+         </ContestSelection>
+         <CountStatus>
+            <Status>unknown</Status>
+            <Type>other</Type>
+         </CountStatus>
+         <ElectionDistrictId>GpU08BE0</ElectionDistrictId>
+         <Name>BELL CITY SPECIAL MUNICIPAL ELECTION - MEASURE T</Name>
+         <SubUnitsReported>4</SubUnitsReported>
+         <TotalSubUnits>4</TotalSubUnits>
+      </Contest>
+      <ElectionScopeId>GpU08BE0</ElectionScopeId>
+      <Name>
+         <Text Language="en">CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS</Text>
+      </Name>
+      <StartDate>2017-03-07</StartDate>
+      <EndDate>2017-03-07</EndDate>
+      <Type>special</Type>
+   </Election>
+   <Format>precinct-level</Format>
+   <GeneratedDate>2017-03-21T10:45:22</GeneratedDate>
+   <GpUnit ObjectId="GpU08BE0" xsi:type="ReportingUnit">
+      <ComposingGpUnitIds>pre_0700001A pre_0700002A pre_0700003D pre_0700005E
+        pre_9990043A</ComposingGpUnitIds>
+      <ExternalIdentifier>
+         <Type>ocd-id</Type>
+         <Value>ocd-division/country:us/state:ca/place:bell</Value>
+      </ExternalIdentifier>
+      <Name>
+         <Text Language="en">CITY OF BELL</Text>
+      </Name>
+      <Type>city</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0700001A" xsi:type="ReportingUnit">
+      <Name>
+         <Text Language="en">0083 - BELL</Text>
+      </Name>
+      <Number>0083</Number>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0700002A" xsi:type="ReportingUnit">
+      <Name>
+         <Text Language="en">0084 - BELL</Text>
+      </Name>
+      <Number>0084</Number>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0700003D" xsi:type="ReportingUnit">
+      <Name>
+         <Text Language="en">0085 - BELL</Text>
+      </Name>
+      <Number>0085</Number>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_0700005E" xsi:type="ReportingUnit">
+      <Name>
+         <Text Language="en">6003 - BELL</Text>
+      </Name>
+      1
+      <Number>6003</Number>
+      <Type>precinct</Type>
+   </GpUnit>
+   <GpUnit ObjectId="pre_9990043A" xsi:type="ReportingUnit">
+      <Name>
+         <Text Language="en">8043 - Ballot Group 43</Text>
+      </Name>
+      <Number>8043</Number>
+      <Type>ballot-batch</Type>
+   </GpUnit>
+   <Issuer>Los Angeles County Registrar-Recorder/County Clerk</Issuer>
+   <IssuerAbbreviation>LA RR/CC</IssuerAbbreviation>
+   <Office ObjectId="off4978">
+      <IsPartisan>false</IsPartisan>
+      <Name>
+         <Text Language="en">BELL CITY GENERAL MUNICIPAL ELECTION Member of the City Council</Text>
+      </Name>
+   </Office>
+   <Party ObjectId="Party-0">
+      <Abbreviation>
+         <Text Language="en">NP</Text>
+      </Abbreviation>
+      <Name>
+         <Text Language="en">Non Partisan</Text>
+      </Name>
+   </Party>
+   <Person ObjectId="per11480">
+      <FirstName>ALICIA</FirstName>
+      <FullName>
+         <Text Language="en">ALICIA ROMERO</Text>
+      </FullName>
+      <Gender>Female</Gender>
+      <LastName>ROMERO</LastName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+         <Text Language="en">Councilmember/Educator</Text>
+      </Profession>
+   </Person>
+   <Person ObjectId="per11481">
+      <FirstName>ANA</FirstName>
+      <FullName>
+         <Text Language="en">ANA MARIA QUINTANA</Text>
+      </FullName>
+      <Gender>Female</Gender>
+      <LastName>QUINTANA</LastName>
+      <MiddleName>MARIA</MiddleName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+         <Text Language="en">Councilwoman/Attorney</Text>
+      </Profession>
+   </Person>
+   <Person ObjectId="per11479">
+      <FirstName>VIOLETA</FirstName>
+      <FullName>
+         <Text Language="en">VIOLETA ALVAREZ</Text>
+      </FullName>
+      <Gender>Female</Gender>
+      <LastName>ALVAREZ</LastName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+         <Text Language="en">Businesswoman</Text>
+      </Profession>
+   </Person>
+   <Person ObjectId="per11482">
+      <FirstName>SUSANA</FirstName>
+      <FullName>
+         <Text Language="en">SUSANA LOPEZ</Text>
+      </FullName>
+      <Gender>Female</Gender>
+      <LastName>LOPEZ</LastName>
+      <PartyId>Party-0</PartyId>
+      <Profession>
+         <Text Language="en">Immigration Legal Assistant</Text>
+      </Profession>
+   </Person>
+   <SequenceStart>1</SequenceStart>
+   <SequenceEnd>1</SequenceEnd>
+   <Status>certified</Status>
+   <VendorApplicationId>Auto-Generated v0.1</VendorApplicationId>
+</ElectionReport>

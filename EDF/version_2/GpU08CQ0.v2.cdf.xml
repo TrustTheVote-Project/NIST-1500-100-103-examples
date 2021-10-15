@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd"
-   xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Election>
       <Candidate ObjectId="can11431">
          <BallotName>
@@ -1037,8 +1036,8 @@
    <GeneratedDate>2017-03-21T10:45:22Z</GeneratedDate>
    <GpUnit ObjectId="GpU08CQ0" xsi:type="ReportingUnit">
       <ComposingGpUnitIds>pre_1500012A pre_1500014A pre_1500022A pre_1500024A pre_1500029A
-         pre_1500035A pre_1500037A pre_1500084A pre_1500087A pre_1500089A pre_1500093A
-         pre_9990048A</ComposingGpUnitIds>
+        pre_1500035A pre_1500037A pre_1500084A pre_1500087A pre_1500089A pre_1500093A
+        pre_9990048A</ComposingGpUnitIds>
       <ExternalIdentifier>
          <Type>ocd-id</Type>
          <Value>ocd-division/country:us/state:ca/place:covina</Value>
