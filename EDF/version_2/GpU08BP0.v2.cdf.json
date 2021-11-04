@@ -1,0 +1,999 @@
+{
+    "ElectionReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "Candidate": [
+                {
+                    "ObjectId": "can11349",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "JOHN A. MIRISCH"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11349"
+                },
+                {
+                    "ObjectId": "can11345",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "LES FRIEDMAN"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11345"
+                },
+                {
+                    "ObjectId": "can11351",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "ROBERT (BOB) WUNDERLICH"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11351"
+                },
+                {
+                    "ObjectId": "can11346",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "NANCY KRASNE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11346"
+                },
+                {
+                    "ObjectId": "can11344",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "ELIOT FINKEL"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11344"
+                },
+                {
+                    "ObjectId": "can11348",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "VERA MARKOWITZ"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11348"
+                },
+                {
+                    "ObjectId": "can11343",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "FRANCES BILAK"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11343"
+                },
+                {
+                    "ObjectId": "can11413",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "JIM WAYNE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11413"
+                },
+                {
+                    "ObjectId": "can11342",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "HOWARD S. FISHER"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11342"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc4969",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11349",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11349"
+                        },
+                        {
+                            "ObjectId": "cs11345",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11345"
+                        },
+                        {
+                            "ObjectId": "cs11351",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 3,
+                            "CandidateIds": "can11351"
+                        },
+                        {
+                            "ObjectId": "cs11346",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 4,
+                            "CandidateIds": "can11346"
+                        },
+                        {
+                            "ObjectId": "cs11344",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 5,
+                            "CandidateIds": "can11344"
+                        },
+                        {
+                            "ObjectId": "cs11348",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 6,
+                            "CandidateIds": "can11348"
+                        },
+                        {
+                            "ObjectId": "cs11343",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 7,
+                            "CandidateIds": "can11343"
+                        },
+                        {
+                            "ObjectId": "cs11413",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 8,
+                            "CandidateIds": "can11413"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08BP0",
+                    "Name": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION Member of the City Council",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4969",
+                    "VotesAllowed": 3
+                },
+                {
+                    "ObjectId": "cc4970",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                        }
+                    },
+                    "ContestSelection": {
+                        "ObjectId": "cs11342",
+                        "xsi:type": "CandidateSelection",
+                        "SequenceOrder": 1,
+                        "CandidateIds": "can11342"
+                    },
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08BP0",
+                    "Name": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION, City Treasurer",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4970",
+                    "VotesAllowed": 1
+                }
+            ],
+            "ElectionScopeId": "GpU08BP0",
+            "Name": {
+                "Text": {
+                    "Language": "en",
+                    "content": "CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS"
+                }
+            },
+            "StartDate": "2017-03-07",
+            "EndDate": "2017-03-07",
+            "Type": "special"
+        },
+        "Format": "precinct-level",
+        "GeneratedDate": "2017-03-21T10:45:22Z",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08BP0",
+                "xsi:type": "ReportingUnit",
+                "ComposingGpUnitIds": "pre_0900001B pre_0900004A pre_0900005A pre_0900006B pre_0900010A\n        pre_0900016A pre_0900020A pre_0900025A pre_0900026A pre_0900037A pre_0900046A pre_9990045A\n        pre_9990046A",
+                "ExternalIdentifier": {
+                    "Type": "ocd-id",
+                    "Value": "ocd-division/country:us/state:ca/place:beverly_hills"
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "CITY OF BEVERLY HILLS"
+                    }
+                },
+                "Type": "city"
+            },
+            {
+                "ObjectId": "pre_0900001B",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "6005 - BEVERLY HILLS"
+                    }
+                },
+                "content": 1,
+                "Number": 6005,
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900004A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0112 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0112",
+                "PartyRegistration": [
+                    {
+                        "Count": 231,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 247,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 276,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 8,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 1,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 1,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 2,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900005A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0113 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0113",
+                "PartyRegistration": [
+                    {
+                        "Count": 627,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 1008,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 774,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 32,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 2,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 5,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 12,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900006B",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "6006 - BEVERLY HILLS"
+                    }
+                },
+                "content": 1,
+                "Number": 6006,
+                "PartyRegistration": [
+                    {
+                        "Count": 4,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 2,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 6,
+                        "PartyId": "Party-2"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900010A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0114 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0114",
+                "PartyRegistration": [
+                    {
+                        "Count": 778,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 968,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 898,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 51,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 5,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 5,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 7,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900016A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0115 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0115",
+                "PartyRegistration": [
+                    {
+                        "Count": 874,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 1156,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 615,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 50,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 6,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 4,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 14,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900020A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0116 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0116",
+                "PartyRegistration": [
+                    {
+                        "Count": 585,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 824,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 342,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 39,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 8,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 4,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 11,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900025A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0117 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0117",
+                "PartyRegistration": [
+                    {
+                        "Count": 726,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 1122,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 513,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 61,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 7,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 8,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 15,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900026A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0118 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0118",
+                "PartyRegistration": [
+                    {
+                        "Count": 835,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 1396,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 549,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 49,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 8,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 7,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 23,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900037A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0119 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0119",
+                "PartyRegistration": [
+                    {
+                        "Count": 968,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 1927,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 768,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 66,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 15,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 6,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 22,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0900046A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0120 - BEVERLY HILLS"
+                    }
+                },
+                "Number": "0120",
+                "PartyRegistration": [
+                    {
+                        "Count": 453,
+                        "PartyId": "Party-0"
+                    },
+                    {
+                        "Count": 798,
+                        "PartyId": "Party-1"
+                    },
+                    {
+                        "Count": 376,
+                        "PartyId": "Party-2"
+                    },
+                    {
+                        "Count": 29,
+                        "PartyId": "Party-3"
+                    },
+                    {
+                        "Count": 4,
+                        "PartyId": "Party-4"
+                    },
+                    {
+                        "Count": 8,
+                        "PartyId": "Party-5"
+                    },
+                    {
+                        "Count": 9,
+                        "PartyId": "Party-6"
+                    }
+                ],
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990045A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "8045 - Ballot Group 45"
+                    }
+                },
+                "Number": 8045,
+                "Type": "ballot-batch"
+            },
+            {
+                "ObjectId": "pre_9990046A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "8046 - Ballot Group 46"
+                    }
+                },
+                "Number": 8046,
+                "Type": "ballot-batch"
+            }
+        ],
+        "Issuer": "Los Angeles County Registrar-Recorder/County Clerk",
+        "IssuerAbbreviation": "LA RR/CC",
+        "Office": [
+            {
+                "ObjectId": "off4969",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4970",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "BEVERLY HILLS CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                    }
+                }
+            }
+        ],
+        "Party": [
+            {
+                "ObjectId": "Party-0",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "NP"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Non Partisan"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-1",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "DEM"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Democratic"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-2",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "REP"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Republican"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-3",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "AI"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "American Independent"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-4",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "GRN"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Green"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-5",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "LIB"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Libertarian"
+                    }
+                }
+            },
+            {
+                "ObjectId": "Party-6",
+                "Abbreviation": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "PF"
+                    }
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Peace and Freedom"
+                    }
+                }
+            }
+        ],
+        "Person": [
+            {
+                "ObjectId": "per11349",
+                "FirstName": "JOHN",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "JOHN A. MIRISCH"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "MIRISCH",
+                "MiddleName": "A",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Mayor, City of Beverly Hills"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11345",
+                "FirstName": "LES",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "LES FRIEDMAN"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "FRIEDMAN",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Attorney/Beverly Hills Commissioner"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11351",
+                "FirstName": "ROBERT",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "ROBERT (BOB) WUNDERLICH"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "WUNDERLICH",
+                "content": "(BOB)",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Economist/MWD Director"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11346",
+                "FirstName": "NANCY",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "NANCY KRASNE"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "KRASNE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Vice-Mayor/Councilmember/Educator"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11344",
+                "FirstName": "ELIOT",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "ELIOT FINKEL"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "FINKEL",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Treasurer of Beverly Hills"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11348",
+                "FirstName": "VERA",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "VERA MARKOWITZ"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "MARKOWITZ",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Businesswoman"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11343",
+                "FirstName": "FRANCES",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "FRANCES BILAK"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "BILAK",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "City Commissioner/Attorney"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11413",
+                "FirstName": "JIM",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "JIM WAYNE"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "WAYNE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Business Owner"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11342",
+                "FirstName": "HOWARD",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "HOWARD S. FISHER"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "FISHER",
+                "MiddleName": "S",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Tax Attorney/Commissioner"
+                    }
+                }
+            }
+        ],
+        "SequenceStart": 1,
+        "SequenceEnd": 1,
+        "Status": "certified",
+        "VendorApplicationId": "Auto-Generated v0.1"
+    }
+}

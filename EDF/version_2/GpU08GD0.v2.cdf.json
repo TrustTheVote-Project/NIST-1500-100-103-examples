@@ -1,0 +1,998 @@
+{
+    "ElectionReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "Candidate": [
+                {
+                    "ObjectId": "can11461",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "TASHA CERDA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11461"
+                },
+                {
+                    "ObjectId": "can11468",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "RACHEL C. JOHNSON"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11468"
+                },
+                {
+                    "ObjectId": "can11465",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "MARK E. HENDERSON"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11465"
+                },
+                {
+                    "ObjectId": "can11477",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "TERRENCE \"TERRY\" TERAUCHI"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11477"
+                },
+                {
+                    "ObjectId": "can11474",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "DANIEL \"DAN\" MEDINA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11474"
+                },
+                {
+                    "ObjectId": "can11466",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "RONALD K. IKEJIRI"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11466"
+                },
+                {
+                    "ObjectId": "can11470",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "WARREN KRONBERGER"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11470"
+                },
+                {
+                    "ObjectId": "can11476",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "RODNEY G. TANAKA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11476"
+                },
+                {
+                    "ObjectId": "can11469",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "HAROUT \"ART\" KASKANIAN"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11469"
+                },
+                {
+                    "ObjectId": "can11464",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "PAULETTE C. FRANCIS"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11464"
+                },
+                {
+                    "ObjectId": "can11462",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "CHARITY CHANDLER-COLE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11462"
+                },
+                {
+                    "ObjectId": "can11473",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "WANDA LOVE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11473"
+                },
+                {
+                    "ObjectId": "can11467",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "NOLAN JAMORA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11467"
+                },
+                {
+                    "ObjectId": "can11471",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "SHANNON W. LAWRENCE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11471"
+                },
+                {
+                    "ObjectId": "can11472",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "CAMMIE LE"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11472"
+                },
+                {
+                    "ObjectId": "can11475",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "MINA SEMENZA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11475"
+                },
+                {
+                    "ObjectId": "can11478",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "J. INGRID TSUKIYAMA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11478"
+                },
+                {
+                    "ObjectId": "can11463",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "KATHLEEN \"SUZY\" EVANS"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11463"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc4984",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION Mayor"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11461",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11461"
+                        },
+                        {
+                            "ObjectId": "cs11468",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11468"
+                        },
+                        {
+                            "ObjectId": "cs11465",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 3,
+                            "CandidateIds": "can11465"
+                        },
+                        {
+                            "ObjectId": "cs11477",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 4,
+                            "CandidateIds": "can11477"
+                        },
+                        {
+                            "ObjectId": "cs11474",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 5,
+                            "CandidateIds": "can11474"
+                        },
+                        {
+                            "ObjectId": "cs11466",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 6,
+                            "CandidateIds": "can11466"
+                        },
+                        {
+                            "ObjectId": "cs11470",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 7,
+                            "CandidateIds": "can11470"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08GD0",
+                    "Name": "GARDENA CITY GENERAL MUNICIPAL ELECTION Mayor",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4984",
+                    "VotesAllowed": 1
+                },
+                {
+                    "ObjectId": "cc4983",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11476",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11476"
+                        },
+                        {
+                            "ObjectId": "cs11469",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11469"
+                        },
+                        {
+                            "ObjectId": "cs11464",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 3,
+                            "CandidateIds": "can11464"
+                        },
+                        {
+                            "ObjectId": "cs11462",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 4,
+                            "CandidateIds": "can11462"
+                        },
+                        {
+                            "ObjectId": "cs11473",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 5,
+                            "CandidateIds": "can11473"
+                        },
+                        {
+                            "ObjectId": "cs11467",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 6,
+                            "CandidateIds": "can11467"
+                        },
+                        {
+                            "ObjectId": "cs11471",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 7,
+                            "CandidateIds": "can11471"
+                        },
+                        {
+                            "ObjectId": "cs11472",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 8,
+                            "CandidateIds": "can11472"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08GD0",
+                    "Name": "GARDENA CITY GENERAL MUNICIPAL ELECTION Member of the City Council",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4983",
+                    "VotesAllowed": 2
+                },
+                {
+                    "ObjectId": "cc4986",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Clerk"
+                        }
+                    },
+                    "ContestSelection": {
+                        "ObjectId": "cs11475",
+                        "xsi:type": "CandidateSelection",
+                        "SequenceOrder": 1,
+                        "CandidateIds": "can11475"
+                    },
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08GD0",
+                    "Name": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Clerk",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4986",
+                    "VotesAllowed": 1
+                },
+                {
+                    "ObjectId": "cc4985",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11478",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11478"
+                        },
+                        {
+                            "ObjectId": "cs11463",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11463"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08GD0",
+                    "Name": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Treasurer",
+                    "SubUnitsReported": 11,
+                    "TotalSubUnits": 11,
+                    "OfficeIds": "off4985",
+                    "VotesAllowed": 1
+                }
+            ],
+            "ElectionScopeId": "GpU08GD0",
+            "Name": {
+                "Text": {
+                    "Language": "en",
+                    "content": "CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS"
+                }
+            },
+            "StartDate": "2017-03-07",
+            "EndDate": "2017-03-07",
+            "Type": "special"
+        },
+        "Format": "precinct-level",
+        "GeneratedDate": "2017-03-21T10:45:22",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08GD0",
+                "xsi:type": "ReportingUnit",
+                "ComposingGpUnitIds": "pre_2500002A pre_2500012A pre_2500013A pre_2500018A pre_2500021C pre_2500023A pre_2500030A pre_2500035A pre_2500041A\n pre_2500063A pre_2500064A pre_9990050A",
+                "ExternalIdentifier": {
+                    "Type": "ocd-id",
+                    "Value": "ocd-division/country:us/state:ca/place:gardena"
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "CITY OF GARDENA"
+                    }
+                },
+                "Type": "city"
+            },
+            {
+                "ObjectId": "pre_2500002A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0358 - GARDENA"
+                    }
+                },
+                "Number": "0358",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500012A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0359 - GARDENA"
+                    }
+                },
+                "Number": "0359",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500013A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0360 - GARDENA"
+                    }
+                },
+                "Number": "0360",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500018A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0361 - GARDENA"
+                    }
+                },
+                "Number": "0361",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500021C",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0362 - GARDENA"
+                    }
+                },
+                "Number": "0362",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500023A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0363 - GARDENA"
+                    }
+                },
+                "Number": "0363",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500030A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0364 - GARDENA"
+                    }
+                },
+                "Number": "0364",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500035A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0365 - GARDENA"
+                    }
+                },
+                "Number": "0365",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500041A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0366 - GARDENA"
+                    }
+                },
+                "Number": "0366",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500063A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0367 - GARDENA"
+                    }
+                },
+                "Number": "0367",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_2500064A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0368 - GARDENA"
+                    }
+                },
+                "Number": "0368",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990050A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "8050 - Ballot Group 50"
+                    }
+                },
+                "Number": 8050,
+                "Type": "ballot-batch"
+            }
+        ],
+        "Issuer": "Los Angeles County Registrar-Recorder/County Clerk",
+        "IssuerAbbreviation": "LA RR/CC",
+        "Office": [
+            {
+                "ObjectId": "off4984",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION Mayor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4983",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4986",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Clerk"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4985",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "GARDENA CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                    }
+                }
+            }
+        ],
+        "Person": [
+            {
+                "ObjectId": "per11461",
+                "FirstName": "TASHA",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "TASHA CERDA"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "CERDA",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "City Council Member"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11468",
+                "FirstName": "RACHEL",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "RACHEL C. JOHNSON"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "JOHNSON",
+                "MiddleName": "C",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Educator/Retired Councilmember"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11465",
+                "FirstName": "MARK",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "MARK E. HENDERSON"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "HENDERSON",
+                "MiddleName": "E",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Mayor Pro Tem"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11477",
+                "FirstName": "TERRENCE",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "TERRENCE \"TERRY\" TERAUCHI"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "TERAUCHI",
+                "content": "TERRY",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Criminal Prosecutor/Councilman"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11474",
+                "FirstName": "DANIEL",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "DANIEL \"DAN\" MEDINA"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "MEDINA",
+                "content": "DAN",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Gardena City Councilman"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11466",
+                "FirstName": "RONALD",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "RONALD K. IKEJIRI"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "IKEJIRI",
+                "MiddleName": "K",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Attorney at Law"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11470",
+                "FirstName": "WARREN",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "WARREN KRONBERGER"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "KRONBERGER",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Compressor Mechanic Supervisor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11476",
+                "FirstName": "RODNEY",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "RODNEY G. TANAKA"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "TANAKA",
+                "MiddleName": "G",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Pastor/Retired Policeman"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11469",
+                "FirstName": "HAROUT",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "HAROUT \"ART\" KASKANIAN"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "KASKANIAN",
+                "content": "ART",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Businessman/Planning Commissioner"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11464",
+                "FirstName": "PAULETTE",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "PAULETTE C. FRANCIS"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "FRANCIS",
+                "MiddleName": "C",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Teacher"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11462",
+                "FirstName": "CHARITY",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "CHARITY CHANDLER-COLE"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "CHANDLER-COLE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Healthcare Nonprofit Director"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11473",
+                "FirstName": "WANDA",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "WANDA LOVE"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "LOVE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Director Chamber Commerce"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11467",
+                "FirstName": "NOLAN",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "NOLAN JAMORA"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "JAMORA",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Director Operations/Businessowner"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11471",
+                "FirstName": "SHANNON",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "SHANNON W. LAWRENCE"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "LAWRENCE",
+                "MiddleName": "W",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Civil Servant/Analyst"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11472",
+                "FirstName": "CAMMIE",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "CAMMIE LE"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "LE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Analyst/R.E. Broker"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11475",
+                "FirstName": "MINA",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "MINA SEMENZA"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "SEMENZA",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "City Clerk"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11478",
+                "FirstName": "J INGRID",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "J. INGRID TSUKIYAMA"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "TSUKIYAMA",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Incumbent"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11463",
+                "FirstName": "KATHLEEN",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "KATHLEEN \"SUZY\" EVANS"
+                    }
+                },
+                "Gender": "Female",
+                "LastName": "EVANS",
+                "content": "SUZY",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Business Owner"
+                    }
+                }
+            }
+        ],
+        "SequenceStart": 1,
+        "SequenceEnd": 1,
+        "Status": "certified",
+        "VendorApplicationId": "Auto-Generated v0.1"
+    }
+}

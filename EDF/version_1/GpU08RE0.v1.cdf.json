@@ -1,0 +1,534 @@
+{
+    "ElectionReport": {
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xmlns": "NIST_V1_election_results.xsd",
+        "xsi:schemaLocation": "NIST_V1_election_results.xsd ../schemas/NIST_V1_election_resultsV50.xsd",
+        "Election": {
+            "CandidateCollection": {
+                "Candidate": [
+                    {
+                        "objectId": "can11513",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "BILL BRAND"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11513"
+                    },
+                    {
+                        "objectId": "can11512",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "STEVE ASPEL"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11512"
+                    },
+                    {
+                        "objectId": "can11516",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "ERIC J. COLEMAN"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11516"
+                    },
+                    {
+                        "objectId": "can11514",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "MICHAEL IAN SACHS"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11514"
+                    },
+                    {
+                        "objectId": "can11515",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "CHRISTOPHER MOWATT"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11515"
+                    },
+                    {
+                        "objectId": "can11517",
+                        "BallotName": {
+                            "Text": {
+                                "language": "en",
+                                "content": "MICHAEL W. WEBB"
+                            }
+                        },
+                        "IsIncumbent": false,
+                        "PartyId": "Party-0",
+                        "PersonId": "per11517"
+                    }
+                ]
+            },
+            "ContestCollection": {
+                "Contest": [
+                    {
+                        "objectId": "cc5008",
+                        "xsi:type": "CandidateContest",
+                        "BallotSelection": [
+                            {
+                                "objectId": "cs11513",
+                                "xsi:type": "CandidateSelection",
+                                "SequenceOrder": 1,
+                                "CandidateIds": "can11513"
+                            },
+                            {
+                                "objectId": "cs11512",
+                                "xsi:type": "CandidateSelection",
+                                "SequenceOrder": 2,
+                                "CandidateIds": "can11512"
+                            },
+                            {
+                                "objectId": "cs11516",
+                                "xsi:type": "CandidateSelection",
+                                "SequenceOrder": 3,
+                                "CandidateIds": "can11516"
+                            },
+                            {
+                                "objectId": "cs11514",
+                                "xsi:type": "CandidateSelection",
+                                "SequenceOrder": 4,
+                                "CandidateIds": "can11514"
+                            },
+                            {
+                                "objectId": "cs11515",
+                                "xsi:type": "CandidateSelection",
+                                "SequenceOrder": 5,
+                                "CandidateIds": "can11515"
+                            }
+                        ],
+                        "BallotTitle": {
+                            "Text": {
+                                "language": "en",
+                                "content": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION Mayor"
+                            }
+                        },
+                        "ElectoralDistrictId": "GpU08RE0",
+                        "Name": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION Mayor",
+                        "SubUnitsReported": 15,
+                        "SummaryCounts": {
+                            "GpUnitId": "GpU08RE0",
+                            "Type": "total",
+                            "BallotsCast": 16546
+                        },
+                        "TotalSubUnits": 15,
+                        "OfficeIds": "off5008",
+                        "VotesAllowed": 1
+                    },
+                    {
+                        "objectId": "cc5009",
+                        "xsi:type": "CandidateContest",
+                        "BallotSelection": {
+                            "objectId": "cs11517",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11517"
+                        },
+                        "BallotTitle": {
+                            "Text": {
+                                "language": "en",
+                                "content": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION, City Attorney"
+                            }
+                        },
+                        "ElectoralDistrictId": "GpU08RE0",
+                        "Name": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION, City Attorney",
+                        "SubUnitsReported": 15,
+                        "SummaryCounts": {
+                            "GpUnitId": "GpU08RE0",
+                            "Type": "total",
+                            "BallotsCast": 16546
+                        },
+                        "TotalSubUnits": 15,
+                        "OfficeIds": "off5009",
+                        "VotesAllowed": 1
+                    },
+                    {
+                        "objectId": "bmc5007",
+                        "xsi:type": "BallotMeasureContest",
+                        "BallotSelection": [
+                            {
+                                "objectId": "bms5007a",
+                                "xsi:type": "BallotMeasureSelection",
+                                "SequenceOrder": 1,
+                                "Selection": {
+                                    "label": "bms5007at",
+                                    "Text": {
+                                        "language": "en",
+                                        "content": "YES"
+                                    }
+                                }
+                            },
+                            {
+                                "objectId": "bms5007b",
+                                "xsi:type": "BallotMeasureSelection",
+                                "SequenceOrder": 2,
+                                "Selection": {
+                                    "label": "bms5007bt",
+                                    "Text": {
+                                        "language": "en",
+                                        "content": "NO"
+                                    }
+                                }
+                            }
+                        ],
+                        "BallotTitle": {
+                            "Text": {
+                                "language": "en",
+                                "content": "REDONDO BEACH CITY SPECIAL MUNICIPAL ELECTION - MEASURE C"
+                            }
+                        },
+                        "ElectoralDistrictId": "GpU08RE0",
+                        "Name": "REDONDO BEACH CITY SPECIAL MUNICIPAL ELECTION - MEASURE C",
+                        "SubUnitsReported": 15,
+                        "SummaryCounts": {
+                            "GpUnitId": "GpU08RE0",
+                            "Type": "total",
+                            "BallotsCast": 16546
+                        },
+                        "TotalSubUnits": 15,
+                        "PassageThreshold": {
+                            "Text": {
+                                "language": "en",
+                                "content": "MAJORITY OF VOTES CAST"
+                            }
+                        }
+                    }
+                ]
+            },
+            "ElectionScopeId": "GpU08RE0",
+            "Name": {
+                "Text": {
+                    "language": "en",
+                    "content": "CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS"
+                }
+            },
+            "StartDate": "2017-03-07",
+            "EndDate": "2017-03-07",
+            "Type": "special"
+        },
+        "Format": "precinct-level",
+        "GeneratedDate": "2017-03-21T10:45:22",
+        "GpUnitCollection": {
+            "GpUnit": [
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "GpU08RE0",
+                    "ComposingGpUnitIds": "pre_5550005A pre_5550013A pre_5550014A pre_5550016A pre_5550017A pre_5550021A pre_5550022A pre_5550029A pre_5550032A\n pre_5550036A pre_5550038A pre_5550044A pre_5550050C pre_5550091A pre_5550093A pre_9990088A pre_9990089A pre_9990090A pre_9990091A",
+                    "ExternalIdentifiers": {
+                        "ExternalIdentifier": {
+                            "Type": "ocd-id",
+                            "Value": "ocd-division/country:us/state:ca/place:redondo_beach"
+                        }
+                    },
+                    "Name": "CITY OF REDONDO BEACH",
+                    "Type": "city"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550005A",
+                    "Name": "0894 - REDONDO BEACH",
+                    "Number": "0894",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550013A",
+                    "Name": "0895 - REDONDO BEACH",
+                    "Number": "0895",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550014A",
+                    "Name": "0896 - REDONDO BEACH",
+                    "Number": "0896",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550016A",
+                    "Name": "0897 - REDONDO BEACH",
+                    "Number": "0897",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550017A",
+                    "Name": "0898 - REDONDO BEACH",
+                    "Number": "0898",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550021A",
+                    "Name": "0899 - REDONDO BEACH",
+                    "Number": "0899",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550022A",
+                    "Name": "0900 - REDONDO BEACH",
+                    "Number": "0900",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550029A",
+                    "Name": "0901 - REDONDO BEACH",
+                    "Number": "0901",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550032A",
+                    "Name": "0902 - REDONDO BEACH",
+                    "Number": "0902",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550036A",
+                    "Name": "0903 - REDONDO BEACH",
+                    "Number": "0903",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550038A",
+                    "Name": "0904 - REDONDO BEACH",
+                    "Number": "0904",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550044A",
+                    "Name": "0905 - REDONDO BEACH",
+                    "Number": "0905",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550050C",
+                    "Name": "0906 - REDONDO BEACH",
+                    "Number": "0906",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550091A",
+                    "Name": "0907 - REDONDO BEACH",
+                    "Number": "0907",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_5550093A",
+                    "Name": "0908 - REDONDO BEACH",
+                    "Number": "0908",
+                    "Type": "precinct"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_9990088A",
+                    "Name": "8088 - Ballot Group 88",
+                    "Number": 8088,
+                    "Type": "ballot-batch"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_9990089A",
+                    "Name": "8089 - Ballot Group 89",
+                    "Number": 8089,
+                    "Type": "ballot-batch"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_9990090A",
+                    "Name": "8090 - Ballot Group 90",
+                    "Number": 8090,
+                    "Type": "ballot-batch"
+                },
+                {
+                    "xsi:type": "ReportingUnit",
+                    "objectId": "pre_9990091A",
+                    "Name": "8091 - Ballot Group 91",
+                    "Number": 8091,
+                    "Type": "ballot-batch"
+                }
+            ]
+        },
+        "Issuer": "Los Angeles County Registrar-Recorder/County Clerk",
+        "IssuerAbbreviation": "LA RR/CC",
+        "OfficeCollection": {
+            "Office": [
+                {
+                    "objectId": "off5008",
+                    "IsPartisan": false,
+                    "Name": {
+                        "Text": {
+                            "language": "en",
+                            "content": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION Mayor"
+                        }
+                    }
+                },
+                {
+                    "objectId": "off5009",
+                    "IsPartisan": false,
+                    "Name": {
+                        "Text": {
+                            "language": "en",
+                            "content": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION, City Attorney"
+                        }
+                    }
+                }
+            ]
+        },
+        "PartyCollection": "",
+        "PersonCollection": {
+            "Person": [
+                {
+                    "objectId": "per11513",
+                    "FirstName": "BILL",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "BILL BRAND"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "BRAND",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Redondo Beach Councilmember"
+                        }
+                    }
+                },
+                {
+                    "objectId": "per11512",
+                    "FirstName": "STEVE",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "STEVE ASPEL"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "ASPEL",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Redondo Beach Mayor"
+                        }
+                    }
+                },
+                {
+                    "objectId": "per11516",
+                    "FirstName": "ERIC",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "ERIC J. COLEMAN"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "COLEMAN",
+                    "MiddleName": "J",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Teacher"
+                        }
+                    }
+                },
+                {
+                    "objectId": "per11514",
+                    "FirstName": "MICHAEL",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "MICHAEL IAN SACHS"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "SACHS",
+                    "MiddleName": "IAN",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Retired Environmental Technician"
+                        }
+                    }
+                },
+                {
+                    "objectId": "per11515",
+                    "FirstName": "CHRISTOPHER",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "CHRISTOPHER MOWATT"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "MOWATT",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Senior Paralegal"
+                        }
+                    }
+                },
+                {
+                    "objectId": "per11517",
+                    "FirstName": "MICHAEL",
+                    "FullName": {
+                        "Text": {
+                            "language": "en",
+                            "content": "MICHAEL W. WEBB"
+                        }
+                    },
+                    "Gender": "Male",
+                    "LastName": "WEBB",
+                    "MiddleName": "W",
+                    "PartyId": "Party-0",
+                    "Profession": {
+                        "Text": {
+                            "language": "en",
+                            "content": "Redondo Beach City Attorney"
+                        }
+                    }
+                }
+            ]
+        },
+        "SequenceStart": 1,
+        "SequenceEnd": 1,
+        "Status": "certified",
+        "VendorApplicationId": "Auto-Generated v0.1"
+    }
+}

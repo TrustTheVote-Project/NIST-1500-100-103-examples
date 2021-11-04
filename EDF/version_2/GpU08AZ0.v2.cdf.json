@@ -1,0 +1,577 @@
+{
+    "ElectionReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-100/v2",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "Candidate": [
+                {
+                    "ObjectId": "can11369",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "JOSEPH ROMERO ROCHA"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11369"
+                },
+                {
+                    "ObjectId": "can11370",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "URIEL EDWARD MACIAS"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11370"
+                },
+                {
+                    "ObjectId": "can11371",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "RUSSELL BRYAN RENTSCHLER"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11371"
+                },
+                {
+                    "ObjectId": "can11372",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "ROBERT GONZALES"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11372"
+                },
+                {
+                    "ObjectId": "can11373",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "EDWARD J. ALVAREZ"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11373"
+                },
+                {
+                    "ObjectId": "can11375",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "ANDREW N. MENDEZ"
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11375"
+                },
+                {
+                    "ObjectId": "can11382",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "JEFFREY LAWRENCE CORNEJO JR."
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11382"
+                },
+                {
+                    "ObjectId": "can11376",
+                    "BallotName": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "ARTHUR M. VASQUEZ JR."
+                        }
+                    },
+                    "IsIncumbent": false,
+                    "PartyId": "Party-0",
+                    "PersonId": "per11376"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc4980",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11369",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11369"
+                        },
+                        {
+                            "ObjectId": "cs11370",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11370"
+                        },
+                        {
+                            "ObjectId": "cs11371",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 3,
+                            "CandidateIds": "can11371"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08AZ0",
+                    "Name": "AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor",
+                    "SubUnitsReported": 7,
+                    "TotalSubUnits": 7,
+                    "OfficeIds": "off4980",
+                    "VotesAllowed": 1
+                },
+                {
+                    "ObjectId": "cc4977",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                        }
+                    },
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11372",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 1,
+                            "CandidateIds": "can11372"
+                        },
+                        {
+                            "ObjectId": "cs11373",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 2,
+                            "CandidateIds": "can11373"
+                        },
+                        {
+                            "ObjectId": "cs11375",
+                            "xsi:type": "CandidateSelection",
+                            "SequenceOrder": 3,
+                            "CandidateIds": "can11375"
+                        }
+                    ],
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08AZ0",
+                    "Name": "AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council",
+                    "SubUnitsReported": 7,
+                    "TotalSubUnits": 7,
+                    "OfficeIds": "off4977",
+                    "VotesAllowed": 2
+                },
+                {
+                    "ObjectId": "cc4981",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk"
+                        }
+                    },
+                    "ContestSelection": {
+                        "ObjectId": "cs11382",
+                        "xsi:type": "CandidateSelection",
+                        "SequenceOrder": 1,
+                        "CandidateIds": "can11382"
+                    },
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08AZ0",
+                    "Name": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk",
+                    "SubUnitsReported": 7,
+                    "TotalSubUnits": 7,
+                    "OfficeIds": "off4981",
+                    "VotesAllowed": 1
+                },
+                {
+                    "ObjectId": "cc4982",
+                    "xsi:type": "CandidateContest",
+                    "BallotTitle": {
+                        "Text": {
+                            "Language": "en",
+                            "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                        }
+                    },
+                    "ContestSelection": {
+                        "ObjectId": "cs11376",
+                        "xsi:type": "CandidateSelection",
+                        "SequenceOrder": 1,
+                        "CandidateIds": "can11376"
+                    },
+                    "CountStatus": {
+                        "Status": "unknown",
+                        "Type": "other"
+                    },
+                    "ElectionDistrictId": "GpU08AZ0",
+                    "Name": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer",
+                    "SubUnitsReported": 7,
+                    "TotalSubUnits": 7,
+                    "OfficeIds": "off4982",
+                    "VotesAllowed": 1
+                }
+            ],
+            "ElectionScopeId": "GpU08AZ0",
+            "Name": {
+                "Text": {
+                    "Language": "en",
+                    "content": "CONSOLIDATED MUNICIPAL AND SPECIAL ELECTIONS"
+                }
+            },
+            "StartDate": "2017-03-07",
+            "EndDate": "2017-03-07",
+            "Type": "special"
+        },
+        "Format": "precinct-level",
+        "GeneratedDate": "2017-03-21T10:45:22",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08AZ0",
+                "xsi:type": "ReportingUnit",
+                "ComposingGpUnitIds": "pre_0550008A pre_0550012A pre_0550025A pre_0550074A pre_0550080A pre_0550084B pre_0550085A pre_9990042A",
+                "ExternalIdentifier": {
+                    "Type": "ocd-id",
+                    "Value": "ocd-division/country:us/state:ca/place:azusa"
+                },
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "CITY OF AZUSA"
+                    }
+                },
+                "Type": "city"
+            },
+            {
+                "ObjectId": "pre_0550008A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0056 - AZUSA"
+                    }
+                },
+                "Number": "0056",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550012A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0057 - AZUSA"
+                    }
+                },
+                "Number": "0057",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550025A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0058 - AZUSA"
+                    }
+                },
+                "Number": "0058",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550074A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0059 - AZUSA"
+                    }
+                },
+                "Number": "0059",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550080A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0060 - AZUSA"
+                    }
+                },
+                "Number": "0060",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550084B",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0061 - AZUSA"
+                    }
+                },
+                "Number": "0061",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0550085A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "0062 - AZUSA"
+                    }
+                },
+                "Number": "0062",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990042A",
+                "xsi:type": "ReportingUnit",
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "8042 - Ballot Group 42"
+                    }
+                },
+                "Number": 8042,
+                "Type": "ballot-batch"
+            }
+        ],
+        "Issuer": "Los Angeles County Registrar-Recorder/County Clerk",
+        "IssuerAbbreviation": "LA RR/CC",
+        "Office": [
+            {
+                "ObjectId": "off4980",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION Mayor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4977",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4981",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Clerk"
+                    }
+                }
+            },
+            {
+                "ObjectId": "off4982",
+                "IsPartisan": false,
+                "Name": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "AZUSA CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                    }
+                }
+            }
+        ],
+        "Person": [
+            {
+                "ObjectId": "per11369",
+                "FirstName": "JOSEPH",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "JOSEPH ROMERO ROCHA"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "ROCHA",
+                "MiddleName": "ROMERO",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Mayor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11370",
+                "FirstName": "URIEL",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "URIEL EDWARD MACIAS"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "MACIAS",
+                "MiddleName": "EDWARD",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Councilmember/Financial Officer"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11371",
+                "FirstName": "RUSSELL",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "RUSSELL BRYAN RENTSCHLER"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "RENTSCHLER",
+                "MiddleName": "BRYAN",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Pest Control"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11372",
+                "FirstName": "ROBERT",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "ROBERT GONZALES"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "GONZALES",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Councilmember"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11373",
+                "FirstName": "EDWARD",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "EDWARD J. ALVAREZ"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "ALVAREZ",
+                "MiddleName": "J",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Councilmember/Federal Auditor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11375",
+                "FirstName": "ANDREW",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "ANDREW N. MENDEZ"
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "MENDEZ",
+                "MiddleName": "N",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "Businessman/Realtor"
+                    }
+                }
+            },
+            {
+                "ObjectId": "per11382",
+                "FirstName": "JEFFREY",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "JEFFREY LAWRENCE CORNEJO JR."
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "CORNEJO",
+                "MiddleName": "LAWRENCE",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "City Clerk"
+                    }
+                },
+                "content": "JR"
+            },
+            {
+                "ObjectId": "per11376",
+                "FirstName": "ARTHUR",
+                "FullName": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "ARTHUR M. VASQUEZ JR."
+                    }
+                },
+                "Gender": "Male",
+                "LastName": "VASQUEZ",
+                "MiddleName": "M",
+                "PartyId": "Party-0",
+                "Profession": {
+                    "Text": {
+                        "Language": "en",
+                        "content": "City Treasurer"
+                    }
+                },
+                "content": "JR"
+            }
+        ],
+        "SequenceStart": 1,
+        "SequenceEnd": 1,
+        "Status": "certified",
+        "VendorApplicationId": "Auto-Generated v0.1"
+    }
+}

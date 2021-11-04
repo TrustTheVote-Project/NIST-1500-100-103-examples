@@ -1,0 +1,216 @@
+{
+    "CastVoteRecordReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-103/v1",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "ObjectId": "some-id",
+            "Candidate": [
+                {
+                    "ObjectId": "can11431",
+                    "Name": "JORGE A. MARQUEZ",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11427",
+                    "Name": "JOHN C. KING",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11429",
+                    "Name": "VICTOR LINARES",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11432",
+                    "Name": "NEIL L. POLZIN",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11434",
+                    "Name": "MARY LOU WALCZAK",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11433",
+                    "Name": "GEOFFREY COBBETT",
+                    "PartyId": "Party-0"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc4954",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11431",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11431"
+                        },
+                        {
+                            "ObjectId": "cs11427",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11427"
+                        },
+                        {
+                            "ObjectId": "cs11429",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11429"
+                        },
+                        {
+                            "ObjectId": "cs11432",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11432"
+                        }
+                    ],
+                    "Name": "COVINA CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                },
+                {
+                    "ObjectId": "cc4962",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": {
+                        "ObjectId": "cs11434",
+                        "xsi:type": "CandidateSelection",
+                        "CandidateIds": "can11434"
+                    },
+                    "Name": "COVINA CITY GENERAL MUNICIPAL ELECTION, City Clerk"
+                },
+                {
+                    "ObjectId": "cc4963",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": {
+                        "ObjectId": "cs11433",
+                        "xsi:type": "CandidateSelection",
+                        "CandidateIds": "can11433"
+                    },
+                    "Name": "COVINA CITY GENERAL MUNICIPAL ELECTION, City Treasurer"
+                },
+                {
+                    "ObjectId": "bmc4953",
+                    "xsi:type": "BallotMeasureContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "bms4953a",
+                            "xsi:type": "BallotMeasureSelection"
+                        },
+                        {
+                            "ObjectId": "bms4953b",
+                            "xsi:type": "BallotMeasureSelection"
+                        }
+                    ],
+                    "Name": "COVINA CITY SPECIAL MUNICIPAL ELECTION - MEASURE CC"
+                }
+            ],
+            "ElectionScopeId": "GpU08CQ0"
+        },
+        "GeneratedDate": "2017-03-21T10:45:22Z",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08CQ0",
+                "Name": "CITY OF COVINA",
+                "Type": "other",
+                "OtherType": "city"
+            },
+            {
+                "ObjectId": "pre_1500012A",
+                "Name": "0235 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500014A",
+                "Name": "0236 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500022A",
+                "Name": "0237 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500024A",
+                "Name": "0238 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500029A",
+                "Name": "0239 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500035A",
+                "Name": "0240 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500037A",
+                "Name": "0241 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500084A",
+                "Name": "0242 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500087A",
+                "Name": "0243 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500089A",
+                "Name": "0244 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_1500093A",
+                "Name": "0245 - COVINA",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990048A",
+                "Name": "8048 - Ballot Group 48",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            }
+        ],
+        "Party": [
+            {
+                "ObjectId": "Party-0",
+                "Name": "Non Partisan"
+            },
+            {
+                "ObjectId": "Party-1",
+                "Name": "Democratic"
+            },
+            {
+                "ObjectId": "Party-2",
+                "Name": "Republican"
+            },
+            {
+                "ObjectId": "Party-3",
+                "Name": "American Independent"
+            },
+            {
+                "ObjectId": "Party-4",
+                "Name": "Green"
+            },
+            {
+                "ObjectId": "Party-5",
+                "Name": "Libertarian"
+            },
+            {
+                "ObjectId": "Party-6",
+                "Name": "Peace and Freedom"
+            }
+        ],
+        "ReportGeneratingDeviceIds": "simulated-1",
+        "ReportingDevice": {
+            "ObjectId": "simulated-1",
+            "Application": "Ballot Marking application",
+            "Manufacturer": "Trust the Vote",
+            "Model": "some-model-number",
+            "SerialNumber": "some-serial-number"
+        },
+        "ReportType": "originating-device-export",
+        "Version": "1.0.0"
+    }
+}

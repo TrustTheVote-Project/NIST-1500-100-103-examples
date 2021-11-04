@@ -1,0 +1,219 @@
+{
+    "CastVoteRecordReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-103/v1",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "ObjectId": "some-id",
+            "Candidate": [
+                {
+                    "ObjectId": "can11513",
+                    "Name": "BILL BRAND",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11512",
+                    "Name": "STEVE ASPEL",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11516",
+                    "Name": "ERIC J. COLEMAN",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11514",
+                    "Name": "MICHAEL IAN SACHS",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11515",
+                    "Name": "CHRISTOPHER MOWATT",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11517",
+                    "Name": "MICHAEL W. WEBB",
+                    "PartyId": "Party-0"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc5008",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11513",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11513"
+                        },
+                        {
+                            "ObjectId": "cs11512",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11512"
+                        },
+                        {
+                            "ObjectId": "cs11516",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11516"
+                        },
+                        {
+                            "ObjectId": "cs11514",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11514"
+                        },
+                        {
+                            "ObjectId": "cs11515",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11515"
+                        }
+                    ],
+                    "Name": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION Mayor"
+                },
+                {
+                    "ObjectId": "cc5009",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": {
+                        "ObjectId": "cs11517",
+                        "xsi:type": "CandidateSelection",
+                        "CandidateIds": "can11517"
+                    },
+                    "Name": "REDONDO BEACH CITY GENERAL MUNICIPAL ELECTION, City Attorney"
+                },
+                {
+                    "ObjectId": "bmc5007",
+                    "xsi:type": "BallotMeasureContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "bms5007a",
+                            "xsi:type": "BallotMeasureSelection"
+                        },
+                        {
+                            "ObjectId": "bms5007b",
+                            "xsi:type": "BallotMeasureSelection"
+                        }
+                    ],
+                    "Name": "REDONDO BEACH CITY SPECIAL MUNICIPAL ELECTION - MEASURE C"
+                }
+            ],
+            "ElectionScopeId": "GpU08RE0"
+        },
+        "GeneratedDate": "2017-03-21T10:45:22",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08RE0",
+                "Name": "CITY OF REDONDO BEACH",
+                "Type": "other",
+                "OtherType": "city"
+            },
+            {
+                "ObjectId": "pre_5550005A",
+                "Name": "0894 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550013A",
+                "Name": "0895 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550014A",
+                "Name": "0896 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550016A",
+                "Name": "0897 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550017A",
+                "Name": "0898 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550021A",
+                "Name": "0899 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550022A",
+                "Name": "0900 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550029A",
+                "Name": "0901 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550032A",
+                "Name": "0902 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550036A",
+                "Name": "0903 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550038A",
+                "Name": "0904 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550044A",
+                "Name": "0905 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550050C",
+                "Name": "0906 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550091A",
+                "Name": "0907 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_5550093A",
+                "Name": "0908 - REDONDO BEACH",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990088A",
+                "Name": "8088 - Ballot Group 88",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            },
+            {
+                "ObjectId": "pre_9990089A",
+                "Name": "8089 - Ballot Group 89",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            },
+            {
+                "ObjectId": "pre_9990090A",
+                "Name": "8090 - Ballot Group 90",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            },
+            {
+                "ObjectId": "pre_9990091A",
+                "Name": "8091 - Ballot Group 91",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            }
+        ],
+        "ReportGeneratingDeviceIds": "simulated-1",
+        "ReportingDevice": {
+            "ObjectId": "simulated-1",
+            "Application": "Ballot Marking application",
+            "Manufacturer": "Trust the Vote",
+            "Model": "some-model-number",
+            "SerialNumber": "some-serial-number"
+        },
+        "ReportType": "originating-device-export",
+        "Version": "1.0.0"
+    }
+}

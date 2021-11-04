@@ -1,0 +1,125 @@
+{
+    "CastVoteRecordReport": {
+        "xmlns": "http://itl.nist.gov/ns/voting/1500-103/v1",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "Election": {
+            "ObjectId": "some-id",
+            "Candidate": [
+                {
+                    "ObjectId": "can11480",
+                    "Name": "ALICIA ROMERO",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11481",
+                    "Name": "ANA MARIA QUINTANA",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11479",
+                    "Name": "VIOLETA ALVAREZ",
+                    "PartyId": "Party-0"
+                },
+                {
+                    "ObjectId": "can11482",
+                    "Name": "SUSANA LOPEZ",
+                    "PartyId": "Party-0"
+                }
+            ],
+            "Contest": [
+                {
+                    "ObjectId": "cc4978",
+                    "xsi:type": "CandidateContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "cs11480",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11480"
+                        },
+                        {
+                            "ObjectId": "cs11481",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11481"
+                        },
+                        {
+                            "ObjectId": "cs11479",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11479"
+                        },
+                        {
+                            "ObjectId": "cs11482",
+                            "xsi:type": "CandidateSelection",
+                            "CandidateIds": "can11482"
+                        }
+                    ],
+                    "Name": "BELL CITY GENERAL MUNICIPAL ELECTION Member of the City Council"
+                },
+                {
+                    "ObjectId": "bmc4979",
+                    "xsi:type": "BallotMeasureContest",
+                    "ContestSelection": [
+                        {
+                            "ObjectId": "bms4979a",
+                            "xsi:type": "BallotMeasureSelection"
+                        },
+                        {
+                            "ObjectId": "bms4979b",
+                            "xsi:type": "BallotMeasureSelection"
+                        }
+                    ],
+                    "Name": "BELL CITY SPECIAL MUNICIPAL ELECTION - MEASURE T"
+                }
+            ],
+            "ElectionScopeId": "GpU08BE0"
+        },
+        "GeneratedDate": "2017-03-21T10:45:22",
+        "GpUnit": [
+            {
+                "ObjectId": "GpU08BE0",
+                "Name": "CITY OF BELL",
+                "Type": "other",
+                "OtherType": "city"
+            },
+            {
+                "ObjectId": "pre_0700001A",
+                "Name": "0083 - BELL",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0700002A",
+                "Name": "0084 - BELL",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0700003D",
+                "Name": "0085 - BELL",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_0700005E",
+                "Name": "6003 - BELL",
+                "Type": "precinct"
+            },
+            {
+                "ObjectId": "pre_9990043A",
+                "Name": "8043 - Ballot Group 43",
+                "Type": "other",
+                "OtherType": "ballot-batch"
+            }
+        ],
+        "Party": {
+            "ObjectId": "Party-0",
+            "Name": "Non Partisan"
+        },
+        "ReportGeneratingDeviceIds": "simulated-1",
+        "ReportingDevice": {
+            "ObjectId": "simulated-1",
+            "Application": "Ballot Marking application",
+            "Manufacturer": "Trust the Vote",
+            "Model": "some-model-number",
+            "SerialNumber": "some-serial-number"
+        },
+        "ReportType": "originating-device-export",
+        "Version": "1.0.0"
+    }
+}
