@@ -1,44 +1,92 @@
-#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
-#+options: author:t broken-links:nil c:nil creator:nil
-#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
-#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
-#+options: timestamp:t title:t toc:t todo:t |:t
 #+title: The NIST 1500 103 Cast Vote Record: an Annotated Overview
 #+date: <2021-11-12 Fri>
 #+author: Clifford E. Wulfman
 #+email: cliff@osetfoundation.org
-#+language: en
-#+select_tags: export
-#+exclude_tags: noexport
-#+creator: Emacs 27.2 (Org mode 9.4.4)
 
-This document reviews the structure of a CVR record.  The standard is
-designed to be serialized as either XML or JSON, and there are
-official schemas for each format; here we use XML because its
-structure is easier to read and understand.  The [[https://doi.org/10.6028/NIST.SP.1500-103][official
-documentation]] is generally straightforward and provides very good
+
+This document reviews the structure of a CVR record from the viewpoint
+of a developer who wishes to read CVR records, parse CVR records,
+process CVR records, or generate CVR records.  The [[https://doi.org/10.6028/NIST.SP.1500-103][official
+documentation]] is generally straightforward and provides a very good
 overview and background information; anyone interested in working with
 CVRs would be well served by reading the first nineteen pages, as well
 as Section 5 (Usage Examples).
 
+* A Note about Seriaization Formats: XML and JSON
+  The NIST documentation is agnostic about how its specifications are
+  /serialized/: that is, the format in which data conforming with the
+  specification are expressed (printed out, written to a file, and so
+  on).  The specification itself is expressed in [[https://en.wikipedia.org/wiki/Unified_Modeling_Language][UML]]; a CVR document
+  is /valid/ if it conforms with the UML specification.
+
+  The UML model is canonical, but as a courtesy to implementers, the
+  standard authors generated /schemas/ that describe this canonical
+  structure in two commonly used languages or formats: XML and JSON.
+  It is important for developers to understand that expressions of CVR
+  documents in XML or JSON are /semantically equivalent/.  JSON was
+  designed to be a light-weight transmission format that represents
+  data as attribute-value pairs; XML is a meta-language that can be
+  used to represent information as trees of elements with attributes.
+  XML has a rich library of tools that can be used to validate XML
+  documents against schemas in a number of languages; indeed,
+  /valiadation/ against schemas is a major component of XML
+  technology.
+
+  These documents therefore use XML in their examples.  For readers
+  who wish to study these examples in JSON format, we suggest using
+  one of the many utilites available on the web to generate JSON
+  expressions from XML data.
+
 * CastVoteRecordReport
-  The model implements a report of cast vote records exported from a
-  device such as scanner or an EMS.  The report is designed to carry
-  multiple records, each of which is identical save for the voter's
-  actual selections, and the format was designed to minimize data
-  duplication by heavy use of structural references.  We will see
-  examples of this shortly.  Here is the top-level structure of a Cast
-  Vote Record Report (CVRR).
+  The NIST model describes a report of cast vote records exported from
+  a device such as scanner or an election management system (EMS).
+  The report is designed to carry multiple records, each of which is
+  identical save for the voter's actual selections: the format was
+  designed to minimize data duplication by making heavy use of
+  structural references.  We will see examples of this shortly.  Here
+  is the top-level structure of a Cast Vote Record Report (CVRR).
 
   #+begin_example
   - CastVoteRecordReport
-    - CVR+
+    - CVR*
     - Election
     - GeneratedDate
-    - GpUnit
+    - GpUnit+
     - ReportGeneratingDeviceIds
     - ReportingDevice+
   #+end_example
+
+  Here's what that structure looks like in XML:
+
+  #+begin_src xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <CastVoteRecordReport>
+      <CVR/>
+      <CVR/>
+      <CVR/>
+      <Election/>
+      <GeneratedDate/>
+      <GpUnit/>
+      <GpUnit/>
+      <ReportGeneratingDeviceIds/>
+      <ReportingDevice/>
+      <ReportingDevice/>
+    </CastVoteRecordReport>
+  #+end_src
+
+  A CastVoteRecordReport carries data about voters' choices: the
+  primary expression of a group of voters' intentions (votes).  The
+  CastVoteRecordReport record format was designed to carry a
+  collection of votes in a transimissible format: a format that has
+  been optimized for transfer from data-recording devices to
+  data-tabulating devices.
+
+  A CastVoteRecordReport does not exist in isolation: it must be read
+  and intepreted in the context of Election Definitions that encode
+  formally described elements of the election in which the electors in
+  the CastVoteRecordReport have expressed choices.
+
+  TODO: a diagram that shows how a CVRR relates to an ED.
 
   Here is a minimal CVRR:
 
