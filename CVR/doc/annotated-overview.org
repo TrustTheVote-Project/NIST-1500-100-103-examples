@@ -7,10 +7,10 @@
 This document reviews the structure of a CVR record from the viewpoint
 of a developer who wishes to read CVR records, parse CVR records,
 process CVR records, or generate CVR records.  The [[https://doi.org/10.6028/NIST.SP.1500-103][official
-documentation]] is generally straightforward and provides a very good
-overview and background information; anyone interested in working with
-CVRs would be well served by reading the first nineteen pages, as well
-as Section 5 (Usage Examples).
+documentation]] of the CVR specification is generally straightforward
+and provides a very good overview and background information; anyone
+interested in working with CVRs would be well served by reading the
+first nineteen pages, as well as Section 5 (Usage Examples).
 
 * A Note about Seriaization Formats: XML and JSON
   The NIST documentation is agnostic about how its specifications are
@@ -74,7 +74,7 @@ as Section 5 (Usage Examples).
     </CastVoteRecordReport>
   #+end_src
 
-  A CastVoteRecordReport carries data about voters' choices: the
+  A CastVoteRecordReport (CVRR) carries data about voters' choices: the
   primary expression of a group of voters' intentions (votes).  The
   CastVoteRecordReport record format was designed to carry a
   collection of votes in a transimissible format: a format that has
@@ -85,6 +85,8 @@ as Section 5 (Usage Examples).
   and intepreted in the context of Election Definitions that encode
   formally described elements of the election in which the electors in
   the CastVoteRecordReport have expressed choices.
+
+  See https://github.com/usnistgov/electionResultsReporting
 
   TODO: a diagram that shows how a CVRR relates to an ED.
 
@@ -169,14 +171,20 @@ as Section 5 (Usage Examples).
     - Status?
     - Type
 
-
-
-
 * Processing Implications
   The highly-structured nature of CVRRs and CVRs can make them quite
   verbose but simple to parse.  Developers are strongly advised to use
-  an XML or JSON parser when working with CVRRs and CVRs
+  an XML or JSON parser when working with CVRRs and CVRs.
 
   #+CAPTION: A spare CVR record
   #+NAME: spare_cvr
   [[file:spare_cvr.jpg]]
+
+
+  Let's look at an example.  Here's an Election definition:
+
+  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/EDF/version_2/GpU08AZ0.v2.cdf.xml
+
+  And here's a corresponding CVRR
+  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/CVR/GpU08AZ0.cvr.xml
+
