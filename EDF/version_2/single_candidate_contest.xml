@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    A definition of an election containing a single candidate contest.
+    
+    This definition has been enhanced with some optional elements, to show
+    that the schema supports many, many varieties of election definitions, 
+    at various levels of detail.
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+
+    <Election>
+        <BallotStyle>
+            <GpUnitIds>princeton_precinct_11</GpUnitIds>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>princeton_borough_header</HeaderId>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_princeton_mayor</ContestId>
+            </OrderedContent>
+        </BallotStyle>
+        
+        <Candidate ObjectId="candidate_alpha">
+            <BallotName>
+                <Text Language="en">Anthony Alpha</Text>
+            </BallotName>
+            <PartyId>princeton_democratic_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_beta">
+            <BallotName>
+                <Text Language="en">Betty Beta</Text>
+            </BallotName>
+            <PartyId>new_jersey_republican_party</PartyId>
+        </Candidate>
+
+        <Contest xsi:type="CandidateContest" ObjectId="contest_princeton_mayor">         
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="alpha_for_mayor">
+                <CandidateIds>candidate_alpha</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="beta_for_mayor">
+                <CandidateIds>beta_for_mayor</CandidateIds>
+            </ContestSelection>
+            
+            <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+            <Name>Selection of Mayor of Princeton</Name>
+            <VoteVariation>majority</VoteVariation>
+            <NumberElected>1</NumberElected>
+            <OfficeIds>princeton_mayor</OfficeIds>
+            <VotesAllowed>1</VotesAllowed>
+        </Contest>
+
+
+        <ElectionScopeId>princeton_borough</ElectionScopeId>
+        <Name>
+            <Text Language="en">Spring 2022 Princeton Municipal Election</Text>
+        </Name>
+        <StartDate>2022-04-15</StartDate>
+        <EndDate>2022-04-15</EndDate>
+        <Type>general</Type>
+    </Election>
+
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <GpUnit xsi:type="ReportingUnit" ObjectId="community_park_polling_place">
+        <Name>
+            <Text Language="en">Community Park School</Text>
+        </Name>
+        <Type>polling-place</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_precinct_11">
+        <ComposingGpUnitIds>community_park_polling_place</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_borough">
+        <ComposingGpUnitIds>princeton_precinct_11</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Princeton</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="mercer_county">
+        <ComposingGpUnitIds>princeton_borough</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="legislative_district_16">
+        <Name>
+            <Text Language="en">District 16</Text>
+        </Name>
+        <Type>other</Type>
+        <OtherType>legislative-district</OtherType>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+
+    <Header ObjectId="state_header">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="mercer_county_header">
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="princeton_borough_header">
+        <Name>
+            <Text Language="en">Municipality of Princeton</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="princeton_precinct_11_header">
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+    </Header>
+    
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+    <!-- Elected offices in the municipality of Princeton -->
+    <Office ObjectId="princeton_mayor">
+        <!-- ElectionDistrictId is optional -->
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Mayor of the City of Princeton</Text>
+        </Name>
+    </Office>
+
+    <!-- Princeton Council members -->
+    <Office ObjectId="princeton_councilmember_1">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_2">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_3">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_4">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_5">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_6">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_7">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+
+    <OfficeGroup Label="Council of Princeton">
+        <Name>Council of Princeton</Name>
+        <OfficeIds>princeton_councilmember_1 princeton_councilmember_2 princeton_councilmember_3
+            princeton_councilmember_4 princeton_councilmember_5 princeton_councilmember_6
+            princeton_councilmember_7</OfficeIds>
+    </OfficeGroup>
+
+    <Party ObjectId="princeton_democratic_party">
+        <Abbreviation>
+            <Text Language="en">PDMC</Text>
+        </Abbreviation>
+        <Name>
+            <Text Language="en">Princeton Democratic Municipal Committee</Text>
+        </Name>
+        <PartyScopeGpUnitIds>princeton_borough</PartyScopeGpUnitIds>
+    </Party>
+    <Party ObjectId="mercer_county_democratic_party">
+        <ContactInformation Label="website">
+            <Uri>https://mercerdemocrats.com</Uri>
+        </ContactInformation>
+        <Name>
+            <Text Language="en">Mercer County Democrats</Text>
+        </Name>
+        <PartyScopeGpUnitIds>mercer_county</PartyScopeGpUnitIds>
+    </Party>
+    <Party ObjectId="new_jersey_republican_party">
+        <Abbreviation>
+            <Text Language="en">NJGOP</Text>
+        </Abbreviation>
+        <Name>
+            <Text Language="en">New Jersey Republican Party</Text>
+        </Name>
+    </Party>
+
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>

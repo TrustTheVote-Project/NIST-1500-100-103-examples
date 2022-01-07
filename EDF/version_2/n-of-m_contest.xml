@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Definition of an election containing an n-of-m contest.
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+
+    <Election>
+        <BallotStyle>
+            <GpUnitIds>princeton_borough</GpUnitIds>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>princeton_borough_header</HeaderId>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>town_council_contest</ContestId>
+            </OrderedContent>
+        </BallotStyle>
+
+        <!-- Candidates for town council -->
+        <Candidate ObjectId="candidate_cnum_1">
+            <BallotName>
+                <Text Language="en">candidate_1</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_2">
+            <BallotName>
+                <Text Language="en">candidate_2</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_3">
+            <BallotName>
+                <Text Language="en">candidate_3</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_4">
+            <BallotName>
+                <Text Language="en">candidate_4</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_5">
+            <BallotName>
+                <Text Language="en">candidate_5</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_6">
+            <BallotName>
+                <Text Language="en">candidate_6</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_7">
+            <BallotName>
+                <Text Language="en">candidate_7</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_8">
+            <BallotName>
+                <Text Language="en">candidate_8</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_9">
+            <BallotName>
+                <Text Language="en">candidate_9</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_10">
+            <BallotName>
+                <Text Language="en">candidate_10</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_11">
+            <BallotName>
+                <Text Language="en">candidate_11</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_12">
+            <BallotName>
+                <Text Language="en">candidate_12</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_cnum_13">
+            <BallotName>
+                <Text Language="en">candidate_13</Text>
+            </BallotName>
+        </Candidate>
+
+        <!-- Town Council contest -->
+        <Contest xsi:type="CandidateContest" ObjectId="town_council_contest">
+            <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+            <Name>For Princeton Town Council</Name>
+            <VoteVariation>n-of-m</VoteVariation>
+            <OfficeIds>princeton_councilmember_1 princeton_councilmember_2 princeton_councilmember_3
+                princeton_councilmember_4 princeton_councilmember_5 princeton_councilmember_6
+                princeton_councilmember_7</OfficeIds>
+            <VotesAllowed>7</VotesAllowed>
+        </Contest>
+
+        <ElectionScopeId>princeton_borough</ElectionScopeId>
+        <Name>
+            <Text Language="en">Spring 2022 Princeton Municipal Election</Text>
+        </Name>
+        <StartDate>2022-04-15</StartDate>
+        <EndDate>2022-04-15</EndDate>
+        <Type>general</Type>
+    </Election>
+
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <!-- Precincts -->
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_1">
+        <Name>
+            <Text Language="en">Precinct 1</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_2">
+        <Name>
+            <Text Language="en">Precinct 2</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_3">
+        <Name>
+            <Text Language="en">Precinct 3</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_4">
+        <Name>
+            <Text Language="en">Precinct 4</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_5">
+        <Name>
+            <Text Language="en">Precinct 5</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_6">
+        <Name>
+            <Text Language="en">Precinct 6</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_7">
+        <Name>
+            <Text Language="en">Precinct 7</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_8">
+        <Name>
+            <Text Language="en">Precinct 8</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_9">
+        <Name>
+            <Text Language="en">Precinct 9</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_10">
+        <Name>
+            <Text Language="en">Precinct 10</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_11">
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_12">
+        <Name>
+            <Text Language="en">Precinct 12</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_13">
+        <Name>
+            <Text Language="en">Precinct 13</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_14">
+        <Name>
+            <Text Language="en">Precinct 14</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_15">
+        <Name>
+            <Text Language="en">Precinct 15</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_16">
+        <Name>
+            <Text Language="en">Precinct 16</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_17">
+        <Name>
+            <Text Language="en">Precinct 17</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_18">
+        <Name>
+            <Text Language="en">Precinct 18</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_19">
+        <Name>
+            <Text Language="en">Precinct 19</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_20">
+        <Name>
+            <Text Language="en">Precinct 20</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_21">
+        <Name>
+            <Text Language="en">Precinct 21</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_22">
+        <Name>
+            <Text Language="en">Precinct 22</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+
+
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_borough">
+        <ComposingGpUnitIds>precinct_1 precinct_2 precinct_3 precinct_4 precinct_5 precinct_6
+            precinct_7 precinct_8 precinct_9 precinct_10 precinct_11 precinct_12 precinct_13
+            precinct_14 precinct_15 precinct_16 precinct_17 precinct_18 precinct_19 precinct_20
+            precinct_21 precinct_22 </ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Princeton</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="mercer_county">
+        <ComposingGpUnitIds>princeton_borough</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="legislative_district_16">
+        <Name>
+            <Text Language="en">District 16</Text>
+        </Name>
+        <Type>other</Type>
+        <OtherType>legislative-district</OtherType>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+
+    <Header ObjectId="state_header">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="mercer_county_header">
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="princeton_borough_header">
+        <Name>
+            <Text Language="en">Municipality of Princeton</Text>
+        </Name>
+    </Header>
+
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+
+
+    <!-- Princeton Council offices -->
+    <Office ObjectId="princeton_councilmember_1">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_2">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_3">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_4">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_5">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_6">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_7">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+
+    <OfficeGroup Label="Council of Princeton">
+        <Name>Council of Princeton</Name>
+        <OfficeIds>princeton_councilmember_1 princeton_councilmember_2 princeton_councilmember_3
+            princeton_councilmember_4 princeton_councilmember_5 princeton_councilmember_6
+            princeton_councilmember_7</OfficeIds>
+    </OfficeGroup>
+
+    <Party ObjectId="princeton_democratic_party">
+        <Abbreviation>
+            <Text Language="en">PDMC</Text>
+        </Abbreviation>
+        <Name>
+            <Text Language="en">Princeton Democratic Municipal Committee</Text>
+        </Name>
+        <PartyScopeGpUnitIds>princeton_borough</PartyScopeGpUnitIds>
+    </Party>
+    <Party ObjectId="mercer_county_democratic_party">
+        <ContactInformation Label="website">
+            <Uri>https://mercerdemocrats.com</Uri>
+        </ContactInformation>
+        <Name>
+            <Text Language="en">Mercer County Democrats</Text>
+        </Name>
+        <PartyScopeGpUnitIds>mercer_county</PartyScopeGpUnitIds>
+    </Party>
+    <Party ObjectId="new_jersey_republican_party">
+        <Abbreviation>
+            <Text Language="en">NJGOP</Text>
+        </Abbreviation>
+        <Name>
+            <Text Language="en">New Jersey Republican Party</Text>
+        </Name>
+    </Party>
+
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>
