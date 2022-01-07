@@ -1,0 +1,9 @@
+#+TITLE: NIST Common Data Formats for Exchanging Election Data
+
+* Summary
+  
+
+* Glossary
+  - CDF :: Common Data Format.
+  - CVR :: Cast Vote Record.
+  - EDF :: Election Definition File.

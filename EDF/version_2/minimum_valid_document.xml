@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This is the minimal valid document, containing only
+    the elements and values required by the schema.  Note that
+    the minimum document does not require an election element.
+-->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>

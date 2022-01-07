@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    A simple election definition containing elements describing
+    geo-political units (GpUnits) and Offices.
+    
+    Like geopolitical units, offices are relatively invariant: 
+    jurisdictional government structures usually have proscribed
+    offices like mayor, alderman, commissioners, and other governmental
+    roles.  The roles are fulfilled by one or more people, who are
+    elected by citizens or appointed by other officials and who serve
+    in those roles for proscribed periods of time.
+    
+    Like geopolitical units, offices may be (but are not required to be)
+    grouped; e.g., a town council comprises town councilmembers.
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <GpUnit xsi:type="ReportingUnit" ObjectId="community_park_polling_place">
+        <Name>
+            <Text Language="en">Community Park School</Text>
+        </Name>
+        <Type>polling-place</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_precinct_11">
+        <ComposingGpUnitIds>community_park_polling_place</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_borough">
+        <ComposingGpUnitIds>princeton_precinct_11</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Princeton</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="mercer_county">
+        <ComposingGpUnitIds>princeton_borough</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="legislative_district_16">
+        <Name>
+            <Text Language="en">District 16</Text>
+        </Name>
+        <Type>other</Type>
+        <OtherType>legislative-district</OtherType>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+    
+    <!-- Elected offices in the municipality of Princeton -->
+    <Office ObjectId="princeton_mayor">
+        <!-- ElectionDistrictId is optional -->
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Mayor of the City of Princeton</Text>
+        </Name>
+    </Office>
+
+    <!-- Princeton Council members -->    
+    <Office ObjectId="princeton_councilmember_1">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_2">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_3">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_4">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_5">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_6">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="princeton_councilmember_7">
+        <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Princeton Councilmember</Text>
+        </Name>
+    </Office>
+
+    <OfficeGroup Label="Council of Princeton">
+        <Name>Council of Princeton</Name>
+        <OfficeIds>princeton_councilmember_1 princeton_councilmember_2 princeton_councilmember_3
+            princeton_councilmember_4 princeton_councilmember_5 princeton_councilmember_6
+            princeton_councilmember_7</OfficeIds>
+    </OfficeGroup>
+
+
+
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>
