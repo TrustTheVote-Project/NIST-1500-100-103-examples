@@ -36,10 +36,16 @@
 
         <Contest xsi:type="CandidateContest" ObjectId="contest_princeton_mayor">         
             <ContestSelection xsi:type="CandidateSelection" ObjectId="alpha_for_mayor">
+                <SequenceOrder>1</SequenceOrder>
                 <CandidateIds>candidate_alpha</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="beta_for_mayor">
+                <SequenceOrder>2</SequenceOrder>
                 <CandidateIds>beta_for_mayor</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="mayor_writein">
+                <SequenceOrder>3</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
             
             <ElectionDistrictId>princeton_borough</ElectionDistrictId>
