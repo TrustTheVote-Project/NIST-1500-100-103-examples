@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd">
+    <!-- 
+        This document contains the context in which the CVRs are interpreted. There
+        is no voter-specific information here.
+        
+        NB: all the ObjectId values are local to this document: they should not be
+        used outside the document.  In practice, many of the element ids will be copies
+        of the ids used in an election definition file that was used to generate the CVR,
+        but no processor should expect or rely on those ids to be identical.
+    -->
+    <Election ObjectId="princeton_municipal_election_2022">
+        <Candidate ObjectId="candidate_alpha"></Candidate>
+        <Candidate ObjectId="candidate_beta"></Candidate>
+        
+        <Contest xsi:type="CandidateContest" ObjectId="contest_princeton_mayor">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_candidate_alpha">
+                <CandidateIds>candidate_alpha</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_candidate_beta">
+                <CandidateIds>candidate_beta</CandidateIds>
+            </ContestSelection>
+        </Contest>
+        <ElectionScopeId>princeton_borough</ElectionScopeId>
+    </Election>
+    
+    
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+    
+    <GpUnit ObjectId="princeton_borough">
+    <Name>Municipality of Princeton</Name>
+        <Type>precinct</Type>
+    </GpUnit>    
+    <GpUnit ObjectId="precinct_1">
+        <Name>Precinct 1</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+        
+    <ReportGeneratingDeviceIds>markit</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="markit">
+        <Application>MarkIt Mobile App</Application>
+        <Manufacturer>Trust the Vote</Manufacturer>
+    </ReportingDevice>
+    <Version>1.0.0</Version>
+</CastVoteRecordReport>
