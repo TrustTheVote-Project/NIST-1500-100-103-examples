@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd">
+    <!-- 
+        A single CVR recording an n-of-m contest. Ballot lists three candidates;
+        voter is instructed to select two.
+        
+        In this example, the SelectionPosition Code is being used to associate
+        the selection with a named form field on the ballot PDF.
+    -->
+    <CVR>
+        <CurrentSnapshotId>cvrs_0</CurrentSnapshotId>
+        <CVRSnapshot ObjectId="cvrs_0">
+            <CVRContest>
+                <ContestId>contest_advisory_board</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>candidate_alpha</ContestSelectionId>
+                    <OptionPosition>1</OptionPosition>
+                    <SelectionPosition>
+                        <Code>
+                            <Type>other</Type>
+                            <OtherType>ballot_field_id</OtherType>
+                            <Value>id_of_pdf_form_field_for_alpha</Value>
+                        </Code>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+                <CVRContestSelection>
+                    <ContestSelectionId>candidate_gamma</ContestSelectionId>
+                    <OptionPosition>3</OptionPosition>
+                    <SelectionPosition>
+                        <Code>
+                            <Type>other</Type>
+                            <OtherType>ballot_field_id</OtherType>
+                            <Value>id_of_pdf_form_field_for_gamma</Value>
+                        </Code>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
+        </CVRSnapshot>
+        <ElectionId>princeton_municipal_election_2022</ElectionId>
+    </CVR>
+
+    <Election ObjectId="princeton_municipal_election_2022">
+        <Candidate ObjectId="candidate_alpha"/>
+        <Candidate ObjectId="candidate_beta"/>
+        <Candidate ObjectId="candidate_gamma"/>
+
+        <Contest xsi:type="CandidateContest" ObjectId="contest_advisory_board">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="cs_1">
+                <CandidateIds>candidate_alpha</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="cs_2">
+                <CandidateIds>candidate_beta</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="cs_3">
+                <CandidateIds>candidate_gamma</CandidateIds>
+            </ContestSelection>
+        </Contest>
+
+
+        <ElectionScopeId>princeton_borough</ElectionScopeId>
+    </Election>
+
+
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <GpUnit ObjectId="princeton_borough">
+        <Name>Municipality of Princeton</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit ObjectId="precinct_1">
+        <Name>Precinct 1</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+
+    <ReportGeneratingDeviceIds>markit</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="markit">
+        <Application>MarkIt Mobile App</Application>
+        <Manufacturer>Trust the Vote</Manufacturer>
+    </ReportingDevice>
+    <Version>1.0.0</Version>
+</CastVoteRecordReport>
