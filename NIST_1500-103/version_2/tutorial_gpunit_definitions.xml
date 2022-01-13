@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    A simple election definition containing elements describing
+    geo-political units (GpUnits).
+    
+    The GpUnit is one of the building-blocks of an election description: it 
+    is "where the votes come from;" descriptions of units of geopolitical geography that 
+    may be associated with contests, offices, ballot styles, and election results.
+    
+    The standard defines two types: 
+    
+    Reporting Units, which are real geo-political entities (states, counties,
+    districts, municipalities, precincts); and 
+    
+    Reporting Devices, which are types of devices or specific devices with which
+    election results can be associated.  Our applications will not be concerned 
+    with reporting devices.
+    
+    As with most of the schema, GpUnits have a document-unique identifier (the
+    "ObjectId" attribute in XML), which is used throughout the document as a reference
+    anchor.  In this pared-down document, for example, the GpUnit ObjectIds are used to
+    define a compositional hierarchy of reporting units. (Such groupings are not required
+    by the schema, however.)
+    
+    The structural data of GpUnits will, in practice, be managed in a Versa back-end database,
+    which will be used to compose election definitions.
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <GpUnit xsi:type="ReportingUnit" ObjectId="community_park_polling_place">
+        <Name>
+            <Text Language="en">Community Park School</Text>
+        </Name>
+        <Type>polling-place</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_precinct_11">
+        <ComposingGpUnitIds>community_park_polling_place</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_borough">
+        <ComposingGpUnitIds>princeton_precinct_11</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Princeton</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="mercer_county">
+        <ComposingGpUnitIds>princeton_borough</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="legislative_district_16">
+        <Name>
+            <Text Language="en">District 16</Text>
+        </Name>
+        <Type>other</Type>
+        <OtherType>Legislative District</OtherType>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>

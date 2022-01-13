@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    A definition of an election comprising a presidential contest.
+    
+    (This is an unrealistic example, because presidential contests
+    are usually bundled together with other contests in a general
+    election.)
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+
+    <!-- The Election -->
+    <Election>
+        <!-- Ballot Styles -->
+        <BallotStyle>
+            <GpUnitIds>united_states</GpUnitIds>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>national_header</HeaderId>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>presidential_contest</ContestId>
+                <OrderedContestSelectionIds>democratic_ticket
+                    republican_ticket</OrderedContestSelectionIds>
+            </OrderedContent>
+        </BallotStyle>
+
+        <!-- Candidates -->
+        <Candidate ObjectId="candidate_alpha">
+            <BallotName>
+                <Text Language="en">Anthony Alpha</Text>
+            </BallotName>
+            <IsTopTicket>true</IsTopTicket>
+            <PartyId>national_democratic_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_beta">
+            <BallotName>
+                <Text Language="en">Betty Beta</Text>
+            </BallotName>
+            <PartyId>national_democratic_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_gamma">
+            <BallotName>
+                <Text Language="en">Gloria Gamma</Text>
+            </BallotName>
+            <IsTopTicket>true</IsTopTicket>
+            <PartyId>national_republican_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_delta">
+            <BallotName>
+                <Text Language="en">David Delta</Text>
+            </BallotName>
+            <PartyId>national_republican_party</PartyId>
+        </Candidate>
+
+        <!-- Contests -->
+        <Contest xsi:type="CandidateContest" ObjectId="presidential_contest">
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="democratic_ticket">
+                <CandidateIds>candidate_alpha candidate_beta</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="republican_ticket">
+                <CandidateIds>candidate_gamma candidate_delta</CandidateIds>
+            </ContestSelection>
+
+
+            <ElectionDistrictId>state_new_jersey</ElectionDistrictId>
+            <Name>President of the United States</Name>
+            <VoteVariation>majority</VoteVariation>
+            <OfficeIds>us_president us_vice_president</OfficeIds>
+            <PrimaryPartyIds>national_democratic_party national_republican_party</PrimaryPartyIds>
+            <VotesAllowed>1</VotesAllowed>
+        </Contest>
+
+
+        <ElectionScopeId>united_states</ElectionScopeId>
+        <Name>
+            <Text Language="en">Spring 2022 Princeton Municipal Election</Text>
+        </Name>
+        <StartDate>2022-04-15</StartDate>
+        <EndDate>2022-04-15</EndDate>
+        <Type>general</Type>
+    </Election>
+    
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <!-- GpUnits -->
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="united_states">
+        <ComposingGpUnitIds>state_new_jersey</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">United States of America</Text>
+        </Name>
+        <Type>country</Type>
+    </GpUnit>
+
+    <!-- Headers -->
+    <Header ObjectId="national_header">
+        <Name>
+            <Text Language="en">National Contests</Text>
+        </Name>
+    </Header>
+
+
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+
+    <!-- Offices -->
+    <Office ObjectId="us_president">
+        <Name>
+            <Text Language="en">Office of President of the United States</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="us_vice_president">
+        <Name>
+            <Text Language="en">Office of Vice-President of the United States</Text>
+        </Name>
+    </Office>
+
+
+    <!-- Parties -->
+    <Party ObjectId="national_democratic_party">
+        <ContactInformation>
+            <Uri>https://democrats.org</Uri>
+        </ContactInformation>
+        <Name>
+            <Text Language="en">Democratic Party</Text>
+        </Name>
+    </Party>
+    <Party ObjectId="national_republican_party">
+        <Abbreviation>
+            <Text Language="en">GOP</Text>
+        </Abbreviation>
+        <Name>
+            <Text Language="en">Republican Party</Text>
+        </Name>
+    </Party>
+
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>

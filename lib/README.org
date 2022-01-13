@@ -1,0 +1,1 @@
+The lib directory contains a few utilities for working with documents in the NIST 1500-100 and -300 schemas.

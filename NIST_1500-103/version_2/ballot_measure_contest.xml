@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Definition of an election containing a ballot measure.
+ -->
+<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+
+    <Election>
+        <BallotStyle>
+            <GpUnitIds>princeton_borough</GpUnitIds>
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>princeton_borough_header</HeaderId>
+            </OrderedContent>
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>new_jersey_public_question_1</ContestId>
+            </OrderedContent>
+        </BallotStyle>
+
+ 
+        <Contest xsi:type="BallotMeasureContest" ObjectId="new_jersey_public_question_1">
+            <ElectionDistrictId>state_new_jersey</ElectionDistrictId>
+            <Name>Constitutional Amendment to Legalize Marijuana</Name>
+            <ConStatement>     
+                <Text Language="en">Shawn Hyland, Director of Advocacy for the Family
+                    Policy Alliance of New Jersey: "The detrimental effect recreational
+                    marijuana will have in the Garden State is undeniable. Study after
+                    study shows legalizing pot will put the public safety of New Jerseyans
+                    at risk. If our legislators continue to support this measure, they are
+                    ignoring the historical trends of harmful youth usage and the
+                    extensive negative effect legalized marijuana has had on communities
+                    of color."
+                    
+                    Kevin Sabet, president of SAM: "It’s time to finally take
+                    action on the social justice concerns the promoters of legalization
+                    have raised, but they will not be solved by creating a commercial
+                    marijuana market in New Jersey. Marijuana commercialization is indeed
+                    a social injustice and polling has routinely shown New Jersey
+                    residents don’t want pot shops in their back yards. It’s time to end
+                    this reckless push once and for all."
+                    
+                    Stephen Reid, Executive Director of NJ RAMP: "The pot advocates here
+                    in Trenton are desperate to institute their addiction-for-profit model
+                    in New Jersey." </Text>
+            </ConStatement>
+            <FullText>
+                <Text Language="en">Do you approve amending the Constitution to 
+                    legalize a controlled form of marijuana called “cannabis”?
+                    
+                    Only adults at least 21 years of age could use cannabis. The State
+                    commission created to oversee the State’s medical cannabis program
+                    would also oversee the new, personal use cannabis market.
+                    
+                    Cannabis products would be subject to the State sales tax. If
+                    authorized by the Legislature, a municipality may pass a local
+                    ordinance to charge a local tax on cannabis products.</Text>
+            </FullText>
+            <ProStatement>
+                <Text Language="en">Michael McQueeny, a lawyer who focused on cannabis
+                    law: "If we didn’t need the money before, we certainly need it
+                    post-pandemic with all the austerity measures that are being talked
+                    about at the state level due to certain budget issues because of the
+                    pandemic."
+                    
+                    State Sen. Nicholas Scutari (D-22): "It will be an
+                    economic engine for New Jersey when it gets going. The greater impact
+                    on society is going to be the job opportunities, people getting
+                    employed and paying their employment tax, people not getting
+                    arrested. It’ll be a whole new industry just like we have liquor
+                    stores, and we have breweries and we have beverage warehousing."
+                    
+                    NJ CAN 2020: "Legalizing cannabis for adult use will reduce costs,
+                    create jobs, and generate revenue for New Jersey."
+                    
+                    NJ CAN 2020: "Regulation of a legalized market and industry will allow
+                    for stringent quality control and best practices, better ensuring a
+                    safer product than an unregulated market. It would also limit the
+                    ability of those underage from obtaining marijuana designed for adult
+                    use. All of this would promote public health and safety."
+                    
+                    U.S. Rep. Frank Pallone (D-6): "Enforcement of marijuana laws has led
+                    to the unequal treatment and targeting of minority communities and has
+                    contributed to the mass incarceration of Black people in New Jersey
+                    and throughout our country. Marijuana should be legalized."</Text>
+            </ProStatement> 
+            <SummaryText>
+                <Text Language="en">This amendment would legalize a
+                    controlled form of marijuana called “cannabis.” Only
+                    persons at least 21 years of age could use cannabis
+                    products legally.
+                    
+                    The Cannabis Regulatory Commission would oversee
+                    the new adult cannabis market. This commission was
+                    created in 2019 to oversee the State’s medical
+                    cannabis program. The scope of the commission’s
+                    new authority would be detailed in laws enacted by
+                    the Legislature.
+                    
+                    All retail sales of cannabis products in the new adult
+                    cannabis market would be subject to the State’s sales
+                    tax. If authorized by the Legislature, a municipality
+                    may pass a local ordinance to charge a local tax on
+                    cannabis products.</Text>
+            </SummaryText>
+            <Type>other</Type>
+            <OtherType>state_constitutional_amendment</OtherType>
+        </Contest>
+
+        <ElectionScopeId>state_new_jersey</ElectionScopeId>
+        <Name>
+            <Text Language="en">Spring 2022 Princeton Municipal Election</Text>
+        </Name>
+        <StartDate>2022-04-15</StartDate>
+        <EndDate>2022-04-15</EndDate>
+        <Type>general</Type>
+    </Election>
+
+    <Format>summary-contest</Format>
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+
+    <!-- Precincts -->
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_1">
+        <Name>
+            <Text Language="en">Precinct 1</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_2">
+        <Name>
+            <Text Language="en">Precinct 2</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_3">
+        <Name>
+            <Text Language="en">Precinct 3</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_4">
+        <Name>
+            <Text Language="en">Precinct 4</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_5">
+        <Name>
+            <Text Language="en">Precinct 5</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_6">
+        <Name>
+            <Text Language="en">Precinct 6</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_7">
+        <Name>
+            <Text Language="en">Precinct 7</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_8">
+        <Name>
+            <Text Language="en">Precinct 8</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_9">
+        <Name>
+            <Text Language="en">Precinct 9</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_10">
+        <Name>
+            <Text Language="en">Precinct 10</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_11">
+        <Name>
+            <Text Language="en">Precinct 11</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_12">
+        <Name>
+            <Text Language="en">Precinct 12</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_13">
+        <Name>
+            <Text Language="en">Precinct 13</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_14">
+        <Name>
+            <Text Language="en">Precinct 14</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_15">
+        <Name>
+            <Text Language="en">Precinct 15</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_16">
+        <Name>
+            <Text Language="en">Precinct 16</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_17">
+        <Name>
+            <Text Language="en">Precinct 17</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_18">
+        <Name>
+            <Text Language="en">Precinct 18</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_19">
+        <Name>
+            <Text Language="en">Precinct 19</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_20">
+        <Name>
+            <Text Language="en">Precinct 20</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_21">
+        <Name>
+            <Text Language="en">Precinct 21</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_22">
+        <Name>
+            <Text Language="en">Precinct 22</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+
+
+    <GpUnit xsi:type="ReportingUnit" ObjectId="princeton_borough">
+        <ComposingGpUnitIds>precinct_1 precinct_2 precinct_3 precinct_4 precinct_5 precinct_6
+            precinct_7 precinct_8 precinct_9 precinct_10 precinct_11 precinct_12 precinct_13
+            precinct_14 precinct_15 precinct_16 precinct_17 precinct_18 precinct_19 precinct_20
+            precinct_21 precinct_22 </ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Princeton</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="mercer_county">
+        <ComposingGpUnitIds>princeton_borough</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="legislative_district_16">
+        <Name>
+            <Text Language="en">District 16</Text>
+        </Name>
+        <Type>other</Type>
+        <OtherType>legislative-district</OtherType>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="congressional_district_12">
+        <Name>
+            <Text Language="en">Congressional District 12</Text>
+        </Name>
+        <Type>congressional</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_new_jersey">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+
+    <Header ObjectId="state_header">
+        <Name>
+            <Text Language="en">State of New Jersey</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="mercer_county_header">
+        <Name>
+            <Text Language="en">Mercer County</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="princeton_borough_header">
+        <Name>
+            <Text Language="en">Municipality of Princeton</Text>
+        </Name>
+    </Header>
+
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+</ElectionReport>

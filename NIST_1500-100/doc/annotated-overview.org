@@ -1,0 +1,190 @@
+#+title: The NIST 1500 103 Cast Vote Record: an Annotated Overview
+#+date: <2021-11-12 Fri>
+#+author: Clifford E. Wulfman
+#+email: cliff@osetfoundation.org
+
+
+This document reviews the structure of a CVR record from the viewpoint
+of a developer who wishes to read CVR records, parse CVR records,
+process CVR records, or generate CVR records.  The [[https://doi.org/10.6028/NIST.SP.1500-103][official
+documentation]] of the CVR specification is generally straightforward
+and provides a very good overview and background information; anyone
+interested in working with CVRs would be well served by reading the
+first nineteen pages, as well as Section 5 (Usage Examples).
+
+* A Note about Seriaization Formats: XML and JSON
+  The NIST documentation is agnostic about how its specifications are
+  /serialized/: that is, the format in which data conforming with the
+  specification are expressed (printed out, written to a file, and so
+  on).  The specification itself is expressed in [[https://en.wikipedia.org/wiki/Unified_Modeling_Language][UML]]; a CVR document
+  is /valid/ if it conforms with the UML specification.
+
+  The UML model is canonical, but as a courtesy to implementers, the
+  standard authors generated /schemas/ that describe this canonical
+  structure in two commonly used languages or formats: XML and JSON.
+  It is important for developers to understand that expressions of CVR
+  documents in XML or JSON are /semantically equivalent/.  JSON was
+  designed to be a light-weight transmission format that represents
+  data as attribute-value pairs; XML is a meta-language that can be
+  used to represent information as trees of elements with attributes.
+  XML has a rich library of tools that can be used to validate XML
+  documents against schemas in a number of languages; indeed,
+  /valiadation/ against schemas is a major component of XML
+  technology.
+
+  These documents therefore use XML in their examples.  For readers
+  who wish to study these examples in JSON format, we suggest using
+  one of the many utilites available on the web to generate JSON
+  expressions from XML data.
+
+* CastVoteRecordReport
+  The NIST model describes a report of cast vote records exported from
+  a device such as scanner or an election management system (EMS).
+  The report is designed to carry multiple records, each of which is
+  identical save for the voter's actual selections: the format was
+  designed to minimize data duplication by making heavy use of
+  structural references.  We will see examples of this shortly.  Here
+  is the top-level structure of a Cast Vote Record Report (CVRR).
+
+  #+begin_example
+  - CastVoteRecordReport
+    - CVR*
+    - Election
+    - GeneratedDate
+    - GpUnit+
+    - ReportGeneratingDeviceIds
+    - ReportingDevice+
+  #+end_example
+
+  Here's what that structure looks like in XML:
+
+  #+begin_src xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <CastVoteRecordReport>
+      <CVR/>
+      <CVR/>
+      <CVR/>
+      <Election/>
+      <GeneratedDate/>
+      <GpUnit/>
+      <GpUnit/>
+      <ReportGeneratingDeviceIds/>
+      <ReportingDevice/>
+      <ReportingDevice/>
+    </CastVoteRecordReport>
+  #+end_src
+
+  A CastVoteRecordReport (CVRR) carries data about voters' choices: the
+  primary expression of a group of voters' intentions (votes).  The
+  CastVoteRecordReport record format was designed to carry a
+  collection of votes in a transimissible format: a format that has
+  been optimized for transfer from data-recording devices to
+  data-tabulating devices.
+
+  A CastVoteRecordReport does not exist in isolation: it must be read
+  and intepreted in the context of Election Definitions that encode
+  formally described elements of the election in which the electors in
+  the CastVoteRecordReport have expressed choices.
+
+  See https://github.com/usnistgov/electionResultsReporting
+
+  TODO: a diagram that shows how a CVRR relates to an ED.
+
+  Here is a minimal CVRR:
+
+  #+begin_src xml
+    <CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+			  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			  xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd">
+      <Election ObjectId="gadget-county-2021-06_a">
+	<Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
+	  <ContestSelection ObjectId="contest_1"></ContestSelection>
+	</Contest>
+	<ElectionScopeId>gadget-county</ElectionScopeId>
+      </Election>
+      <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
+      <GpUnit ObjectId="gadget-county">
+	<Type>other</Type>
+      </GpUnit>
+      <ReportGeneratingDeviceIds>ballot-marker-1</ReportGeneratingDeviceIds>
+      <ReportingDevice ObjectId="ballot-marker-1"/>
+      <Version>1.0.0</Version>
+    </CastVoteRecordReport>
+  #+end_src
+
+  The most minimal CVRR doesn't even contain a CVR!  A
+  CastVoteRecordReport includes general information about the
+  election.  These bits of information can be referred to in
+  individual CVRs, as we'll see.
+
+* CVR
+  A cast vote record is an accumulation of /snapshots:/ the state of a
+  voter's selections at a particular point in time.
+
+  #+begin_src xml
+    <CVR>
+      <CurrentSnapshotId></CurrentSnapshotId>
+      <CVRSnapshot ObjectId="">
+	<Type></Type>
+      </CVRSnapshot>
+      <ElectionId></ElectionId>
+    </CVR>
+  #+end_src
+
+  There are three types of snapshot:
+
+  - original :: the version created when a marked paper ballot is
+    scanned and before the selections have been interpreted according
+    to election rules.
+  - intepreted :: the version created after the selections in the
+    original snapshot have been interpreted; it may also be the
+    version created by a Direct Record Electronic device or from a
+    ballot marking device's encoded voter selecctions.
+  - modified :: the version created after modifications have been made
+    to the interpreted version through adjudication; e.g., because of
+    a write-in selection on the ballot.
+
+  The specification describes the idea behind CVR snapshots:
+
+  #+begin_quote
+   Depending on how this specification may be implemented, all three
+   types of snapshots could be used in a CVR, or two, or one. For CVRs
+   created by devices such as a DRE or a BMD that encodes voter
+   selections, there is no original snapshot, thus using interpreted
+   makes more sense. For hand-marked paper ballots, use of the
+   original and interpreted snapshots allows for traceability of all
+   marks detected on the ballot and how the scanner interpreted them
+   according to mark density values and contest rules. Generally, the
+   modified snapshot would be created by adjudication applications so
+   as to provide traceability for adjudications of voter-made marks or
+   adjudication of write-ins.
+  #+end_quote
+    
+  One of the snapshots must be identified as the one to include in
+  tabluations (the CurentSnapShotId).
+
+  Here is a more detailed outline of the CVRSnapShot's strucure:
+
+  - CVRSnapshot
+    - Annotation*
+    - CVRContest*
+    - Status?
+    - Type
+
+* Processing Implications
+  The highly-structured nature of CVRRs and CVRs can make them quite
+  verbose but simple to parse.  Developers are strongly advised to use
+  an XML or JSON parser when working with CVRRs and CVRs.
+
+  #+CAPTION: A spare CVR record
+  #+NAME: spare_cvr
+  [[file:spare_cvr.jpg]]
+
+
+  Let's look at an example.  Here's an Election definition:
+
+  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/EDF/version_2/GpU08AZ0.v2.cdf.xml
+
+  And here's a corresponding CVRR
+  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/CVR/GpU08AZ0.cvr.xml
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd">
+    <CVR>
+        <BallotStyleId>ballot-style-downtown-precinct</BallotStyleId>
+        <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
+        <!-- Base snapshot is derived from the output from the mobile app -->
+        <CVRSnapshot ObjectId="snapshot-01">
+            <CVRContest>
+                <ContestId>contest-mayor-orbit-city</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest-mayor--selection-spencer-cogswell</ContestSelectionId>
+                    <OptionPosition>2</OptionPosition>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+            </CVRContest>
+            
+            <CVRContest>
+                <ContestId>contest-ballot-measure-gadget-county-1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>contest-ballot-measure-1--selection-no</ContestSelectionId>
+                    <OptionPosition>2</OptionPosition>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                    <TotalNumberVotes>1</TotalNumberVotes>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
+        </CVRSnapshot>
+        
+        <ElectionId>gadget-county-2021-06</ElectionId>
+    </CVR>
+    <!-- Election information is derived from the EDF -->
+    <Election ObjectId="gadget-county-2021-06">
+        <Candidate ObjectId="candidate-cosmo-spacely">
+            <Name>Cosmo Spacely</Name>
+            <PartyId>party-lepton</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate-spencer-cogswell">
+            <Name>Spencer Cogswell</Name>
+            <PartyId>party-hadron</PartyId>
+        </Candidate>
+        <Contest xsi:type="CandidateContest" ObjectId="contest-mayor-orbit-city">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-cosmo-spacely">
+                <CandidateIds>candidate-cosmo-spacely</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-spencer-cogswell">
+                <CandidateIds>candidate-spencer-cogswell</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest-mayor--selection-write-in">
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <Name>Mayor of Orbit City</Name>
+            <VoteVariation>plurality</VoteVariation>
+        </Contest>
+        <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-yes">
+                <Selection>Yes</Selection>
+            </ContestSelection>
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest-ballot-measure-1--selection-no">
+                <Selection>No</Selection>
+            </ContestSelection>
+            <Name>Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Name>
+            <VoteVariation>plurality</VoteVariation>
+        </Contest>
+        <ElectionScopeId>gadget-county</ElectionScopeId>
+    </Election>
+    
+    <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
+    
+    <GpUnit ObjectId="gadget-county">
+        <Name>Gadget County</Name>
+        <Type>other</Type>
+        <OtherType>county</OtherType>
+    </GpUnit>
+    
+    <GpUnit ObjectId="downtown-precinct">
+        <Name>Downtown Precinct</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    
+    <Party ObjectId="party-lepton">
+        <Name>Lepton Party</Name>
+    </Party>
+    <Party ObjectId="party-hadron">
+        <Name>Hadron Party</Name>
+    </Party>
+    
+    <ReportGeneratingDeviceIds>ballot-marker-1</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="ballot-marker-1">
+        <Application>Ballot marking application</Application>
+        <Manufacturer>Trust the Vote</Manufacturer>
+        <Model>git-c3cd6f4f-20210601</Model>
+        <SerialNumber>AB:CD:EF:12:34:56</SerialNumber>
+    </ReportingDevice>
+    <ReportType>originating-device-export</ReportType>
+    <Version>1.0.0</Version>
+</CastVoteRecordReport>
