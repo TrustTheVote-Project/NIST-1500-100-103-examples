@@ -12,9 +12,9 @@
         - 1 BallotMeasureContest
 -->
 
-<ElectionReport xmlns="NIST_V1_election_results.xsd"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v1">
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="NIST_V1_election_results.xsd file:/Users/cwulfman/repos/github/trustthevote/NIST-1500-100-103-examples/NIST_1500-100/version_1/schemas/ElectionReport.xsd"
+ xmlns="NIST_V1_election_results.xsd">
     <Election>
         <BallotStyleCollection>
             <BallotStyle objectId="ballot_style_1">
@@ -35,11 +35,15 @@
                 <BallotName>
                     <Text language="en">Cosmo Spacely</Text>
                 </BallotName>
+                <IsIncumbent>false</IsIncumbent>
+                <PartyId>party-lepton</PartyId>
             </Candidate>
             <Candidate objectId="candidate-spencer-cogswell">
                 <BallotName>
                     <Text language="en">Spencer Cogswell</Text>
                 </BallotName>
+                <IsIncumbent>true</IsIncumbent>
+                <PartyId>party-hadron</PartyId>
             </Candidate>
             <Candidate objectId="candidate-jane-jetson">
                 <BallotName>
@@ -132,9 +136,9 @@
             </Contest>
             <Contest xsi:type="BallotMeasureContest"
                 objectId="contest-ballot-measure-gadget-county-1">
-                <VoteVariation>approval</VoteVariation>
-                <ElectoralDistrictId>gadget-county</ElectoralDistrictId>
+                <ElectoralDistrictId> gadget-county</ElectoralDistrictId>
                 <Name>Gadget County Sales Tax Increase</Name>
+                <VoteVariation>approval</VoteVariation>                
                 <FullText>
                     <Text language="en">Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Text>
                 </FullText>
@@ -177,10 +181,31 @@
             </Name>
         </Office>
         <Office objectId="control-board-spaceport">
-            <Name>Spaceport Control Board</Name>
+            <Name><Text language="dn">Spaceport Control Board</Text></Name>
         </Office>
     </OfficeCollection>
-
+    <PartyCollection>
+        <Party objectId="party-lepton">
+            <Name>
+                <Text language="en">Lepton Party</Text>
+            </Name>
+        </Party>
+        <Party objectId="party-hadron">
+            <Name>
+                <Text language="en">Hadron Party</Text>
+            </Name>
+        </Party>
+    </PartyCollection>
+    <PersonCollection>
+        <Person objectId="person-cosmo-spacely">
+            <FirstName>Cosmo</FirstName>
+            <FullName>
+                <Text language="en">Cosmo Spacely</Text>
+            </FullName>
+            <Gender>Male</Gender>
+            <LastName>Spacely</LastName>
+        </Person>
+    </PersonCollection>
     <SequenceStart>1</SequenceStart>
     <SequenceEnd>1</SequenceEnd>
     <Status>pre-election</Status>
