@@ -286,10 +286,30 @@
 
   
   The mobile app would parse this standard data structure and use the
-  data to present a ballot to the voter.  We don't know how the mobile
-  app keeps track of data while it's running, of course; but let's
-  imagine that it is written in Typescript.  The app's internal
-  representation of the data might look something like this:
+  data to present a ballot to the voter.  The purpose of the app is to
+  collect a user's choices so that they may be cast as votes.  The
+  actual casting of the votes does not happen until the user indicates
+  that she is satisfied with her selections; then those selections are 
+  transmitted in the form of a Cast Vote Record (NIST 1500-103). Let's
+  imagine the user has made her choices; the app presents a screen so
+  she may review them:
+
+  #+begin_example
+    Here are the choices you have made:
+
+         For Mayor of Orbit City: - Spencer Cogswell (candidate-spencer-cogswell)
+     
+         For Control Board:       - Jane Jetson (candidate-jane-jetson)
+                                  - Harlan Ellis (candidate-harlan ellis)
+                              
+         On Ballot Question 1:    - YES
+  #+end_example
+
+  
+  We don't know how the mobile app keeps track of data while it's
+  running, of course; but let's imagine that it is written in
+  Typescript.  The app's internal representation of the data might
+  look something like this:
 
   #+begin_src js
     class CandidateContestSelection {
@@ -316,7 +336,7 @@
 
     const ballot_measure_choice = new BallotContestSelection();
     ballot_measure_choice.contestId = "contest_3";
-    ballot_measure_choice.selection = true;
+    ballot_measure_choice.selection = "yes";
   #+end_src
 
   When sending the voter's choices to be recorded, the app uses the
