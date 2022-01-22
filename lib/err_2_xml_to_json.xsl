@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	This transform is based on the work at 
+	https://github.com/HiltonRoscoe/CDFPrototype/blob/master/conversion/format_conversion.md
+-->
 <xsl:stylesheet xmlns="http://www.w3.org/2005/xpath-functions" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:cdf="http://itl.nist.gov/ns/voting/1500-100/v2" 
