@@ -25,26 +25,31 @@
                 <BallotName>
                     <Text language="en">Cosmo Spacely</Text>
                 </BallotName>
+                <PartyId>party-lepton</PartyId>
             </Candidate>
             <Candidate objectId="candidate-spencer-cogswell">
                 <BallotName>
                     <Text language="en">Spencer Cogswell</Text>
                 </BallotName>
+                <PartyId>party-hadron</PartyId>
             </Candidate>
             <Candidate objectId="candidate-jane-jetson">
                 <BallotName>
                     <Text language="en">Jane Jetson</Text>
                 </BallotName>
+                <PartyId>party-lepton</PartyId>
             </Candidate>
             <Candidate objectId="candidate-harlan-ellis">
                 <BallotName>
                     <Text language="en">Harlan Ellis</Text>
                 </BallotName>
+                <PartyId>party-lepton</PartyId>
             </Candidate>
             <Candidate objectId="candidate-rudi-indexer">
                 <BallotName>
                     <Text language="en">Rudi Indexer</Text>
                 </BallotName>
+                <PartyId>party-hadron</PartyId>
             </Candidate>
             <Candidate objectId="candidate-write-in-for-mayor">
                 <BallotName>
@@ -169,7 +174,19 @@
             </Name>
         </Office>
     </OfficeCollection>
-
+    <PartyCollection>
+        <Party objectId="party-lepton">
+            <Name>
+                <Text language="en">Lepton Party</Text>
+            </Name>
+        </Party>
+        <Party objectId="party-hadron">
+            <Name>
+                <Text language="en">Hadron Party</Text>
+            </Name>
+        </Party>
+    </PartyCollection>
+    
     <SequenceStart>1</SequenceStart>
     <SequenceEnd>1</SequenceEnd>
     <Status>pre-election</Status>

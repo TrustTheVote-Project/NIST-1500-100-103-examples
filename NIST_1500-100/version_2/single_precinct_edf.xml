@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd"
- xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd"
+    xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
     <Election>
         <BallotStyle>
             <ExternalIdentifier>
@@ -115,13 +115,18 @@
             <VoteVariation>n-of-m</VoteVariation>
             <VotesAllowed>2</VotesAllowed>
         </Contest>
-        <Contest xsi:type="BallotMeasureContest" ObjectId="contest-ballot-measure-gadget-county-1">
+
+        <Contest ObjectId="contest-ballot-measure-gadget-county-1" xsi:type="BallotMeasureContest">
             <ElectionDistrictId>gadget-county</ElectionDistrictId>
             <Name>Gadget County Sales Tax Increase</Name>
             <FullText>
-                <Text Language="en">Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?</Text>
+                <Text Language="en">Shall Gadget County 
+                    increase its sales tax from 1% to 1.1% for 
+                    the purpose of raising additional revenue to fund
+                    expanded air traffic control operations?</Text>
             </FullText>
         </Contest>
+
         <ElectionScopeId>gadget-county</ElectionScopeId>
         <Name>
             <Text Language="en">Gadget County Elections</Text>
