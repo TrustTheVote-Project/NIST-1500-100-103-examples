@@ -41,7 +41,7 @@
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="beta_for_mayor">
                 <SequenceOrder>2</SequenceOrder>
-                <CandidateIds>beta_for_mayor</CandidateIds>
+                <CandidateIds>candidate_beta</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="mayor_writein">
                 <SequenceOrder>3</SequenceOrder>
