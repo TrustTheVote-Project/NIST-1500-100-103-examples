@@ -11,9 +11,15 @@
             <GpUnitIds>princeton_borough</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>princeton_borough_header</HeaderId>
-            </OrderedContent>
-            <OrderedContent xsi:type="OrderedContest">
-                <ContestId>town_council_contest</ContestId>
+
+                <OrderedContent xsi:type="OrderedHeader">
+                    <HeaderId>princeton_borough_town_council_header</HeaderId>
+                    <OrderedContent xsi:type="OrderedContest">
+                        <ContestId>town_council_contest</ContestId>
+                        <OrderedContestSelectionIds>selection_1 selection_2 selection_3 selection_4
+                            selection_5 selection_6 selection_7</OrderedContestSelectionIds>
+                    </OrderedContent>
+                </OrderedContent>
             </OrderedContent>
         </BallotStyle>
 
@@ -93,6 +99,49 @@
                 princeton_councilmember_4 princeton_councilmember_5 princeton_councilmember_6
                 princeton_councilmember_7</OfficeIds>
             <VotesAllowed>7</VotesAllowed>
+        </Contest>
+
+        <!-- Alternative form of Town Council Contest? -->
+        <Contest ObjectId="town_council_contest_bis" xsi:type="CandidateContest">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_cnum_1</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_cnum_2</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_3">
+                <SequenceOrder>3</SequenceOrder>
+                <CandidateIds>candidate_cnum_3</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4">
+                <SequenceOrder>4</SequenceOrder>
+                <CandidateIds>candidate_cnum_4</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_5">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds>candidate_cnum_5</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_6">
+                <SequenceOrder>6</SequenceOrder>
+                <CandidateIds>candidate_cnum_6</CandidateIds>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7">
+                <SequenceOrder>7</SequenceOrder>
+                <CandidateIds>candidate_cnum_7</CandidateIds>
+            </ContestSelection>
+
+            <ElectionDistrictId>princeton_borough</ElectionDistrictId>
+            <Name>Two Members of Princeton Town Council</Name>
+            <OfficeIds>princeton_town_council</OfficeIds>
+            <VotesAllowed>2</VotesAllowed>
         </Contest>
 
         <ElectionScopeId>princeton_borough</ElectionScopeId>
@@ -294,12 +343,23 @@
             <Text Language="en">Municipality of Princeton</Text>
         </Name>
     </Header>
+    <Header ObjectId="princeton_borough_town_council_header">
+        <Name>
+            <Text Language="en">Members of the Princeton Town Council</Text>
+        </Name>
+    </Header>
 
     <Issuer>Trust the Vote</Issuer>
     <IssuerAbbreviation>TTV</IssuerAbbreviation>
 
 
-    <!-- Princeton Council offices -->
+    <Office ObjectId="princeton_town_council">
+        <Name>
+            <Text Language="en">Princeton Town Council</Text>
+        </Name>
+    </Office>
+
+    <!-- Princeton Itemized Council offices -->
     <Office ObjectId="princeton_councilmember_1">
         <ElectionDistrictId>princeton_borough</ElectionDistrictId>
         <Name>
@@ -376,6 +436,13 @@
             <Text Language="en">New Jersey Republican Party</Text>
         </Name>
     </Party>
+
+    <!-- People -->
+    <Person ObjectId="person_1">
+        <FullName>
+            <Text Language="en">Person 1</Text>
+        </FullName>
+    </Person>
 
     <SequenceStart>1</SequenceStart>
     <SequenceEnd>1</SequenceEnd>
