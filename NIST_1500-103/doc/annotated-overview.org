@@ -179,12 +179,3 @@ first nineteen pages, as well as Section 5 (Usage Examples).
   #+CAPTION: A spare CVR record
   #+NAME: spare_cvr
   [[file:spare_cvr.jpg]]
-
-
-  Let's look at an example.  Here's an Election definition:
-
-  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/EDF/version_2/GpU08AZ0.v2.cdf.xml
-
-  And here's a corresponding CVRR
-  https://github.com/TrustTheVote-Project/NIST-1500-100-103-examples/blob/main/CVR/GpU08AZ0.cvr.xml
-
