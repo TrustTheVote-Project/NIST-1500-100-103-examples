@@ -11,7 +11,6 @@
             <GpUnitIds>princeton_borough</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>princeton_borough_header</HeaderId>
-
                 <OrderedContent xsi:type="OrderedHeader">
                     <HeaderId>princeton_borough_town_council_header</HeaderId>
                     <OrderedContent xsi:type="OrderedContest">
@@ -92,6 +91,72 @@
 
         <!-- Town Council contest -->
         <Contest xsi:type="CandidateContest" ObjectId="town_council_contest">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_cnum_1</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_cnum_2</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_3">
+                <SequenceOrder>3</SequenceOrder>
+                <CandidateIds>candidate_cnum_3</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4">
+                <SequenceOrder>4</SequenceOrder>
+                <CandidateIds>candidate_cnum_4</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_5">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds>candidate_cnum_5</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_6">
+                <SequenceOrder>6</SequenceOrder>
+                <CandidateIds>candidate_cnum_6</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7">
+                <SequenceOrder>7</SequenceOrder>
+                <CandidateIds>candidate_cnum_7</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_8">
+                <SequenceOrder>8</SequenceOrder>
+                <CandidateIds>candidate_cnum_8</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_9">
+                <SequenceOrder>9</SequenceOrder>
+                <CandidateIds>candidate_cnum_9</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_10">
+                <SequenceOrder>10</SequenceOrder>
+                <CandidateIds>candidate_cnum_10</CandidateIds>
+            </ContestSelection>            
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_11">
+                <SequenceOrder>11</SequenceOrder>
+                <CandidateIds>candidate_cnum_11</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_12">
+                <SequenceOrder>12</SequenceOrder>
+                <CandidateIds>candidate_cnum_12</CandidateIds>
+            </ContestSelection>
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_13">
+                <SequenceOrder>13</SequenceOrder>
+                <CandidateIds>candidate_cnum_13</CandidateIds>
+            </ContestSelection>
+            
+            
             <ElectionDistrictId>princeton_borough</ElectionDistrictId>
             <Name>For Princeton Town Council</Name>
             <VoteVariation>n-of-m</VoteVariation>
@@ -102,47 +167,7 @@
         </Contest>
 
         <!-- Alternative form of Town Council Contest? -->
-        <Contest ObjectId="town_council_contest_bis" xsi:type="CandidateContest">
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1">
-                <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_cnum_1</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2">
-                <SequenceOrder>2</SequenceOrder>
-                <CandidateIds>candidate_cnum_2</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_3">
-                <SequenceOrder>3</SequenceOrder>
-                <CandidateIds>candidate_cnum_3</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4">
-                <SequenceOrder>4</SequenceOrder>
-                <CandidateIds>candidate_cnum_4</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_5">
-                <SequenceOrder>5</SequenceOrder>
-                <CandidateIds>candidate_cnum_5</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_6">
-                <SequenceOrder>6</SequenceOrder>
-                <CandidateIds>candidate_cnum_6</CandidateIds>
-            </ContestSelection>
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7">
-                <SequenceOrder>7</SequenceOrder>
-                <CandidateIds>candidate_cnum_7</CandidateIds>
-            </ContestSelection>
-
-            <ElectionDistrictId>princeton_borough</ElectionDistrictId>
-            <Name>Two Members of Princeton Town Council</Name>
-            <OfficeIds>princeton_town_council</OfficeIds>
-            <VotesAllowed>2</VotesAllowed>
-        </Contest>
+        
 
         <ElectionScopeId>princeton_borough</ElectionScopeId>
         <Name>

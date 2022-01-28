@@ -15,10 +15,11 @@
             <GpUnitIds>princeton_precinct_11</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>princeton_borough_header</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest_princeton_mayor</ContestId>
+                </OrderedContent>
             </OrderedContent>
-            <OrderedContent xsi:type="OrderedContest">
-                <ContestId>contest_princeton_mayor</ContestId>
-            </OrderedContent>
+            
         </BallotStyle>
         
         <Candidate ObjectId="candidate_alpha">

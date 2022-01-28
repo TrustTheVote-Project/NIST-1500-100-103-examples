@@ -11,9 +11,9 @@
             <GpUnitIds>princeton_borough</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>princeton_borough_header</HeaderId>
-            </OrderedContent>
-            <OrderedContent xsi:type="OrderedContest">
-                <ContestId>new_jersey_public_question_1</ContestId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>new_jersey_public_question_1</ContestId>
+                </OrderedContent>
             </OrderedContent>
         </BallotStyle>
 

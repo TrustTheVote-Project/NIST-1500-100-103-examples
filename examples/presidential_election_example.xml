@@ -17,12 +17,13 @@
             <GpUnitIds>united_states</GpUnitIds>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>national_header</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>presidential_contest</ContestId>
+                    <OrderedContestSelectionIds>democratic_ticket
+                        republican_ticket</OrderedContestSelectionIds>
+                </OrderedContent>
             </OrderedContent>
-            <OrderedContent xsi:type="OrderedContest">
-                <ContestId>presidential_contest</ContestId>
-                <OrderedContestSelectionIds>democratic_ticket
-                    republican_ticket</OrderedContestSelectionIds>
-            </OrderedContent>
+            
         </BallotStyle>
 
         <!-- Candidates -->
