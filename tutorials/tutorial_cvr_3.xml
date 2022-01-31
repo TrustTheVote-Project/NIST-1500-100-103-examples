@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CastVoteRecordReport xmlns="http://itl.nist.gov/ns/voting/1500-103/v1"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 schemas/CastVoteRecordReport.xsd">
+<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
+ xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
     <!-- 
         A single CVR recording an n-of-m contest. Ballot lists three candidates;
         voter is instructed to select two.

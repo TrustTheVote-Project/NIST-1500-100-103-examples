@@ -3,31 +3,32 @@
     A simple election definition containing elements describing
     geo-political units (GpUnits).
     
-    The GpUnit is one of the building-blocks of an election description: it 
-    is "where the votes come from;" descriptions of units of geopolitical geography that 
-    may be associated with contests, offices, ballot styles, and election results.
+    The GpUnit is one of the building-blocks of an election description.  It 
+    is "where the votes come from:" descriptions of devices and units of
+    geopolitical geography that may be associated with contests, offices,
+    ballot styles, and election results.
     
     The standard defines two types: 
     
-    Reporting Units, which are real geo-political entities (states, counties,
-    districts, municipalities, precincts); and 
+    - Reporting Units, which are real geo-political entities (states, counties,
+      districts, municipalities, precincts); and 
     
-    Reporting Devices, which are types of devices or specific devices with which
-    election results can be associated.  Our applications will not be concerned 
-    with reporting devices.
+    - Reporting Devices, which are types of devices or specific devices with which
+      election results can be associated.  Our applications will not be concerned 
+      with reporting devices.
     
-    As with most of the schema, GpUnits have a document-unique identifier (the
-    "ObjectId" attribute in XML), which is used throughout the document as a reference
-    anchor.  In this pared-down document, for example, the GpUnit ObjectIds are used to
-    define a compositional hierarchy of reporting units. (Such groupings are not required
-    by the schema, however.)
+    As with most of top-level classes in the schema, GpUnits have document-unique
+    identifiers (the "ObjectId" attribute in XML), which is used throughout the
+    document as a reference anchor.  In this pared-down document, for example, the
+    GpUnit ObjectIds are used to define a compositional hierarchy of reporting units.
+    (Such groupings are not required by the schema, however.)
     
     The structural data of GpUnits will, in practice, be managed in a Versa back-end database,
     which will be used to compose election definitions.
  -->
-<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
+ xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
     <Format>summary-contest</Format>
     <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
 

@@ -18,9 +18,9 @@
     of the election (the geo-political unit to which it pertains); 
     the date(s) and type of election; and a name.
  -->
-<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
+ xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
     
     <Election>
         <ElectionScopeId>princeton_borough</ElectionScopeId>

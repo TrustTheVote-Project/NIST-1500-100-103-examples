@@ -11,9 +11,9 @@
     may or may not appear in a particular election definition, but which
     may be used to express various fields in a Versa database.
  -->
-<ElectionReport xmlns="http://itl.nist.gov/ns/voting/1500-100/v2"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 schemas/ElectionReport.xsd">
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
+ xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
     <Format>summary-contest</Format>
     <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
 
