@@ -13,12 +13,14 @@
                 <HeaderId>header-mayor-orbit-city</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-mayor-orbit-city</ContestId>
+                    <OrderedContestSelectionIds>candidate-cosmo-spacely candidate-spencer-cogswell</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header-control-board-spaceport</HeaderId>
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest-control-board-spaceport</ContestId>
+                    <OrderedContestSelectionIds>candidate-jane-jetson candidate-harlan-ellis candidate-rudi-indexer</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
             <OrderedContent xsi:type="OrderedHeader">
