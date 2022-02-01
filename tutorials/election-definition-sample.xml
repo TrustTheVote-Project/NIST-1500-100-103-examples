@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
+    
+    <Election>
+        
+        <BallotStyle>
+            <GpUnitIds>spaceport</GpUnitIds>
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>orbit_city_mayor</ContestId>
+            </OrderedContent>
+        </BallotStyle>
+        
+        <Candidate ObjectId="candidate_1">
+            <BallotName>
+                <Text Language="en">Cosmo Spacely</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_2">
+            <BallotName>
+                <Text Language="en">Spencer Cogswell</Text>
+            </BallotName>
+        </Candidate>
+        
+        <Contest xsi:type="CandidateContest" ObjectId="gc_contest1">
+            
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_1</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_2">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_2</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_3">
+                <SequenceOrder>3</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            
+            <ElectionDistrictId>orbit_city</ElectionDistrictId>
+            <Name>Contest for Mayor of Orbit City</Name>
+            <OfficeIds>orbit_city_mayor</OfficeIds>
+            <VotesAllowed>1</VotesAllowed>
+        </Contest>
+        <ElectionScopeId>gadget_county</ElectionScopeId>
+        <Name>
+            <Text Language="en">Gadget County General Election 2062</Text>
+        </Name>
+        <StartDate>2062-06-15</StartDate>
+        <EndDate>2062-06-15</EndDate>
+        <Type>general</Type>
+    </Election>
+    
+    <Format>summary-contest</Format>
+    <GeneratedDate>2062-01-01T12:00:00-08:00</GeneratedDate>
+    
+    <GpUnit xsi:type="ReportingUnit" ObjectId="little_dipper_school">
+        <Name>
+            <Text Language="en">Little Dipper School</Text>
+        </Name>
+        <Type>polling-place</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="spaceport">
+        <ComposingGpUnitIds>little_dipper_school</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Spaceport District</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="orbit_city">
+        <ComposingGpUnitIds>spaceport</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Orbit City</Text>
+        </Name>
+        <Type>city</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="spacetown">
+        <Name>
+            <Text Language="en">Spacetown</Text>
+        </Name>
+        <Type>borough</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="gadget_county">
+        <ComposingGpUnitIds>orbit_city spacetown</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Gadget County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="farallon">
+        <ComposingGpUnitIds>gadget_county</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">State of Farallon</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+    
+    <Issuer>Trust the Vote</Issuer>
+    <IssuerAbbreviation>TTV</IssuerAbbreviation>
+    
+    <Office ObjectId="orbit_city_mayor">
+        <Description>
+            <Text Language="en">Grand Poobah of Orbit City.</Text>
+        </Description>
+        <ElectionDistrictId>orbit_city</ElectionDistrictId>
+        <IsPartisan>true</IsPartisan>
+        <Name>
+            <Text Language="en">Mayor of Orbit City</Text>
+        </Name>
+    </Office>
+
+    <Party ObjectId="lepton_party">
+        <Name>
+            <Text Language="en">Farallon Lepton Party</Text>
+        </Name>
+        <PartyScopeGpUnitIds>farallon</PartyScopeGpUnitIds>
+    </Party>
+    
+    <Party ObjectId="hadron_party">
+        <Name>
+            <Text Language="en">Grand Hadron Party of Gadget County</Text>
+        </Name>
+        <PartyScopeGpUnitIds>gadget_county</PartyScopeGpUnitIds>
+    </Party>   <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+    
+</ElectionReport>

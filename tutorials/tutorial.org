@@ -1,0 +1,329 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Defining Elections: A Tutorial
+#+date: <2022-01-31 Mon>
+#+author: Clifford Wulfman
+#+email: cliff@osetinstitute.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.2 (Org mode 9.4.4)
+* Introduction
+  This document is not meant to replace the excellent, thorough, and
+  well-written civics documentation available in textbooks and on the
+  Web.  It is intended primarily for developers and others interested
+  in contributing to TrustTheVote projects.
+
+* Extra-Election Elements
+  Government at all levels is defined by a variety of entities that
+  are relatively unchanging: county lines seldom change; precincts are
+  redrawn only after a census; etc.  The offices of government, too,
+  are seldom invented or redefined: governors and mayors; various
+  councils and boards -- all of these are defined by statutes and
+  persist outside election cycles.
+
+  Yet defining an election entails these entities.
+
+** Defining Geopolitical Units
+   Geopolitical units (GpUnits) are one of the building blocks of an
+   election description.  A GpUnit is "where the votes come from": it
+   is a unit of political geography (a ReportingUnit, like a town or a
+   precinct) or a particular ReportingDevice (a particular scanner)
+   that may be associated with ballots or votes during an election.
+   ReportingUnits may be composed to reflect a state's jurisdictions,
+   districts, and precincts.
+
+   #+begin_src xml
+     <GpUnit xsi:type="ReportingUnit" ObjectId="orbit_city">
+         <ComposingGpUnitIds>spaceport</ComposingGpUnitIds>
+         <Name>
+             <Text Language="en">Orbit City</Text>
+         </Name>
+         <Type>city</Type>
+     </GpUnit>
+     <GpUnit xsi:type="ReportingUnit" ObjectId="spaceport">
+         <ComposingGpUnitIds>little_dipper_school</ComposingGpUnitIds>
+         <Name>
+             <Text Language="en">Spaceport District</Text>
+         </Name>
+         <Type>precinct</Type>
+     </GpUnit>
+     <GpUnit xsi:type="ReportingUnit" ObjectId="little_dipper_school">
+         <Name>
+             <Text Language="en">Little Dipper School</Text>
+         </Name>
+         <Type>polling-place</Type>
+     </GpUnit>
+   #+end_src
+
+   This looks complicated, especially if you are unused to reading
+   XML.  (Quick overview of how to read XML syntax here.)
+
+*** About ObjectIds
+    Many elements in the NIST 1500-100 schema include a special
+    attribute named /ObjectId/. XML is a document-based language, and
+    a valid XML document can contain identifiers that are guaranteed
+    to be unique to the document in which they appear. The /ObjectId/
+    can be used in one element to link to another.  In the example
+    above, Orbit City includes the Spaceport District; the NIST
+    1500-100 schema expresses this fact by including the unique
+    ObjectId of the Spaceport District's defining element as a value
+    in the Orbit City's set of Composing GpUnits.
+
+
+   [[file:gpunits.xml][Example GpUnit Definitions]]
+** Defining Political Offices
+   Like the data about geopolitical units, data about political offices
+   is usually kept in one or more government databases, which may
+   include many fields.  The EDF defines a set of properties which may
+   be used to represent those data in a platform-neutral way.
+
+   Some of the data about an office is general, and is not specific to
+   a particular election: for example, the name of the office, its
+   description, and its geopolitical scope (who gets to choose the
+   holder or holders of the office):
+
+   #+begin_src xml
+     <Office ObjectId="orbit_city_mayor">
+         <Name>
+             <Text Language="en">Mayor of Orbit City</Text>
+         </Name>
+         <ElectionDistrictId>orbit_city</ElectionDistrictId>
+         <Description>
+             <Text Language="en">Grand Poobah of Orbit City.</Text>
+         </Description>
+         <IsPartisan>true</IsPartisan>
+     </Office>
+   #+end_src
+
+** Defining Political Parties
+   Political Parties, too, exist outside any particular election.  The
+   EDF provides many fields that may be used to record information
+   about them; here are just a few.
+
+   #+begin_src xml
+     <Party ObjectId="lepton_party">
+         <Name>
+             <Text Language="en">Farallon Lepton Party</Text>
+         </Name>
+         <PartyScopeGpUnitIds>farallon</PartyScopeGpUnitIds>
+     </Party>
+   #+end_src
+
+* Elements of an Election
+  Elections are held in order for members of a group to make
+  collective decisions. Who should be the next mayor?  Should we raise
+  our taxes to pay for school repairs?  These decisions may be framed
+  in terms of /contests/: one choice versus another.  Should the next
+  mayor be Cosmo Spacely or Spencer Cogswell? (Or should it be someone
+  entirely different?). Should we or should we not raise the tax rate?
+  In the case of political /offices/, the people who are vying to hold
+  the office are called /candidates/; questions to be decided are
+  frequently presented as /initiatives/ or /propositions/ or
+  /referendums/.
+
+  The process of making these choices is called an /election./ 
+  Elections may be held on a regular basis, by law; in other
+  cases, there may be special circumstances under which an election is
+  called.  And elections may be restricted to particular subsets of
+  voters: /partisan primary elections/ are an example, in which, in many
+  states, only registered members of a particular party may vote, or
+  may use a particular /ballot/ with particular choices which may only
+  be made by members of the party.
+
+  About the /ballot/: the term /ballot/ usually refers to the medium
+  through which, on which, or by means of which a voter expresses
+  their choices in an election.  When recorded on a ballot, those
+  choices become /votes/.  At the conclusion of an election, the votes
+  are /tallied/ (counted) to determine the outcome of each contest.
+
+  An election usually encompasses several contests, from the national
+  to the local level.  Voters usually make choices in a subset of
+  contests, depending on where they live and with what, if any,
+  political party they affiliate.  Election officials must provide
+  ballots for each valid subset of contests, so that any voter is
+  presented with all and only the contests he or she is eligible to
+  vote in.
+
+  These are the barest outlines of the election process; in actual
+  practice, elections are bewilderingly complex affairs, with
+  elaborate regulations, procedures, and forms that vary from
+  jurisdiction to jurisdiction.  NIST 1500-100 and 1500-103 were
+  developed to provide a Common Data Format for setting up elections
+  and reporting results in the United States.  Because it aims to
+  support all election practices in U.S. jurisdictions with a "one size
+  fits all" format, the standard contains more elements and properties
+  than any single jurisdiction would use.
+
+  The remainder of this section focuses on a subset of the standard
+  that might be used in preparation for a hypothetical election.  We
+  do not cover vote tracking or vote recording (the reporting of which
+  is, in fact, the primary purpose of the standards); we cover only
+  the scenario in which government officials assemble the information
+  required to produce ballots, though much of this information also
+  appears in the post-election reports, too.  This process is often
+  called /election definition/.
+
+** Defining an Election using NIST 1500-100
+   The bare-bones definition of an election, using the NIST 1500-100
+   standard, is very simple:
+
+   #+begin_src xml
+     <Election>
+         <ElectionScopeId>gadget_county</ElectionScopeId>
+         <Name>
+             <Text Language="en">Gadget County General Election 2062</Text>
+         </Name>
+         <StartDate>2062-06-15</StartDate>
+         <EndDate>2062-06-15</EndDate>
+         <Type>general</Type>
+     </Election>
+   #+end_src
+
+   It defines the name of election, when it takes place, its type
+   (general, primary, special, etc., according to categories defined
+   by each jurisdiction), and the jurisdiction it covers.
+
+   #+begin_aside
+   (Another note about these XML examples: the NIST XML schema has some
+   unfortunate features, one of which is its insistence on a
+   particular order of elements and sub-elements (it appears to be
+   alphabetical).  Some of the examples we have shown you before have
+   not been strictly valid, because we have violated the required
+   order to make the examples clearer.  From now on we will present
+   elements in the required order.)
+   #+end_aside
+
+** Contests
+   The Election element may be used to define one or more contests.
+   Here is an example of a simple candidate contest:
+
+   #+begin_src xml
+     <Contest xsi:type="CandidateContest" ObjectId="gc_contest1">
+         <ElectionDistrictId>orbit_city</ElectionDistrictId>
+         <Name>Contest for Mayor of Orbit City</Name>
+         <OfficeIds>orbit_city_mayor</OfficeIds>
+         <VotesAllowed>1</VotesAllowed>
+     </Contest>
+   #+end_src
+
+   Remember that the NIST 1500-100 schema requires, in some cases,
+   that you specify the /type/ an element has, so that the schema can
+   be used to tell if the element has the right sub-elements in it.
+
+   This example defines a candidate contest for the office of Orbit
+   City Mayor; the contest is restricted to voters in Orbit City, who
+   may vote for exactly one candidate.  The <Name> element defines the
+   name of the contest; that may not be the name that appears on the
+   ballot.  (We'll see an example of that in a moment.)
+
+** Candidates
+   The Election element also contains the definition of the candidates
+   in the election. Here, for example, are two candidates:
+   #+begin_src xml
+     <Candidate ObjectId="candidate_1">
+         <BallotName>
+             <Text Language="en">Cosmo Spacely</Text>
+         </BallotName>
+     </Candidate>
+     <Candidate ObjectId="candidate_2">
+         <BallotName>
+             <Text Language="en">Spencer Cogswell</Text>
+         </BallotName>
+     </Candidate>
+   #+end_src
+
+   These are minimal candidate definitions, containing only an
+   ObjectId and a name to used on the ballot.  The NIST 1500-100
+   standard allows an election official to associate much more
+   information with a candidate, including party affiliation, when the
+   candidate filed their intention to run for an office (note that the
+   office the candidate is running for is not specified here), contact
+   information, and more.
+
+   With candidates defined, the Contest may be extended to include the
+   selections voters will be able to choose among:
+
+   #+begin_src xml
+     <Contest xsi:type="CandidateContest" ObjectId="gc_contest1">
+         <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_1">
+             <CandidateIds>candidate_1</CandidateIds>
+         </ContestSelection>
+         <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_2">
+             <CandidateIds>candidate_2</CandidateIds>
+         </ContestSelection>
+    
+         <ElectionDistrictId>orbit_city</ElectionDistrictId>
+         <Name>Contest for Mayor of Orbit City</Name>
+         <OfficeIds>orbit_city_mayor</OfficeIds>
+         <VotesAllowed>1</VotesAllowed>
+     </Contest>
+   #+end_src
+
+   Don't forget that the ObjectIds are simply unique identifiers, and
+   would in practice most likely be opaque strings (like "r124n6").
+   We're using human-readable identifiers like "candidate_1" and
+   "contest_selection_1" to make the examples easier to
+   understand.
+
+** Ballots
+   Finally, the Election element may be used to define what will
+   appear on one or more ballots associated with this election.  In
+   our simple example, there is only one contest and only one
+   jurisdiction, so there is only a single ballot definition, called a
+   /BallotStyle/:
+
+   #+begin_src xml
+     <BallotStyle>
+         <GpUnitIds>spaceport</GpUnitIds>
+         <OrderedContent xsi:type="OrderedContest">
+             <ContestId>orbit_city_mayor</ContestId>
+         </OrderedContent>
+     </BallotStyle>
+   #+end_src
+
+   The pattern of definitions should now be clear: elements refer to
+   other elements so that information does not have to be repeated.
+   Here the ballotstyle definition declares that this ballot is to be
+   used in the Spaceport district of Orbit City, and that the ballot
+   should present one contest, that for Orbit City mayor. The details
+   of the contest are to be found in the linked Contest element.
+
+   It is not clear why the ballot content should be named
+   /OrderedContent/ or /OrderedContest/, as there is no unordered
+   alternative; this is another of the NIST 1500-100's
+   idiosyncrasies.  Another is the placement of information about the
+   order in which candidates are to appear on the ballot. So far our
+   Contest definition says nothing about ballot layout, but if we need
+   to specify the order in which names are to appear on the ballot, we
+   must do it in the Contest element:
+
+   #+begin_src xml
+     <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_1">
+         <SequenceOrder>1</SequenceOrder>
+         <CandidateIds>candidate_1</CandidateIds>
+     </ContestSelection>
+     <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_2">
+         <SequenceOrder>2</SequenceOrder>
+         <CandidateIds>candidate_2</CandidateIds>
+     </ContestSelection>
+     <ContestSelection xsi:type="CandidateSelection" ObjectId="contest_selection_3">
+         <SequenceOrder>3</SequenceOrder>
+         <IsWriteIn>true</IsWriteIn>
+     </ContestSelection>
+   #+end_src
+
+   We will also take this opportunity to add a write-in option for the contest.
+
+* Conclusion
+  We've included a completed example [[file:election-definition-sample.xml][here.]] 
+
+  The NIST 1500-100 standard includes other elements and
+  attributes that election officials may use to define elections, as
+  well as many others intended to be used in later stages of the
+  election process to track the state of the vote count.  All of these
+  are well documented in the specification, which is very readable.
+  The standard can be found [[https://pages.nist.gov/ElectionResultsReporting/][here]].  

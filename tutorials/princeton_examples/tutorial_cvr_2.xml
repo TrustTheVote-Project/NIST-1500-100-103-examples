@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
+ xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
+    <!-- 
+        A single cast vote record as it might be emitted from an app.
+        
+        In this example, the SelectionPosition Code is being used to associate
+        the selection with a named form field on the ballot PDF.
+    -->
+    <CVR>
+        <CurrentSnapshotId>cvrs_0</CurrentSnapshotId>
+        <CVRSnapshot ObjectId="cvrs_0">
+            <CVRContest>
+                <ContestId>contest_princeton_mayor</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId>candidate_alpha</ContestSelectionId>
+                    <SelectionPosition>
+                        <Code>
+                            <Type>other</Type>
+                            <OtherType>ballot_field_id</OtherType>
+                            <Value>id_of_pdf_form_field</Value>
+                        </Code>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
+        </CVRSnapshot>
+        <ElectionId>princeton_municipal_election_2022</ElectionId>
+    </CVR>
+    
+    <Election ObjectId="princeton_municipal_election_2022">
+        <Candidate ObjectId="candidate_alpha"></Candidate>
+        <Candidate ObjectId="candidate_beta"></Candidate>
+        
+        <Contest xsi:type="CandidateContest" ObjectId="contest_princeton_mayor">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_candidate_alpha">
+                <CandidateIds>candidate_alpha</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_candidate_beta">
+                <CandidateIds>candidate_beta</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="mayor_writein">
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+        </Contest>
+        <ElectionScopeId>princeton_borough</ElectionScopeId>
+    </Election>
+    
+    
+    <GeneratedDate>2022-01-01T12:00:00-08:00</GeneratedDate>
+    
+    <GpUnit ObjectId="princeton_borough">
+    <Name>Municipality of Princeton</Name>
+        <Type>precinct</Type>
+    </GpUnit>    
+    <GpUnit ObjectId="precinct_1">
+        <Name>Precinct 1</Name>
+        <Type>precinct</Type>
+    </GpUnit>
+        
+    <ReportGeneratingDeviceIds>markit</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="markit">
+        <Application>MarkIt Mobile App</Application>
+        <Manufacturer>Trust the Vote</Manufacturer>
+    </ReportingDevice>
+    <Version>1.0.0</Version>
+</CastVoteRecordReport>
