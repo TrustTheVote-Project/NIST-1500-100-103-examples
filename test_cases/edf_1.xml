@@ -106,7 +106,69 @@
             
         </BallotStyle>
         
+       
+       
+        <!--
+            Ballot Style for Spacetown
+            
+            - 2 1 x n contests
+            - 2 n x m contests
+            - 2 ballot measures (one short, one long)
+            - 1 gubernatorial contest
+        -->     
+        <BallotStyle>
+            <GpUnitIds> spacetown</GpUnitIds>
+            
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId> header_governor</HeaderId>
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>governor</ContestId>
+                    <OrderedContestSelectionIds>lepton_ticket hadron_ticket</OrderedContestSelectionIds>
+                </OrderedContent>
+            </OrderedContent>
+            
+            <!-- Spaceport Control Board (n x m) -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_2</ContestId>  
+                <OrderedContestSelectionIds>selection_2.1 selection_2.2 selection_2.3 selection_2.4 selection_2.5</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <!-- County Board of Commissioners (n x m) -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_4</ContestId>
+                <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3 selection_4.4 selection_4.5 selection_4.6 selection_4.7 selection_4.8</OrderedContestSelectionIds>
+            </OrderedContent>                
+            
+            <!-- Gadget County Sheriff (1 x n) -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_5</ContestId>
+                <OrderedContestSelectionIds> selection_5.1 selection_5.2 selection_5.3 selection_5.4</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <!-- Comptroller (1 x n) -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_8</ContestId>
+                <OrderedContestSelectionIds> selection_8.1 selection_8.2 selection_8.3</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <!-- Tax Increase Ballot Measure -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_3</ContestId>
+                <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <!-- Helium Ballot Measure -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_6</ContestId>
+                <OrderedContestSelectionIds> selection_6.1 selection_6.2</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            
+        </BallotStyle>
         
+        
+       
+       
 
         <!-- Orbit City Mayoral Candidates -->
         <Candidate ObjectId="candidate_1">
@@ -232,6 +294,33 @@
             </BallotName>
         </Candidate>
         
+        <!-- Candidates for Governor -->
+        <Candidate ObjectId="candidate_alpha">
+            <BallotName>
+                <Text Language="en">Anthony Alpha</Text>
+            </BallotName>
+            <IsTopTicket>true</IsTopTicket>
+            <PartyId> lepton_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_beta">
+            <BallotName>
+                <Text Language="en">Betty Beta</Text>
+            </BallotName>
+            <PartyId> lepton_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_gamma">
+            <BallotName>
+                <Text Language="en">Gloria Gamma</Text>
+            </BallotName>
+            <IsTopTicket>true</IsTopTicket>
+            <PartyId> hadron_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_delta">
+            <BallotName>
+                <Text Language="en">David Delta</Text>
+            </BallotName>
+            <PartyId> hadron_party</PartyId>
+        </Candidate>
         
         
         <!-- Contest for Orbit City Mayor (1 x n) -->
@@ -552,6 +641,22 @@
             <VotesAllowed>1</VotesAllowed>
         </Contest>
         
+        <!-- Contest for Governor of Farallon -->
+        <Contest xsi:type="CandidateContest" ObjectId="contest_9">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="lepton_ticket">
+                <CandidateIds>candidate_alpha candidate_beta</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="hadron_ticket">
+                <CandidateIds> candidate_gamma candidate_delta</CandidateIds>
+            </ContestSelection>
+            
+            <ElectionDistrictId>farallon</ElectionDistrictId>
+            <Name>Contest for Governor of Farallon</Name>
+            <VoteVariation>plurality</VoteVariation>
+            <OfficeIds>governor lieutenant_governor</OfficeIds>
+            <VotesAllowed>1</VotesAllowed>
+        </Contest>
+        
         <ElectionScopeId>gadget_county</ElectionScopeId>
         <Name>
             <Text Language="en">Gadget County General Election 2062</Text>
@@ -632,6 +737,11 @@
             <Text Language="en">Ballot Measures</Text>
         </Name>
     </Header>
+    <Header ObjectId="header_governor">
+        <Name>
+            <Text Language="en">For Governor</Text>
+        </Name>
+    </Header>
 
     <Issuer>Gadget County</Issuer>
     <IssuerAbbreviation>gc</IssuerAbbreviation>
@@ -681,6 +791,18 @@
     <Office ObjectId="spaceport_comptroller">
         <Name>
             <Text Language="en">Spaceport Comptroller</Text>
+        </Name>
+    </Office>
+    
+    <Office ObjectId="governor">
+        <Name>
+            <Text Language="en">Governor of Farallon</Text>
+        </Name>
+    </Office>
+    
+    <Office ObjectId="lieutenant_governor">
+        <Name>
+            <Text Language="en">Lieutenant Governor of Farallon</Text>
         </Name>
     </Office>
     
