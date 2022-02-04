@@ -7,10 +7,10 @@
     <Election>
 
         <!-- 
-            Ballot Style for Orbit City 
+            Ballot Style for Orbit City
             
             - 2 1 x n contests 
-            - 1 n x m contest
+            - 2 n x m contests
             - 1 ballot measure (short text)
         -->
         <BallotStyle>
@@ -19,19 +19,28 @@
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header_offices</HeaderId>
                 
+                <!-- Orbit City Mayor (1 x n) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_1</ContestId>
                     <OrderedContestSelectionIds>selection_1.1 selection_1.2 selection_1.3</OrderedContestSelectionIds>
                 </OrderedContent>
                 
+                <!-- County Board of Commissioners (n x m) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_4</ContestId>
                     <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3 selection_4.4 selection_4.5 selection_4.6 selection_4.7 selection_4.8</OrderedContestSelectionIds>
                 </OrderedContent>                
                 
+                <!-- Gadget County Sheriff (1 x n) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_5</ContestId>
                     <OrderedContestSelectionIds> selection_5.1 selection_5.2 selection_5.3 selection_5.4</OrderedContestSelectionIds>
+                </OrderedContent>
+                
+                <!-- School Board (n x m) -->
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>school_board</ContestId>
+                    <OrderedContestSelectionIds>selection_7.1 selection_7.2 selection_7.3 selection_7.4 selection_7.5 selection_7.6 selection_7.7 selection_7.8 selection_7.9 selection_7.10 selection_7.11 selection_7.12 selection_7.13</OrderedContestSelectionIds>
                 </OrderedContent>
                 
             </OrderedContent>
@@ -51,33 +60,44 @@
         <!--
             Ballot Style for Spaceport
             
-            - 1 1 x n
-            - 2 n x m
+            - 2 1 x n contests
+            - 2 n x m contests
             - 2 ballot measures (one short, one long)
-        -->
-        
+        -->     
         <BallotStyle>
             <GpUnitIds>spaceport</GpUnitIds>
+            
+            <!-- Spaceport Control Board (n x m) -->
             <OrderedContent xsi:type="OrderedContest">
                 <ContestId>contest_2</ContestId>  
                 <OrderedContestSelectionIds>selection_2.1 selection_2.2 selection_2.3 selection_2.4 selection_2.5</OrderedContestSelectionIds>
             </OrderedContent>
             
+            <!-- County Board of Commissioners (n x m) -->
             <OrderedContent xsi:type="OrderedContest">
                 <ContestId>contest_4</ContestId>
                 <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3 selection_4.4 selection_4.5 selection_4.6 selection_4.7 selection_4.8</OrderedContestSelectionIds>
             </OrderedContent>                
             
+            <!-- Gadget County Sheriff (1 x n) -->
             <OrderedContent xsi:type="OrderedContest">
                 <ContestId>contest_5</ContestId>
                 <OrderedContestSelectionIds> selection_5.1 selection_5.2 selection_5.3 selection_5.4</OrderedContestSelectionIds>
             </OrderedContent>
             
+            <!-- Comptroller (1 x n) -->
+            <OrderedContent xsi:type="OrderedContest">
+                <ContestId>contest_8</ContestId>
+                <OrderedContestSelectionIds> selection_8.1 selection_8.2 selection_8.3</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <!-- Tax Increase Ballot Measure -->
             <OrderedContent xsi:type="OrderedContest">
                 <ContestId>contest_3</ContestId>
                 <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
             </OrderedContent>
             
+            <!-- Helium Ballot Measure -->
             <OrderedContent xsi:type="OrderedContest">
                 <ContestId>contest_6</ContestId>
                 <OrderedContestSelectionIds> selection_6.1 selection_6.2</OrderedContestSelectionIds>
@@ -163,6 +183,57 @@
             </BallotName>
         </Candidate>
 
+        <!-- School Board Candidates -->
+        <Candidate ObjectId="candidate_14">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_15">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_16">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>  
+        <Candidate ObjectId="candidate_17">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>       
+        <Candidate ObjectId="candidate_18">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_19">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_20">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+
+        <!-- Comptroller Candidates -->
+        <Candidate ObjectId="candidate_21">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_22">
+            <BallotName>
+                <Text Language="en"/>
+            </BallotName>
+        </Candidate>
+        
+        
+        
         <!-- Contest for Orbit City Mayor (1 x n) -->
         <Contest xsi:type="CandidateContest" ObjectId="contest_1">
 
@@ -186,8 +257,8 @@
             <VotesAllowed>1</VotesAllowed>
 
         </Contest>
-       
-        <!-- Contest or Spaceport Control Board (n x m) -->
+ 
+        <!-- Contest for Spaceport Control Board (n x m) -->
         <Contest xsi:type="CandidateContest" ObjectId="contest_2">
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.1">
                 <SequenceOrder>1</SequenceOrder>
@@ -277,8 +348,6 @@
                 <SequenceOrder>8</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            
-            
             
             <ElectionDistrictId>gadget_county</ElectionDistrictId>
             <Name>Board of County Comissioners</Name>
@@ -395,6 +464,92 @@
             </SummaryText>
             <Type>other</Type>
             <OtherType>state_constitutional_amendment</OtherType>
+        </Contest>
+        
+        <!-- Contest for Gadget County School Board (n x m) -->
+        <Contest xsi:type="CandidateContest" ObjectId="contest_7">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_14</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.2">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_15</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.3">
+                <SequenceOrder>3</SequenceOrder>
+                <CandidateIds>candidate_16</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.4">
+                <SequenceOrder>4</SequenceOrder>
+                <CandidateIds>candidate_17</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.5">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds>candidate_18</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.6">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds>candidate_19</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.7">
+                <SequenceOrder>5</SequenceOrder>
+                <CandidateIds>candidate_20</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.8">
+                <SequenceOrder>6</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.9">
+                <SequenceOrder>7</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.10">
+                <SequenceOrder>8</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.11">
+                <SequenceOrder>7</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.12">
+                <SequenceOrder>8</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_7.13">
+                <SequenceOrder>7</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            
+            <ElectionDistrictId>gadget_county</ElectionDistrictId>
+            <Name>Gadget County School Board</Name>
+            <VoteVariation>n-of-m</VoteVariation>
+            <NumberElected>5</NumberElected>
+            <OfficeIds>school_board</OfficeIds>
+            <VotesAllowed>5</VotesAllowed>
+        </Contest>
+        
+        <!-- Contest for Spaceport Comptroller (1 x n) -->
+        <Contest xsi:type="CandidateContest" ObjectId="contest_8">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_8.1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_21</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_8.2">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_22</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_8.3">
+                <SequenceOrder>3</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            
+            <ElectionDistrictId>spaceport</ElectionDistrictId>
+            <Name>Spaceport Comptroller</Name>
+            <VoteVariation>plurality</VoteVariation>
+            <NumberElected>1</NumberElected>
+            <OfficeIds>spaceport_comptroller</OfficeIds>
+            <VotesAllowed>1</VotesAllowed>
         </Contest>
         
         <ElectionScopeId>gadget_county</ElectionScopeId>
@@ -516,6 +671,19 @@
         </Name>
     </Office>
 
+    <Office ObjectId="school_board">
+        <ElectionDistrictId>gadget_county</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Gadget County School Board</Text>
+        </Name>
+    </Office>
+
+    <Office ObjectId="spaceport_comptroller">
+        <Name>
+            <Text Language="en">Spaceport Comptroller</Text>
+        </Name>
+    </Office>
+    
     <Party ObjectId="lepton_party">
         <Name>
             <Text Language="en">Farallon Lepton Party</Text>
