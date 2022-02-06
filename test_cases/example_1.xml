@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--+
+                                Example 1
+    
+        Intended for use by AV; very similar to the old Jetsons data.
+    
+        Contains 3 districts, 3 contests.
+    
+        The NIST-1500-100 XML schema requires elements to appear in a specific order,
+        which is not terribly perspicuous for the human reader who may wish to begin
+        with the geopolitical units (<GpUnit> elements) and then proceed to the offices
+        and parties, all of which are defined outside the <Election> element.
+        
+        In the <Election> element, readers may wish to begin by studying the <Candidate>s
+        and the <Contest>s before examining the <BallotStyle> elements, which comprise
+        the actual ballot definitions.
+    +-->
+
+<ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
+    xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
+    <!--+
+        The Election element is the crux of the election report; the other portions are
+        presumably drawn from a variety of election-related databases.
+    +-->    
+    <Election>
+    <!--+
+        Ballot Definitions
+        
+        At the core of the <Election> are the ballot definitions (ballot styles) for each precinct.  Each 
+        ballot definition comprises an ordered list of contests and ballot measures for which
+        a voter may cast votes. The details of the contests and ballot measures (what the choices are)
+        are defined in their own elements.
+        
+        The ballots for the Downtown and Spacetown precincts are the same, because they are
+        both included in the Orbit City district.
+    +-->
+        <BallotStyle>
+            <!-- This is the ballot presented to voters in the Orbit City precincts -->
+            <GpUnitIds>precinct_1_downtown precinct_2_spacetown</GpUnitIds>
+            <!--+ 
+                Voters in the these precincts may vote in two contests:
+                
+                    - Because the precinct is in the Orbit City district,
+                      voters there may elect the Mayor.
+                      
+                    - Because the precincts are in the Orbit City district,
+                      and the Orbit City district is in the Gadget County district,
+                      voters my vote for in any county-wide contest: in this case,
+                      there is only a single ballot measure at the county level.
+            +-->
+                <OrderedContent xsi:type="OrderedContest">
+                    <!-- The contest for Mayor.  There are two candidates,
+                          plus a write-in option. -->
+                    <ContestId>contest_1</ContestId>
+                    <OrderedContestSelectionIds>selection_1.1 selection_1.2 selection_1.3</OrderedContestSelectionIds>
+                </OrderedContent>
+
+                <OrderedContent xsi:type="OrderedContest">
+                    <!-- The ballot measure.  Voters may vote yes or no. -->
+                    <ContestId>contest_3</ContestId>
+                    <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+                </OrderedContent>
+        </BallotStyle>
+        <BallotStyle>
+            <!--+
+                The ballot presented to voters in the Spaceport precinct, 
+            
+                The Spaceport precinct is not in Orbit City, so its residents
+                may not vote for Mayor of Orbit City.  It is in the Aldrin Spaceport 
+                district, which is holding an election to select members of the
+                Spaceport Control Board.  And because the Spaceport district is
+                in Gadget county, residents of the Spaceport precinct may
+                participate in the county-wide ballot measure contest.
+            +-->
+            <GpUnitIds>precinct_3_spaceport</GpUnitIds>
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The Spaceport Control Board Contest -->
+                <ContestId>contest_2</ContestId>
+                <OrderedContestSelectionIds>selection_2.1 selection_2.2 selection_2.3 selection_2.4 selection_2.5</OrderedContestSelectionIds>
+            </OrderedContent>
+
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The ballot measure.  Voters may vote yes or no. -->
+                <ContestId>contest_3</ContestId>
+                <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+            </OrderedContent>
+        </BallotStyle>
+        <BallotStyle>
+            <!--+
+                The ballot for residents of Bedrock.
+                
+                Bedrock, a rural community, has no district-specific
+                contests: the only contest in which Bedrock residents may
+                participate is the county-wide ballot measure.
+            +-->
+            <!-- Ballot Style for Bedrock Precinct -->
+            <GpUnitIds>precinct_4_bedrock</GpUnitIds>
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The ballot measure.  Voters may vote yes or no. -->
+                <ContestId>contest_3</ContestId>
+                <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+            </OrderedContent>
+        </BallotStyle>
+
+    <!--+
+        Candidates
+        
+        Candidates are the objects of selections in Contests.  The NIST-1500-100
+        specification allows election officials to encode many kinds of information
+        about candidates: when they filed for candidacy; how their campaigns may be
+        contacted; even what the candidate's campaign slogan is.  Election officials may
+        also link a Candidate to a detailed personal record (whose contents likely come
+        from another database).  The specification does not require this information,
+        however. At bare minimum, a <Candidate> element must include the name that should
+        appear on the ballot. Because most contests are partisan contests, though, and 
+        because most ballot layouts show party affiliation, we include party affiliation
+        in our use of the <Candidate> object.
+    +-->
+        
+        <!-- Orbit City Mayoral Candidates -->
+        <Candidate ObjectId="candidate_1">
+            <BallotName>
+                <Text Language="en">Cosmo Spacely</Text>
+            </BallotName>
+            <PartyId>lepton_party</PartyId>
+        </Candidate>
+        <Candidate ObjectId="candidate_2">
+            <BallotName>
+                <Text Language="en">Spencer Cogswell</Text>
+            </BallotName>
+            <PartyId>hadron_party</PartyId>
+        </Candidate>
+
+        <!-- Spaceport Control Board Candidates -->
+        <Candidate ObjectId="candidate_3">
+            <BallotName>
+                <Text Language="en">Jane Jetson</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_4">
+            <BallotName>
+                <Text Language="en">Harlan Ellis</Text>
+            </BallotName>
+        </Candidate>
+        <Candidate ObjectId="candidate_5">
+            <BallotName>
+                <Text Language="en">Rudy Indexer</Text>
+            </BallotName>
+        </Candidate>
+
+    <!--+
+        Contests
+        
+        The <Contest> element is the most detailed element in
+        the specification.  Election officials use it to describe
+        all aspects of a contest: the name of the contest; what
+        jurisdiction the contest entails; what office or offices are
+        being decided; what kind of selection will be used (simple majority;
+        plurality; n-of-m candidates, and so on); and how many votes
+        a voter may cast (e.g., in a contest to elect three members to
+        a control board, a voter is allowed three votes).
+        
+        In addition to this general information, the <Contest> element
+        also specifies what specific selections should be presented on
+        a ballot, for which candidate that selection applies, and in what order
+        the selection should appear on the ballot.  Write-in selections
+        may be specified as well.
+    +-->
+        <Contest xsi:type="CandidateContest" ObjectId="contest_1">
+            <!--+
+                The contest for Mayor of Orbit City.  There are two candidates, plus
+                a write-in option. These selections, like many elements in
+                the report document, have unique identifiers (ObjectIds), so that they
+                may be referenced in the Ballot Style definitions.
+            +-->
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_1</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.2">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_2</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.3">
+                <SequenceOrder>3</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ElectionDistrictId>district_orbit_city</ElectionDistrictId>
+            <Name>Contest for Mayor of Orbit City</Name>
+            <VoteVariation>plurality</VoteVariation>
+            <OfficeIds>office_mayor</OfficeIds>
+            <VotesAllowed>1</VotesAllowed>
+        </Contest>
+        <Contest xsi:type="CandidateContest" ObjectId="contest_2">
+            <!-- Contest for Spaceport Control Board (n x m) -->
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.1">
+                <SequenceOrder>1</SequenceOrder>
+                <CandidateIds>candidate_3</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.2">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_4</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.3">
+                <SequenceOrder>3</SequenceOrder>
+                <CandidateIds>candidate_5</CandidateIds>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.4">
+                <SequenceOrder>4</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.5">
+                <SequenceOrder>5</SequenceOrder>
+                <IsWriteIn>true</IsWriteIn>
+            </ContestSelection>
+
+            <ElectionDistrictId> district_aldrin_spaceport</ElectionDistrictId>
+            <Name>Spaceport Control Board</Name>
+            <VoteVariation>n-of-m</VoteVariation>
+            <NumberElected>2</NumberElected>
+            <OfficeIds>office_control_board</OfficeIds>
+            <VotesAllowed>2</VotesAllowed>
+
+        </Contest>
+        <Contest xsi:type="BallotMeasureContest" ObjectId="contest_3">
+            <!--+
+            The definition of ballot measure to increase the sales tax.
+            Election officials may use the Ballot-measure contest element
+            to capture descriptions, summaries, and arguments for and against
+            the measure under consideration.
+            +-->
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.1">
+                <SequenceOrder>1</SequenceOrder>
+                <Selection>
+                    <Text Language="en">yes</Text>
+                </Selection>
+            </ContestSelection>
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.2">
+                <SequenceOrder>2</SequenceOrder>
+                <Selection>
+                    <Text Language="en">no</Text>
+                </Selection>
+            </ContestSelection>
+            <ElectionDistrictId>county_gadget</ElectionDistrictId>
+            <Name>Air Traffic Control Tax Increase</Name>
+            <FullText>
+                <Text Language="en">Shall Gadget County increase its sales tax
+                    from 1% to 1.1% for the purpose of raising additional revenue
+                    to fund expanded air traffic control operations?</Text>
+            </FullText>
+            <Type>ballot-measure</Type>
+        </Contest>
+
+        <!--+
+            The end of the <Election> element includes additional
+            information about the election.
+        +-->
+        <ElectionScopeId>county_gadget</ElectionScopeId>
+        <Name>
+            <Text Language="en">Gadget County General Election 2062</Text>
+        </Name>
+        <StartDate>2062-06-15</StartDate>
+        <EndDate>2062-06-15</EndDate>
+        <Type>general</Type>
+    </Election>
+
+    <!--+
+        In alphabetical order, the report contains some metadata.
+    +-->
+    <Format>summary-contest</Format>
+    <GeneratedDate>2062-01-01T12:00:00-08:00</GeneratedDate>
+
+<!--+ 
+        Geopolitical Units 
+        
+        Gadget County lies in the state of Farallon. For purposes of this example,
+        this document describes three districts within Gadget County: Orbit City,
+        Aldrin Spaceport, and Bedrock.  Orbit City has two precincts, the downtown precinct
+        and the Spacetown precinct; Aldrin Spaceport has a single precinct (the spaceport
+        precinct); and Bedrock is a rural precinct in the county.
+        
+        The hierarchical composition of these geopolitical units is as follows:
+        
+        - State of Farallon
+            - Gadget County
+                - Orbit City
+                    - downtown precinct
+                    - spacetown precinct
+                - Alrin Spaceport District
+                    - spaceport precinct
+                - Bedrock precinct
+    +-->
+    <GpUnit xsi:type="ReportingUnit" ObjectId="state_farallon">
+        <!-- contains everything -->
+        <ComposingGpUnitIds>county_gadget</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">State of Farallon</Text>
+        </Name>
+        <Type>state</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="county_gadget">
+        <ComposingGpUnitIds>district_orbit_city district_aldrin_spaceport precinct_4_bedrock</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Gadget County</Text>
+        </Name>
+        <Type>county</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="district_orbit_city">
+        <ComposingGpUnitIds>precinct_2_spacetown precinct_1_downtown</ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Orbit City</Text>
+        </Name>
+        <Type>city</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="district_aldrin_spaceport">
+        <ComposingGpUnitIds> precinct_2_spacetown precinct_3_spaceport </ComposingGpUnitIds>
+        <Name>
+            <Text Language="en">Galaxy Spaceport District</Text>
+        </Name>
+        <Type>city</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_1_downtown">
+        <Name>
+            <Text Language="en">Downtown Orbit City Precinct</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>    
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_2_spacetown">
+        <Name>
+            <Text Language="en">Spacetown Precinct</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_3_spaceport">
+        <Name>
+            <Text Language="en">Spaceport precinct</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+    <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_4_bedrock">
+        <Name>
+            <Text Language="en">Bedrock precinct</Text>
+        </Name>
+        <Type>precinct</Type>
+    </GpUnit>
+
+<!--+
+        Headers
+        
+        Header elements are optional parts of ballot definitions (<BallotStyle> elements)
+    +-->
+    <Header ObjectId="header_national">
+        <Name>
+            <Text Language="en">National Contests</Text>
+        </Name>
+    </Header>
+    <Header ObjectId="header_county">
+        <Name>
+            <Text Language="en">County Contests</Text>
+        </Name>
+    </Header>
+
+    <!--+
+        More metadata about the report, in alphabetical
+        order.
+    +-->
+    <Issuer>Gadget County</Issuer>
+    <IssuerAbbreviation>gc</IssuerAbbreviation>
+
+    <!--+
+        Offices
+        
+        Like the <Candidate> element, the <Office> element may contain
+        many pieces of information gleaned from state and local government
+        databases.  At minimum, an office definition includes a name and
+        the jurisdiction to which it obtains.
+    +-->
+    <Office ObjectId="office_mayor">
+        <ElectionDistrictId>district_orbit_city</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Mayor of Orbit City</Text>
+        </Name>
+    </Office>
+    <Office ObjectId="office_control_board">
+        <ElectionDistrictId> district_aldrin_spaceport</ElectionDistrictId>
+        <Name>
+            <Text Language="en">Spaceport Control Board</Text>
+        </Name>
+    </Office>
+
+    <!--+
+        Parties
+        
+        Parties may similarly have spare or elaborate descriptions with the
+        schema.  They are not required.
+    +-->
+    <Party ObjectId="lepton_party">
+        <Name>
+            <Text Language="en">Farallon Lepton Party</Text>
+        </Name>
+        <PartyScopeGpUnitIds>state_farallon</PartyScopeGpUnitIds>
+    </Party>
+    <Party ObjectId="hadron_party">
+        <Name>
+            <Text Language="en">Grand Hadron Party of Gadget County</Text>
+        </Name>
+        <PartyScopeGpUnitIds>county_gadget</PartyScopeGpUnitIds>
+    </Party>
+
+    <!-- The report ends with some final metadata. -->
+    <SequenceStart>1</SequenceStart>
+    <SequenceEnd>1</SequenceEnd>
+    <Status>pre-election</Status>
+    <VendorApplicationId>TTV</VendorApplicationId>
+
+</ElectionReport>
