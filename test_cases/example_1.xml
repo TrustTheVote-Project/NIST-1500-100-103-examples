@@ -14,14 +14,18 @@
         In the <Election> element, readers may wish to begin by studying the <Candidate>s
         and the <Contest>s before examining the <BallotStyle> elements, which comprise
         the actual ballot definitions.
-    +-->
-
++-->
 <ElectionReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-100/v2 http://itl.nist.gov/ns/voting/1500-100/v2"
     xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
-    <!--+
+<!--+
+        The <Election> element
+        
         The Election element is the crux of the election report; the other portions are
-        presumably drawn from a variety of election-related databases.
+        presumably drawn from a variety of election-related databases.  In the pre-election
+        phase, the <Election> element comprises the election definition; in the election-night
+        and post-election scenarios, its sub-elements are used to carry counts and other 
+        reportable nformation.
     +-->    
     <Election>
     <!--+
@@ -264,13 +268,12 @@
         <EndDate>2062-06-15</EndDate>
         <Type>general</Type>
     </Election>
-
     <!--+
-        In alphabetical order, the report contains some metadata.
+        Following the <Election> element and alphabetical order, 
+        the report contains some metadata.
     +-->
     <Format>summary-contest</Format>
     <GeneratedDate>2062-01-01T12:00:00-08:00</GeneratedDate>
-
 <!--+ 
         Geopolitical Units 
         
@@ -290,7 +293,7 @@
                 - Alrin Spaceport District
                     - spaceport precinct
                 - Bedrock precinct
-    +-->
++-->
     <GpUnit xsi:type="ReportingUnit" ObjectId="state_farallon">
         <!-- contains everything -->
         <ComposingGpUnitIds>county_gadget</ComposingGpUnitIds>
@@ -344,12 +347,11 @@
         </Name>
         <Type>precinct</Type>
     </GpUnit>
-
 <!--+
         Headers
         
         Header elements are optional parts of ballot definitions (<BallotStyle> elements)
-    +-->
++-->
     <Header ObjectId="header_national">
         <Name>
             <Text Language="en">National Contests</Text>
