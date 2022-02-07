@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--+
                                 Example 2
-    
+
         For Anne; this example extends Example 1 to include
-        a US Presidential contest and two additional, longer 
+        a US Presidential contest and two additional, longer
         ballot measures.
-        
+
         Please refer to Example 1 for comments on the ordering of elements and
         their general purpose; the comments in this file, for the most part,
         simply highlight changes from Example 1.
-        
+
         We add a new county-wide district, the Gadget County Unified School District.
         This addition does not increase the number of precincts; the existing precincts
         are also part of the new district.
-        
+
         We also add the State of Farallon as a Geopolitical Unit. as it is the reporting unit
         for the presidential race.
     +-->
@@ -85,10 +85,10 @@
         </BallotStyle>
         <BallotStyle>
             <!--+
-                The ballot presented to voters in the Spaceport precinct, 
-            
+                The ballot presented to voters in the Spaceport precinct,
+
                 The Spaceport precinct is not in Orbit City, so its residents
-                may not vote for Mayor of Orbit City.  It is in the Aldrin Spaceport 
+                may not vote for Mayor of Orbit City.  It is in the Aldrin Spaceport
                 district, which is holding an election to select members of the
                 Spaceport Control Board.  And because the Spaceport district is
                 in Gadget county, residents of the Spaceport precinct may
@@ -150,15 +150,15 @@
         <BallotStyle>
             <!--+
                 The ballot for residents of Bedrock.
-                
+
                 Bedrock, a rural community, has no district-specific
                 contests: the only contests in which Bedrock residents may
-                participate are the national, state, and county-wide 
+                participate are the national, state, and county-wide
                 contests.
             +-->
             <!-- Ballot Style for Bedrock Precinct -->
             <GpUnitIds>precinct_4_bedrock</GpUnitIds>
-            
+
             <!-- National Contests -->
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header_national</HeaderId>
@@ -169,7 +169,7 @@
                         presidential_write-in</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
-            
+
             <!-- State Contests -->
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId>header_state</HeaderId>
@@ -180,7 +180,7 @@
                         selection_6.2</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
-            
+
             <!-- County Contests -->
             <OrderedContent xsi:type="OrderedHeader">
                 <HeaderId> header_county</HeaderId>
@@ -523,12 +523,12 @@
     <Format>summary-contest</Format>
     <GeneratedDate>2062-01-01T12:00:00-08:00</GeneratedDate>
 
-    <!--+ 
+    <!--+
         Geopolitical Units: Government-based geography
-        
+
         The government-based geographical divisions from Example 1
         remain unchanged in Example 2:
-        
+
         - State of Farallon
             - Gadget County
                 - Orbit City
@@ -593,9 +593,9 @@
         <Type>precinct</Type>
     </GpUnit>
 
-    <!--+ 
+    <!--+
     Geopolitical Units: Administrative Geography
-    
+
     Example 2 adds an administrative district: the Gadget County Unified School District.
     The School District happens to be coextensive with the government-based county unit,
     but it is a separate entity.
@@ -612,7 +612,7 @@
 
     <!--+
         Headers
-        
+
         Header elements are optional parts of ballot definitions (<BallotStyle> elements)
     +-->
     <Header ObjectId="header_national">
