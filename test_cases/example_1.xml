@@ -40,15 +40,15 @@
         both included in the Orbit City district.
     +-->
         <BallotStyle>
-            <!-- This is the ballot presented to voters in the Orbit City precincts -->
-            <GpUnitIds>precinct_1_downtown precinct_2_spacetown</GpUnitIds>
+            <!-- This is the ballot presented to voters in the downtown district -->
+            <GpUnitIds>precinct_1_downtown</GpUnitIds>
             <!--+ 
-                Voters in the these precincts may vote in two contests:
+                Voters in the the downtown precinct may vote in two contests:
                 
                     - Because the precinct is in the Orbit City district,
                       voters there may elect the Mayor.
                       
-                    - Because the precincts are in the Orbit City district,
+                    - Because the precinct is in the Orbit City district,
                       and the Orbit City district is in the Gadget County district,
                       voters my vote for in any county-wide contest: in this case,
                       there is only a single ballot measure at the county level.
@@ -57,15 +57,53 @@
                     <!-- The contest for Mayor.  There are two candidates,
                           plus a write-in option. -->
                     <ContestId>contest_1</ContestId>
-                    <OrderedContestSelectionIds>selection_1.1 selection_1.2 selection_1.3</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
                 </OrderedContent>
 
                 <OrderedContent xsi:type="OrderedContest">
                     <!-- The ballot measure.  Voters may vote yes or no. -->
                     <ContestId>contest_3</ContestId>
-                    <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
                 </OrderedContent>
         </BallotStyle>
+        
+        <BallotStyle>
+            <!-- This is the ballot presented to voters in the spacetown district -->
+            <GpUnitIds> precinct_2_spacetown</GpUnitIds>
+            <!--+ 
+                Voters in the spacetown district may vote in three contests:
+                
+                    - Because the precinct is in the Orbit City district,
+                      voters there may elect the Mayor.
+                      
+                    - They may vote in the 
+                      
+                    - Because the precincts are in the Orbit City district,
+                      and the Orbit City district is in the Gadget County district,
+                      voters my vote for in any county-wide contest: in this case,
+                      there is only a single ballot measure at the county level.
+            +-->
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The contest for Mayor.  There are two candidates,
+                          plus a write-in option. -->
+                <ContestId>contest_1</ContestId>
+                <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The ballot measure.  Voters may vote yes or no. -->
+                <ContestId>contest_3</ContestId>
+                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The ballot measure.  Voters may vote yes or no. -->
+                <ContestId>contest_3</ContestId>
+                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+            </OrderedContent>
+        </BallotStyle>
+        
+        
         <BallotStyle>
             <!--+
                 The ballot presented to voters in the Spaceport precinct, 
@@ -81,13 +119,13 @@
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The Spaceport Control Board Contest -->
                 <ContestId>contest_2</ContestId>
-                <OrderedContestSelectionIds>selection_2.1 selection_2.2 selection_2.3 selection_2.4 selection_2.5</OrderedContestSelectionIds>
+                <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
             </OrderedContent>
 
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The ballot measure.  Voters may vote yes or no. -->
                 <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
             </OrderedContent>
         </BallotStyle>
         <BallotStyle>
@@ -103,7 +141,7 @@
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The ballot measure.  Voters may vote yes or no. -->
                 <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>selection_3.1 selection_3.2</OrderedContestSelectionIds>
+                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
             </OrderedContent>
         </BallotStyle>
 
@@ -123,13 +161,13 @@
     +-->
         
         <!-- Orbit City Mayoral Candidates -->
-        <Candidate ObjectId="candidate_1">
+        <Candidate ObjectId="candidate_spacely">
             <BallotName>
                 <Text Language="en">Cosmo Spacely</Text>
             </BallotName>
             <PartyId>lepton_party</PartyId>
         </Candidate>
-        <Candidate ObjectId="candidate_2">
+        <Candidate ObjectId="candidate_cogswell">
             <BallotName>
                 <Text Language="en">Spencer Cogswell</Text>
             </BallotName>
@@ -137,17 +175,17 @@
         </Candidate>
 
         <!-- Spaceport Control Board Candidates -->
-        <Candidate ObjectId="candidate_3">
+        <Candidate ObjectId="candidate_jetson">
             <BallotName>
                 <Text Language="en">Jane Jetson</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_4">
+        <Candidate ObjectId="candidate_ellis">
             <BallotName>
                 <Text Language="en">Harlan Ellis</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_5">
+        <Candidate ObjectId="candidate_indexer">
             <BallotName>
                 <Text Language="en">Rudy Indexer</Text>
             </BallotName>
@@ -178,15 +216,15 @@
                 the report document, have unique identifiers (ObjectIds), so that they
                 may be referenced in the Ballot Style definitions.
             +-->
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.1">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_spacely">
                 <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_1</CandidateIds>
+                <CandidateIds>candidate_spacely</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.2">
-                <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_2</CandidateIds>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_cogswell">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_cogswell</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.3">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_1">
                 <SequenceOrder>3</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
@@ -198,23 +236,23 @@
         </Contest>
         <Contest xsi:type="CandidateContest" ObjectId="contest_2">
             <!-- Contest for Spaceport Control Board (n x m) -->
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.1">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_jetson">
                 <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_3</CandidateIds>
+                <CandidateIds>candidate_jetson</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.2">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_ellis">
                 <SequenceOrder>2</SequenceOrder>
-                <CandidateIds>candidate_4</CandidateIds>
+                <CandidateIds>candidate_ellis</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.3">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_indexer">
                 <SequenceOrder>3</SequenceOrder>
-                <CandidateIds>candidate_5</CandidateIds>
+                <CandidateIds>candidate_indexer</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.4">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_2">
                 <SequenceOrder>4</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.5">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_3">
                 <SequenceOrder>5</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
@@ -234,13 +272,13 @@
             to capture descriptions, summaries, and arguments for and against
             the measure under consideration.
             +-->
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.1">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_yes">
                 <SequenceOrder>1</SequenceOrder>
                 <Selection>
                     <Text Language="en">yes</Text>
                 </Selection>
             </ContestSelection>
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.2">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_no">
                 <SequenceOrder>2</SequenceOrder>
                 <Selection>
                     <Text Language="en">no</Text>
@@ -280,19 +318,8 @@
         Gadget County lies in the state of Farallon. For purposes of this example,
         this document describes three districts within Gadget County: Orbit City,
         Aldrin Spaceport, and Bedrock.  Orbit City has two precincts, the downtown precinct
-        and the Spacetown precinct; Aldrin Spaceport has a single precinct (the spaceport
-        precinct); and Bedrock is a rural precinct in the county.
-        
-        The hierarchical composition of these geopolitical units is as follows:
-        
-        - State of Farallon
-            - Gadget County
-                - Orbit City
-                    - downtown precinct
-                    - spacetown precinct
-                - Aldrin Spaceport District
-                    - spaceport precinct
-                - Bedrock precinct
+        and the Spacetown precinct; Aldrin Spaceport has a two precincts: the spacetown precinct
+        and the spaceport precinct; and Bedrock is a rural precinct in the county.
 +-->
     <GpUnit xsi:type="ReportingUnit" ObjectId="state_farallon">
         <!-- contains everything -->
@@ -310,16 +337,16 @@
         <Type>county</Type>
     </GpUnit>
     <GpUnit xsi:type="ReportingUnit" ObjectId="district_orbit_city">
-        <ComposingGpUnitIds>precinct_2_spacetown precinct_1_downtown</ComposingGpUnitIds>
+        <ComposingGpUnitIds>precinct_1_downtown precinct_2_spacetown </ComposingGpUnitIds>
         <Name>
             <Text Language="en">Orbit City</Text>
         </Name>
         <Type>city</Type>
     </GpUnit>
     <GpUnit xsi:type="ReportingUnit" ObjectId="district_aldrin_spaceport">
-        <ComposingGpUnitIds> precinct_2_spacetown precinct_3_spaceport </ComposingGpUnitIds>
+        <ComposingGpUnitIds> precinct_2_spacetown precinct_3_spaceport</ComposingGpUnitIds>
         <Name>
-            <Text Language="en">Galaxy Spaceport District</Text>
+            <Text Language="en">Aldrin Spaceport District</Text>
         </Name>
         <Type>city</Type>
     </GpUnit>
