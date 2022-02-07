@@ -275,7 +275,7 @@
     <Format>summary-contest</Format>
     <GeneratedDate>2062-01-01T12:00:00-08:00</GeneratedDate>
 <!--+ 
-        Geopolitical Units 
+        Geopolitical Units: Government-Based Geography
         
         Gadget County lies in the state of Farallon. For purposes of this example,
         this document describes three districts within Gadget County: Orbit City,
@@ -290,7 +290,7 @@
                 - Orbit City
                     - downtown precinct
                     - spacetown precinct
-                - Alrin Spaceport District
+                - Aldrin Spaceport District
                     - spaceport precinct
                 - Bedrock precinct
 +-->
