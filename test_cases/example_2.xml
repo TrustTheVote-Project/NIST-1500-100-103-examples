@@ -23,9 +23,10 @@
     xmlns="http://itl.nist.gov/ns/voting/1500-100/v2">
 
     <Election>
+ 
+        <!-- This is the ballot presented to voters in precinct 1  -->
         <BallotStyle>
-            <!-- This is the ballot presented to voters in the Orbit City precincts -->
-            <GpUnitIds>precinct_1_downtown precinct_2_spacetown</GpUnitIds>
+            <GpUnitIds>precinct_1_downtown</GpUnitIds>
             <!--+
                 In Example 2, the Ballot are divided into sections, National,
                 State, County, and District.  The school-board election is included in the County
@@ -60,15 +61,15 @@
                 <!-- The School Board Contest (n x m) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId> contest_4</ContestId>
-                    <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3
-                        selection_4.4 selection_4.5 selection_4.6 selection_4.7
+                    <OrderedContestSelectionIds>selection_smith selection_gomez selection_davis
+                        selection_tsi selection_orotund selection_4.6 selection_4.7
                         selection_4.8</OrderedContestSelectionIds>
                 </OrderedContent>
+                
                 <!-- The tax measure.  Voters may vote yes or no. -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_3</ContestId>
-                    <OrderedContestSelectionIds>selection_3.1
-                        selection_3.2</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
 
@@ -78,22 +79,81 @@
                 <!-- The contest for Mayor. (1 x n) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_1</ContestId>
-                    <OrderedContestSelectionIds>selection_1.1 selection_1.2
-                        selection_1.3</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds> selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
+ 
+        <!-- This is the ballot presented to voters in precinct 2  -->
         <BallotStyle>
+            <GpUnitIds> precinct_2_spacetown</GpUnitIds>
             <!--+
-                The ballot presented to voters in the Spaceport precinct,
-
-                The Spaceport precinct is not in Orbit City, so its residents
-                may not vote for Mayor of Orbit City.  It is in the Aldrin Spaceport
-                district, which is holding an election to select members of the
-                Spaceport Control Board.  And because the Spaceport district is
-                in Gadget county, residents of the Spaceport precinct may
-                participate in the county-wide ballot measure contest.
-            +-->
+                In Example 2, the Ballot are divided into sections, National,
+                State, County, and District.  The school-board election is included in the County
+                division, even though the School District is different from the County.
+            -->
+            
+            <!-- National Contests -->
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header_national</HeaderId>
+                <!-- POTUS -->
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest_9</ContestId>
+                    <OrderedContestSelectionIds>lepton_ticket hadron_ticket
+                        presidential_write-in</OrderedContestSelectionIds>
+                </OrderedContent>
+            </OrderedContent>
+            
+            <!-- State Contests -->
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header_state</HeaderId>
+                <!-- The Helium legalization measure.  Voters may vote yes or no. -->
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest_6</ContestId>
+                    <OrderedContestSelectionIds>selection_6.1
+                        selection_6.2</OrderedContestSelectionIds>
+                </OrderedContent>
+            </OrderedContent>
+            
+            <!-- County Contests -->
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId> header_county</HeaderId>
+                <!-- The School Board Contest (n x m) -->
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId> contest_4</ContestId>
+                    <OrderedContestSelectionIds>selection_smith selection_gomez selection_davis
+                        selection_tsi selection_orotund selection_4.6 selection_4.7
+                        selection_4.8</OrderedContestSelectionIds>
+                </OrderedContent>
+                
+                <!-- The tax measure.  Voters may vote yes or no. -->
+                <OrderedContent xsi:type="OrderedContest">
+                    <ContestId>contest_3</ContestId>
+                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+                </OrderedContent>
+            </OrderedContent>
+            
+            <!-- District Contests -->
+            <OrderedContent xsi:type="OrderedHeader">
+                <HeaderId>header_district</HeaderId>
+                
+                <OrderedContent xsi:type="OrderedContest">
+                    <!-- The contest for Mayor.  There are two candidates,
+                          plus a write-in option. -->
+                    <ContestId>contest_1</ContestId>
+                    <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
+                </OrderedContent>
+                <OrderedContent xsi:type="OrderedContest">
+                    <!-- The Spaceport Control Board Contest -->
+                    <ContestId>contest_2</ContestId>
+                    <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
+                </OrderedContent>
+                
+            </OrderedContent>
+        </BallotStyle>
+        
+        <!-- The ballot presented to voters in precinct 3 -->
+        <BallotStyle>
             <GpUnitIds>precinct_3_spaceport</GpUnitIds>
 
             <!-- National Contests -->
@@ -124,17 +184,17 @@
                 <!-- The School Board Contest (n x m) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId> contest_4</ContestId>
-                    <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3
-                        selection_4.4 selection_4.5 selection_4.6 selection_4.7
+                    <OrderedContestSelectionIds>selection_smith selection_gomez selection_davis
+                        selection_tsi selection_orotund selection_4.6 selection_4.7
                         selection_4.8</OrderedContestSelectionIds>
                 </OrderedContent>
                 <!-- The tax measure.  Voters may vote yes or no. -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_3</ContestId>
-                    <OrderedContestSelectionIds>selection_3.1
-                        selection_3.2</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
+
 
             <!-- District Contests -->
             <OrderedContent xsi:type="OrderedHeader">
@@ -142,11 +202,12 @@
                 <OrderedContent xsi:type="OrderedContest">
                     <!-- The Spaceport Control Board Contest -->
                     <ContestId>contest_2</ContestId>
-                    <OrderedContestSelectionIds>selection_2.1 selection_2.2 selection_2.3
-                        selection_2.4 selection_2.5</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
         </BallotStyle>
+        
+        <!-- Ballot for precinct 4 -->
         <BallotStyle>
             <!--+
                 The ballot for residents of Bedrock.
@@ -187,74 +248,75 @@
                 <!-- The School Board Contest (n x m) -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId> contest_4</ContestId>
-                    <OrderedContestSelectionIds>selection_4.1 selection_4.2 selection_4.3
-                        selection_4.4 selection_4.5 selection_4.6 selection_4.7
+                    <OrderedContestSelectionIds>selection_smith selection_gomez selection_davis
+                        selection_tsi selection_orotund selection_4.6 selection_4.7
                         selection_4.8</OrderedContestSelectionIds>
                 </OrderedContent>
                 <!-- The tax measure.  Voters may vote yes or no. -->
                 <OrderedContent xsi:type="OrderedContest">
                     <ContestId>contest_3</ContestId>
-                    <OrderedContestSelectionIds>selection_3.1
-                        selection_3.2</OrderedContestSelectionIds>
+                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
                 </OrderedContent>
             </OrderedContent>
+
         </BallotStyle>
 
+
         <!-- Orbit City Mayoral Candidates -->
-        <Candidate ObjectId="candidate_1">
+        <Candidate ObjectId="candidate_spacely">
             <BallotName>
                 <Text Language="en">Cosmo Spacely</Text>
             </BallotName>
             <PartyId>lepton_party</PartyId>
         </Candidate>
-        <Candidate ObjectId="candidate_2">
+        <Candidate ObjectId="candidate_cogswell">
             <BallotName>
                 <Text Language="en">Spencer Cogswell</Text>
             </BallotName>
             <PartyId>hadron_party</PartyId>
         </Candidate>
-
+        
         <!-- Spaceport Control Board Candidates -->
-        <Candidate ObjectId="candidate_3">
+        <Candidate ObjectId="candidate_jetson">
             <BallotName>
                 <Text Language="en">Jane Jetson</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_4">
+        <Candidate ObjectId="candidate_ellis">
             <BallotName>
                 <Text Language="en">Harlan Ellis</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_5">
+        <Candidate ObjectId="candidate_indexer">
             <BallotName>
                 <Text Language="en">Rudy Indexer</Text>
             </BallotName>
         </Candidate>
-
+        
         <!-- Gadget County School Board Candidates -->
-        <Candidate ObjectId="candidate_6">
+        <Candidate ObjectId="candidate_smith">
             <BallotName>
-                <Text Language="en"/>
+                <Text Language="en">Sally smith</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_7">
+        <Candidate ObjectId="candidate_gomez">
             <BallotName>
-                <Text Language="en"/>
+                <Text Language="en">Hector Gomez</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_8">
+        <Candidate ObjectId="candidate_davis">
             <BallotName>
-                <Text Language="en"/>
+                <Text Language="en">Rosashawn Davis</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_9">
+        <Candidate ObjectId="candidate_tsi">
             <BallotName>
-                <Text Language="en"/>
+                <Text Language="en">Oliver Tsi</Text>
             </BallotName>
         </Candidate>
-        <Candidate ObjectId="candidate_10">
+        <Candidate ObjectId="candidate_orotund">
             <BallotName>
-                <Text Language="en"/>
+                <Text Language="en">Glavin Orotund</Text>
             </BallotName>
         </Candidate>
 
@@ -290,69 +352,78 @@
 
         <!-- Contest for Orbit City Mayor (1 x n) -->
         <Contest xsi:type="CandidateContest" ObjectId="contest_1">
-
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.1">
+            <!--+
+                The contest for Mayor of Orbit City.  There are two candidates, plus
+                a write-in option. These selections, like many elements in
+                the report document, have unique identifiers (ObjectIds), so that they
+                may be referenced in the Ballot Style definitions.
+            +-->
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_spacely">
                 <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_1</CandidateIds>
+                <CandidateIds>candidate_spacely</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.2">
-                <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_2</CandidateIds>
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_cogswell">
+                <SequenceOrder>2</SequenceOrder>
+                <CandidateIds>candidate_cogswell</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_1.3">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_1">
                 <SequenceOrder>3</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-
             <ElectionDistrictId>district_orbit_city</ElectionDistrictId>
             <Name>Contest for Mayor of Orbit City</Name>
             <VoteVariation>plurality</VoteVariation>
             <OfficeIds>office_mayor</OfficeIds>
             <VotesAllowed>1</VotesAllowed>
-
         </Contest>
 
-        <!-- Contest for Spaceport Control Board (n x m) -->
         <Contest xsi:type="CandidateContest" ObjectId="contest_2">
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.1">
+            <!-- Contest for Spaceport Control Board (n x m) -->
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_jetson">
                 <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_3</CandidateIds>
+                <CandidateIds>candidate_jetson</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.2">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_ellis">
                 <SequenceOrder>2</SequenceOrder>
-                <CandidateIds>candidate_4</CandidateIds>
+                <CandidateIds>candidate_ellis</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.3">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_indexer">
                 <SequenceOrder>3</SequenceOrder>
-                <CandidateIds>candidate_5</CandidateIds>
+                <CandidateIds>candidate_indexer</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.4">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_2">
                 <SequenceOrder>4</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_2.5">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_3">
                 <SequenceOrder>5</SequenceOrder>
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-
+            
             <ElectionDistrictId> district_aldrin_spaceport</ElectionDistrictId>
             <Name>Spaceport Control Board</Name>
             <VoteVariation>n-of-m</VoteVariation>
             <NumberElected>2</NumberElected>
             <OfficeIds>office_control_board</OfficeIds>
             <VotesAllowed>2</VotesAllowed>
-
+            
         </Contest>
 
         <!-- Tax Increase (short ballot measure) -->
         <Contest xsi:type="BallotMeasureContest" ObjectId="contest_3">
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.1">
+            <!--+
+            The definition of ballot measure to increase the sales tax.
+            Election officials may use the Ballot-measure contest element
+            to capture descriptions, summaries, and arguments for and against
+            the measure under consideration.
+            +-->
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_yes">
                 <SequenceOrder>1</SequenceOrder>
                 <Selection>
                     <Text Language="en">yes</Text>
                 </Selection>
             </ContestSelection>
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="selection_3.2">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_no">
                 <SequenceOrder>2</SequenceOrder>
                 <Selection>
                     <Text Language="en">no</Text>
@@ -370,25 +441,25 @@
 
         <!-- Contest for School Board (n x m) -->
         <Contest xsi:type="CandidateContest" ObjectId="contest_4">
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.1">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_smith">
                 <SequenceOrder>1</SequenceOrder>
-                <CandidateIds>candidate_6</CandidateIds>
+                <CandidateIds>candidate_smith</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.2">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_gomez">
                 <SequenceOrder>2</SequenceOrder>
-                <CandidateIds>candidate_7</CandidateIds>
+                <CandidateIds>candidate_gomez</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.3">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_davis">
                 <SequenceOrder>3</SequenceOrder>
-                <CandidateIds>candidate_8</CandidateIds>
+                <CandidateIds>candidate_davis</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.4">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_tsi">
                 <SequenceOrder>4</SequenceOrder>
-                <CandidateIds>candidate_9</CandidateIds>
+                <CandidateIds>candidate_tsi</CandidateIds>
             </ContestSelection>
-            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.5">
+            <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_orotund">
                 <SequenceOrder>5</SequenceOrder>
-                <CandidateIds>candidate_10</CandidateIds>
+                <CandidateIds>candidate_orotund</CandidateIds>
             </ContestSelection>
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_4.6">
                 <SequenceOrder>6</SequenceOrder>
