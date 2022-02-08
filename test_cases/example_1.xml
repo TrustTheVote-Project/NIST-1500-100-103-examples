@@ -74,16 +74,20 @@
                     - Because the precinct is in the Orbit City district,
                       voters there may elect the Mayor.
                                             
-                    - Because the precinct is in the Orbit City district,
-                      and the Orbit City district is in the Gadget County district,
-                      voters my vote for in any county-wide contest: in this case,
-                      there is only a single ballot measure at the county level.
+                    - Because the precinct is in the Aldrin Spaceport district,
+                      voters may vote in the Spaceport Control Board contest.
             +-->
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The contest for Mayor.  There are two candidates,
                           plus a write-in option. -->
                 <ContestId>contest_1</ContestId>
                 <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
+            </OrderedContent>
+            
+            <OrderedContent xsi:type="OrderedContest">
+                <!-- The Spaceport Control Board Contest -->
+                <ContestId>contest_2</ContestId>
+                <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
             </OrderedContent>
             
             <OrderedContent xsi:type="OrderedContest">
