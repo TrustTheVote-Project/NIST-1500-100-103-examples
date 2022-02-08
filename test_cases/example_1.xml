@@ -36,11 +36,9 @@
         a voter may cast votes. The details of the contests and ballot measures (what the choices are)
         are defined in their own elements.
         
-        The ballots for the Downtown and Spacetown precincts are the same, because they are
-        both included in the Orbit City district.
     +-->
         <BallotStyle>
-            <!-- This is the ballot presented to voters in the downtown district -->
+            <!-- This is the ballot presented to voters in precinct 1  -->
             <GpUnitIds>precinct_1_downtown</GpUnitIds>
             <!--+ 
                 Voters in the the downtown precinct may vote in two contests:
@@ -68,17 +66,15 @@
         </BallotStyle>
         
         <BallotStyle>
-            <!-- This is the ballot presented to voters in the spacetown district -->
+            <!-- This is the ballot presented to voters in precinct 2  -->
             <GpUnitIds> precinct_2_spacetown</GpUnitIds>
             <!--+ 
-                Voters in the spacetown district may vote in three contests:
+                Voters in the spacetown district may vote in two contests:
                 
                     - Because the precinct is in the Orbit City district,
                       voters there may elect the Mayor.
-                      
-                    - They may vote in the 
-                      
-                    - Because the precincts are in the Orbit City district,
+                                            
+                    - Because the precinct is in the Orbit City district,
                       and the Orbit City district is in the Gadget County district,
                       voters my vote for in any county-wide contest: in this case,
                       there is only a single ballot measure at the county level.
