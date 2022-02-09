@@ -649,7 +649,7 @@
           ],
           "ElectionDistrictId": "county_gadget",
           "Name": "Air Traffic Control Tax Increase",
-          "@type": "ElectionResults.Contest"
+          "@type": "ElectionResults.BallotMeasureContest"
         },
         {
           "NumberElected": 3,
@@ -759,7 +759,7 @@
           ],
           "ElectionDistrictId": "state_farallon",
           "Name": "Constitutional Amendment to Legalize Helium Balloons",
-          "@type": "ElectionResults.Contest"
+          "@type": "ElectionResults.BallotMeasureContest"
         },
         {
           "OfficeIds": [

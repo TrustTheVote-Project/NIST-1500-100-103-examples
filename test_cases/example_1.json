@@ -311,7 +311,7 @@
           ],
           "ElectionDistrictId": "county_gadget",
           "Name": "Air Traffic Control Tax Increase",
-          "@type": "ElectionResults.BallotContest"
+          "@type": "ElectionResults.BallotMeasureContest"
         }
       ],
       "ElectionScopeId": "county_gadget",
