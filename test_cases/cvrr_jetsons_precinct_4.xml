@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    Cast Vote Record Report for Bedrock Precinct (precinct 4)
+    
+    
+-->
+<CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
+    xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
+    <CVR>
+        <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
+
+
+        <CVRSnapshot ObjectId="snapshot-01">
+            <CVRContest>
+                <ContestId>ballotmeasure-1</ContestId>
+                <CVRContestSelection>
+                    <ContestSelectionId> ballotmeasure-1_no</ContestSelectionId>
+                    <SelectionPosition>
+                        <HasIndication>yes</HasIndication>
+                        <NumberVotes>1</NumberVotes>
+                    </SelectionPosition>
+                </CVRContestSelection>
+            </CVRContest>
+            <Type>original</Type>
+        </CVRSnapshot>
+        <ElectionId>gadget-county-2021-06</ElectionId>
+    </CVR>
+    <Election ObjectId="gadget-county-2021-06">
+
+
+        <Contest xsi:type="BallotMeasureContest" ObjectId="ballotmeasure-1">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_yes">
+                <Selection>yes</Selection>
+            </ContestSelection>
+
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_no">
+                <Selection>no</Selection>
+            </ContestSelection>
+        </Contest>
+
+        <ElectionScopeId>precinct_4_bedrock</ElectionScopeId>
+    </Election>
+
+    <GeneratedDate>2021-06-01T12:00:00-08:00</GeneratedDate>
+    <GpUnit ObjectId="precinct_4_bedrock">
+        <Type>precinct</Type>
+    </GpUnit>
+    <ReportGeneratingDeviceIds>_RD1</ReportGeneratingDeviceIds>
+    <ReportingDevice ObjectId="_RD1">
+        <Application>Trust the Vote application</Application>
+    </ReportingDevice>
+    <Version>1.0.0</Version>
+</CastVoteRecordReport>
