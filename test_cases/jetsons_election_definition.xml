@@ -54,14 +54,14 @@
                 <OrderedContent xsi:type="OrderedContest">
                     <!-- The contest for Mayor.  There are two candidates,
                           plus a write-in option. -->
-                    <ContestId>contest_1</ContestId>
+                    <ContestId>contest-orbit-city-mayor</ContestId>
                     <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
                 </OrderedContent>
 
                 <OrderedContent xsi:type="OrderedContest">
                     <!-- The ballot measure.  Voters may vote yes or no. -->
-                    <ContestId>contest_3</ContestId>
-                    <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+                    <ContestId>ballotmeasure-1</ContestId>
+                    <OrderedContestSelectionIds>ballotmeasure-1_yes ballotmeasure-1_no</OrderedContestSelectionIds>
                 </OrderedContent>
         </BallotStyle>
         
@@ -69,41 +69,37 @@
             <!-- This is the ballot presented to voters in precinct 2  -->
             <GpUnitIds> precinct_2_spacetown</GpUnitIds>
             <!--+ 
-                Voters in the spacetown district may vote in two contests:
+                Voters in the spacetown district may vote in three contests:
                 
                     - Because the precinct is in the Orbit City district,
                       voters there may elect the Mayor.
                                             
                     - Because the precinct is in the Aldrin Spaceport district,
                       voters may vote in the Spaceport Control Board contest.
+                      
+                    - Because the precinct is in Gadget County, voters may vote
+                      on the ballot measure.
             +-->
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The contest for Mayor.  There are two candidates,
                           plus a write-in option. -->
-                <ContestId>contest_1</ContestId>
+                <ContestId>contest-orbit-city-mayor</ContestId>
                 <OrderedContestSelectionIds>selection_spacely selection_cogswell selection_writein_1</OrderedContestSelectionIds>
             </OrderedContent>
             
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The Spaceport Control Board Contest -->
-                <ContestId>contest_2</ContestId>
+                <ContestId>contest-spaceport-control-board</ContestId>
                 <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
             </OrderedContent>
             
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The ballot measure.  Voters may vote yes or no. -->
-                <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
-            </OrderedContent>
-            
-            <OrderedContent xsi:type="OrderedContest">
-                <!-- The ballot measure.  Voters may vote yes or no. -->
-                <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+                <ContestId>ballotmeasure-1</ContestId>
+                <OrderedContestSelectionIds>ballotmeasure-1_yes ballotmeasure-1_no</OrderedContestSelectionIds>
             </OrderedContent>
         </BallotStyle>
-        
-        
+           
         <BallotStyle>
             <!--+
                 The ballot presented to voters in the Spaceport precinct, 
@@ -118,16 +114,17 @@
             <GpUnitIds>precinct_3_spaceport</GpUnitIds>
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The Spaceport Control Board Contest -->
-                <ContestId>contest_2</ContestId>
+                <ContestId>contest-spaceport-control-board</ContestId>
                 <OrderedContestSelectionIds>selection_jetson selection_ellis selection_indexer selection_writein_2 selection_writein_3</OrderedContestSelectionIds>
             </OrderedContent>
 
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The ballot measure.  Voters may vote yes or no. -->
-                <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+                <ContestId>ballotmeasure-1</ContestId>
+                <OrderedContestSelectionIds>ballotmeasure-1_yes ballotmeasure-1_no</OrderedContestSelectionIds>
             </OrderedContent>
         </BallotStyle>
+        
         <BallotStyle>
             <!--+
                 The ballot for residents of Bedrock.
@@ -140,8 +137,8 @@
             <GpUnitIds>precinct_4_bedrock</GpUnitIds>
             <OrderedContent xsi:type="OrderedContest">
                 <!-- The ballot measure.  Voters may vote yes or no. -->
-                <ContestId>contest_3</ContestId>
-                <OrderedContestSelectionIds>contest_3_yes contest_3_no</OrderedContestSelectionIds>
+                <ContestId>ballotmeasure-1</ContestId>
+                <OrderedContestSelectionIds>ballotmeasure-1_yes ballotmeasure-1_no</OrderedContestSelectionIds>
             </OrderedContent>
         </BallotStyle>
 
@@ -179,7 +176,9 @@
             <BallotName>
                 <Text Language="en">Jane Jetson</Text>
             </BallotName>
+            <PersonId>person_jetson</PersonId>
         </Candidate>
+        
         <Candidate ObjectId="candidate_ellis">
             <BallotName>
                 <Text Language="en">Harlan Ellis</Text>
@@ -209,7 +208,7 @@
         the selection should appear on the ballot.  Write-in selections
         may be specified as well.
     +-->
-        <Contest xsi:type="CandidateContest" ObjectId="contest_1">
+        <Contest xsi:type="CandidateContest" ObjectId="contest-orbit-city-mayor">
             <!--+
                 The contest for Mayor of Orbit City.  There are two candidates, plus
                 a write-in option. These selections, like many elements in
@@ -234,7 +233,7 @@
             <OfficeIds>office_mayor</OfficeIds>
             <VotesAllowed>1</VotesAllowed>
         </Contest>
-        <Contest xsi:type="CandidateContest" ObjectId="contest_2">
+        <Contest xsi:type="CandidateContest" ObjectId="contest-spaceport-control-board">
             <!-- Contest for Spaceport Control Board (n x m) -->
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_jetson">
                 <SequenceOrder>1</SequenceOrder>
@@ -265,20 +264,20 @@
             <VotesAllowed>2</VotesAllowed>
 
         </Contest>
-        <Contest xsi:type="BallotMeasureContest" ObjectId="contest_3">
+        <Contest xsi:type="BallotMeasureContest" ObjectId="ballotmeasure-1">
             <!--+
             The definition of ballot measure to increase the sales tax.
             Election officials may use the Ballot-measure contest element
             to capture descriptions, summaries, and arguments for and against
             the measure under consideration.
             +-->
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_yes">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_yes">
                 <SequenceOrder>1</SequenceOrder>
                 <Selection>
                     <Text Language="en">yes</Text>
                 </Selection>
             </ContestSelection>
-            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="contest_3_no">
+            <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_no">
                 <SequenceOrder>2</SequenceOrder>
                 <Selection>
                     <Text Language="en">no</Text>
@@ -293,6 +292,7 @@
             </FullText>
             <Type>ballot-measure</Type>
         </Contest>
+        
 
         <!--+
             The end of the <Election> element includes additional
@@ -425,17 +425,43 @@
         schema.  They are not required.
     +-->
     <Party ObjectId="lepton_party">
+        <Abbreviation>
+            <Text Language="en">LEP</Text>
+        </Abbreviation>
         <Name>
             <Text Language="en">Farallon Lepton Party</Text>
         </Name>
         <PartyScopeGpUnitIds>state_farallon</PartyScopeGpUnitIds>
     </Party>
     <Party ObjectId="hadron_party">
+        <Abbreviation>
+            <Text Language="en">HAD</Text>
+        </Abbreviation>
         <Name>
             <Text Language="en">Grand Hadron Party of Gadget County</Text>
         </Name>
         <PartyScopeGpUnitIds>county_gadget</PartyScopeGpUnitIds>
     </Party>
+    
+    <Person ObjectId="person_jetson">
+        <ContactInformation>
+            <Email Annotation="email">jjetson@jetsonconsulting.com</Email>
+        </ContactInformation>
+        <DateOfBirth>2030-02-15</DateOfBirth>
+        <FirstName>Jane</FirstName>
+        <FullName>
+            <Text Language="en">Jane Caroline Jetson</Text>
+        </FullName>
+        <MiddleName>Caroline</MiddleName>
+        <Nickname>Sparky</Nickname>
+        <Prefix>Mx</Prefix>
+        <Profession>
+            <Text Language="en">Consultant</Text>
+        </Profession>
+        <Title>
+            <Text Language="en">Independent Consultant</Text>
+        </Title>
+    </Person>
 
     <!-- The report ends with some final metadata. -->
     <SequenceStart>1</SequenceStart>
