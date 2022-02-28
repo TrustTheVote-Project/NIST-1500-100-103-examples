@@ -3,14 +3,23 @@
 <!-- 
     Cast Vote Record Report for Downtown Precinct (precinct 1)
     
-    
 -->
 <CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
     xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
-    <CVR>
-        <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
 
+    <!-- 
+        Interactions with the voting apps involve a single voter, so a CastVoteRecordReport
+        produced by one of these apps will only have a single <CVR> element.
+    -->
+    <CVR>
+        
+        <!-- 
+            The voting app is responsible simply for transmitting the voter's choices;
+            it does no intepreting or tabulating.  Therefore the CVR will have only one
+            snapshot.
+        -->
+        <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
 
         <CVRSnapshot ObjectId="snapshot-01">
             
