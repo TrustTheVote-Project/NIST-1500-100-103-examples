@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- 
     Cast Vote Record Report for Spaceport Precinct (precinct 3)
-    
-    
 -->
 <CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
     xmlns="http://itl.nist.gov/ns/voting/1500-103/v1">
     <CVR>
         <CurrentSnapshotId>snapshot-01</CurrentSnapshotId>
-
-        <!-- 
-            Base snapshot is derived from the output from the mobile app
-        -->
         <CVRSnapshot ObjectId="snapshot-01">
             <CVRContest>
                 <ContestId>contest-spaceport-control-board</ContestId>
@@ -24,10 +17,14 @@
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
                 </CVRContestSelection>
-
+                
+                <!-- This voter has written in a selection. -->
                 <CVRContestSelection>
-                    <ContestSelectionId>selection_ellis</ContestSelectionId>
+                    <ContestSelectionId>selection_writein_2</ContestSelectionId>
                     <SelectionPosition>
+                        <CVRWriteIn>
+                            <Text>Zaphod Beeblebrox</Text>
+                        </CVRWriteIn>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>

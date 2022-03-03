@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!-- 
-    Cast Vote Record Report for Spacetown Precinct (precinct 2)
-    
-    
+    Cast Vote Record Report for Spacetown Precinct (precinct 2
 -->
 <CastVoteRecordReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://itl.nist.gov/ns/voting/1500-103/v1 http://itl.nist.gov/ns/voting/1500-103/v1"
@@ -15,14 +12,17 @@
             <CVRContest>
                 <ContestId>contest-orbit-city-mayor</ContestId>
                 <CVRContestSelection>
-                    <ContestSelectionId>candidate_spacely</ContestSelectionId>
+                    <ContestSelectionId>selection_writein_1</ContestSelectionId>
                     <SelectionPosition>
+                        <CVRWriteIn>
+                            <Text>Flash Gordon</Text>
+                        </CVRWriteIn>
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
                 </CVRContestSelection>
             </CVRContest>
-            
+
             <CVRContest>
                 <ContestId>contest-spaceport-control-board</ContestId>
                 <CVRContestSelection>
@@ -50,7 +50,7 @@
                         <HasIndication>yes</HasIndication>
                         <NumberVotes>1</NumberVotes>
                     </SelectionPosition>
-                </CVRContestSelection>      
+                </CVRContestSelection>
             </CVRContest>
             <Type>original</Type>
         </CVRSnapshot>
@@ -85,8 +85,8 @@
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
         </Contest>
-            
-            <Contest xsi:type="CandidateContest" ObjectId="contest-spaceport-control-board">
+
+        <Contest xsi:type="CandidateContest" ObjectId="contest-spaceport-control-board">
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_jetson">
                 <CandidateIds>candidate_jetson</CandidateIds>
             </ContestSelection>
@@ -102,7 +102,7 @@
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_2">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>
-            
+
             <ContestSelection xsi:type="CandidateSelection" ObjectId="selection_writein_3">
                 <IsWriteIn>true</IsWriteIn>
             </ContestSelection>

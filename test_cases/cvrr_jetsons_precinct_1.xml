@@ -13,7 +13,6 @@
         produced by one of these apps will only have a single <CVR> element.
     -->
     <CVR>
-        
         <!-- 
             The voting app is responsible simply for transmitting the voter's choices;
             it does no intepreting or tabulating.  Therefore the CVR will have only one
@@ -49,6 +48,8 @@
         </CVRSnapshot>
         <ElectionId>gadget-county-2021-06</ElectionId>
     </CVR>
+    
+    <!-- The Election element in the CVR contains only contests relevant to this ballot. -->
     <Election ObjectId="gadget-county-2021-06">
         <Candidate ObjectId="candidate_spacely">
             <Name>Cosmo Spacely</Name>
