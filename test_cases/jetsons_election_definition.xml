@@ -407,12 +407,14 @@
     +-->
     <Office ObjectId="office_mayor">
         <ElectionDistrictId>district_orbit_city</ElectionDistrictId>
+        <IsPartisan>true</IsPartisan>
         <Name>
             <Text Language="en">Mayor of Orbit City</Text>
         </Name>
     </Office>
     <Office ObjectId="office_control_board">
         <ElectionDistrictId> district_aldrin_spaceport</ElectionDistrictId>
+        <IsPartisan>false</IsPartisan>
         <Name>
             <Text Language="en">Spaceport Control Board</Text>
         </Name>
