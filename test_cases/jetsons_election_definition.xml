@@ -274,21 +274,23 @@
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_yes">
                 <SequenceOrder>1</SequenceOrder>
                 <Selection>
-                    <Text Language="en">yes</Text>
+                    <Text Language="en">Yes</Text>
                 </Selection>
             </ContestSelection>
             <ContestSelection xsi:type="BallotMeasureSelection" ObjectId="ballotmeasure-1_no">
                 <SequenceOrder>2</SequenceOrder>
                 <Selection>
-                    <Text Language="en">no</Text>
+                    <Text Language="en">No</Text>
                 </Selection>
             </ContestSelection>
             <ElectionDistrictId>county_gadget</ElectionDistrictId>
             <Name>Air Traffic Control Tax Increase</Name>
             <FullText>
-                <Text Language="en">Shall Gadget County increase its sales tax
-                    from 1% to 1.1% for the purpose of raising additional revenue
-                    to fund expanded air traffic control operations?</Text>
+                <Text Language="en">Initiative Measure No 0101 concerns sales tax.
+
+                    Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?  Funding is to update its air traffic control system, make investments in safety and next-generation systems, and address the impact of aviation on climate change.
+
+                    Should this measure be enacted into law?</Text>
             </FullText>
             <Type>ballot-measure</Type>
         </Contest>
@@ -364,13 +366,13 @@
     </GpUnit>
     <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_3_spaceport">
         <Name>
-            <Text Language="en">Spaceport precinct</Text>
+            <Text Language="en">Spaceport Precinct</Text>
         </Name>
         <Type>precinct</Type>
     </GpUnit>
     <GpUnit xsi:type="ReportingUnit" ObjectId="precinct_4_bedrock">
         <Name>
-            <Text Language="en">Bedrock precinct</Text>
+            <Text Language="en">Bedrock Precinct</Text>
         </Name>
         <Type>precinct</Type>
     </GpUnit>
