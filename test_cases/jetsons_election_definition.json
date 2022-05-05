@@ -253,7 +253,7 @@
                             "Selection": {
                                 "Text": [
                                     {
-                                        "Content": "yes",
+                                        "Content": "Yes",
                                         "Language": "en",
                                         "@type": "ElectionResults.LanguageString"
                                     }
@@ -268,7 +268,7 @@
                             "Selection": {
                                 "Text": [
                                     {
-                                        "Content": "no",
+                                        "Content": "No",
                                         "Language": "en",
                                         "@type": "ElectionResults.LanguageString"
                                     }
@@ -416,7 +416,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Spaceport precinct",
+                        "Content": "Spaceport Precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -431,7 +431,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Bedrock precinct",
+                        "Content": "Bedrock Precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
