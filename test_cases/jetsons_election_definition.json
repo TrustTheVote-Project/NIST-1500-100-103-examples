@@ -282,9 +282,16 @@
                     ],
                     "ElectionDistrictId": "county_gadget",
                     "Name": "Air Traffic Control Tax Increase",
-                    "@type": "ElectionResults.BallotMeasureContest"
+                    "@type": "ElectionResults.BallotMeasureContest",
+                        "FullText": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text" : [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Content": "Initiative Measure No 0101 concerns sales tax.\nShall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations? Funding is to update its air traffic control system, make investments in safety and next-generation systems, and address the impact of aviation on climate change.\nShould this measure be enacted into law?"
+                            }
+                        ]
                 }
-            ],
             "ElectionScopeId": "county_gadget",
             "EndDate": "2062-06-15",
             "Name": {
