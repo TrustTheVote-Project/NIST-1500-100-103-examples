@@ -1,4 +1,5 @@
 {
+    "@type": "ElectionResults.ElectionReport",
     "Election": [
         {
             "BallotStyle": [
@@ -176,10 +177,13 @@
             ],
             "Contest": [
                 {
-                    "OfficeIds": ["office_mayor"],
-                    "VotesAllowed": 1,
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "contest-orbit-city-mayor",
+                    "Name": "Contest for Mayor of Orbit City",
+                    "OfficeIds": ["office_mayor"],
+                    "VotesAllowed": 1,
+                    "ElectionDistrictId": "district_orbit_city",
+                    "VoteVariation": "plurality",
                     "ContestSelection": [
                         {
                             "CandidateIds": ["candidate_spacely"],
@@ -199,17 +203,17 @@
                             "@id": "selection_writein_1",
                             "SequenceOrder": 3
                         }
-                    ],
-                    "ElectionDistrictId": "district_orbit_city",
-                    "Name": "Contest for Mayor of Orbit City",
-                    "VoteVariation": "plurality"
+                    ]
                 },
                 {
-                    "NumberElected": 2,
-                    "OfficeIds": ["office_control_board"],
-                    "VotesAllowed": 2,
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "contest-spaceport-control-board",
+                    "Name": "Spaceport Control Board",
+                    "OfficeIds": ["office_control_board"],
+                    "ElectionDistrictId": "district_aldrin_spaceport",
+                    "VoteVariation": "n-of-m",
+                    "NumberElected": 2,
+                    "VotesAllowed": 2,
                     "ContestSelection": [
                         {
                             "CandidateIds": ["candidate_jetson"],
@@ -241,13 +245,23 @@
                             "@id": "selection_writein_3",
                             "SequenceOrder": 5
                         }
-                    ],
-                    "ElectionDistrictId": "district_aldrin_spaceport",
-                    "Name": "Spaceport Control Board",
-                    "VoteVariation": "n-of-m"
+                    ]
                 },
                 {
+                    "@type": "ElectionResults.BallotMeasureContest",
                     "@id": "ballotmeasure-1",
+                    "Name": "Air Traffic Control Tax Increase",
+                    "ElectionDistrictId": "county_gadget",
+                    "FullText": {
+                        "@type": "ElectionResults.InternationalizedText",
+                        "Text": [
+                            {
+                                "@type": "ElectionResults.LanguageString",
+                                "Language": "en",
+                                "Content": "Initiative Measure No 0101 concerns sales tax.\nShall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations? Funding is to update its air traffic control system, make investments in safety and next-generation systems, and address the impact of aviation on climate change.\nShould this measure be enacted into law?"
+                            }
+                        ]
+                    },
                     "ContestSelection": [
                         {
                             "Selection": {
@@ -279,19 +293,9 @@
                             "@id": "ballotmeasure-1_no",
                             "SequenceOrder": 2
                         }
-                    ],
-                    "ElectionDistrictId": "county_gadget",
-                    "Name": "Air Traffic Control Tax Increase",
-                    "@type": "ElectionResults.BallotMeasureContest",
-                        "FullText": {
-                        "@type": "ElectionResults.InternationalizedText",
-                        "Text" : [
-                            {
-                                "@type": "ElectionResults.LanguageString",
-                                "Content": "Initiative Measure No 0101 concerns sales tax.\nShall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations? Funding is to update its air traffic control system, make investments in safety and next-generation systems, and address the impact of aviation on climate change.\nShould this measure be enacted into law?"
-                            }
-                        ]
+                    ]
                 }
+            ],
             "ElectionScopeId": "county_gadget",
             "EndDate": "2062-06-15",
             "Name": {
@@ -423,7 +427,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Spaceport Precinct",
+                        "Content": "Spaceport precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -438,7 +442,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Bedrock Precinct",
+                        "Content": "Bedrock precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -619,6 +623,5 @@
     "SequenceEnd": 1,
     "SequenceStart": 1,
     "Status": "pre-election",
-    "VendorApplicationId": "TTV",
-    "@type": "ElectionResults.ElectionReport"
+    "VendorApplicationId": "TTV"
 }
