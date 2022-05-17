@@ -228,7 +228,7 @@
             "Description": {
                 "Text": [
                     {
-                        "Content": "Grand Poobah of Orbit City.",
+                        "Content": "Mayor of Orbit City.",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -314,13 +314,16 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Farallon Lepton Party",
+                        "Content": "The Lepton Party of Farallon",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
                 ],
+                "Label": "Lepton",
+
                 "@type": "ElectionResults.InternationalizedText"
             },
+
             "PartyScopeGpUnitIds": ["state_farallon"],
             "@type": "ElectionResults.Party"
         },
@@ -329,15 +332,70 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Grand Hadron Party of Gadget County",
+                        "Content": "The Hadron Party",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
                 ],
+                "Label": "Hadron",
                 "@type": "ElectionResults.InternationalizedText"
             },
+
             "PartyScopeGpUnitIds": ["county_gadget"],
             "@type": "ElectionResults.Party"
+        }
+    ],
+    "Person": [
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "person_jetson",
+            "ContactInformation": [
+                {
+                    "@type": "ElectionResults.ContactInformation",
+                    "Email": [
+                    {
+                        "@type": "ElectionResults.AnnotatedString",
+                        "Annotation": "email",
+                        "Content": "jjetson@jetsonconsulting.com"                        
+                    }
+                    ]
+                }
+            ],
+            "DateOfBirth": "2030-02-15",
+            "FirstName": "Jane",
+            "FullName": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                {
+                    "@type": "ElectionResults.LanguageString",
+                    "Language": "en",
+                    "Content": "Jane Caroline Jetson"                    
+                }
+                ]               
+            },
+            "MiddleName": [ "Caroline" ],
+            "Nickname": "Sparky",
+            "Prefix": "Mx",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Consultant"
+                    }
+                ]
+            },
+            "Title": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Independent Consultant"
+                    }
+                ]
+            } 
         }
     ],
     "Election": [
@@ -564,36 +622,325 @@
                 }
             ],
             "BallotStyle": [
+
                 {
-                    "@type": "ElectionResults.BallotStyle",
                     "GpUnitIds": ["precinct_1_downtown"],
                     "OrderedContent": [
                         {
-                            "@type": "ElectionResults.OrderedContest",
-                            "ContestId": "contest-orbit-city-mayor",
-                            "OrderedContestSelectionIds": [
-                                "selection_spacely",
-                                "selection_cogswell",
-                                "selection_writein_1"
-                            ]
+                            "HeaderId": "header_national",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_9",
+                                    "OrderedContestSelectionIds": [
+                                        "lepton_ticket",
+                                        "hadron_ticket",
+                                        "presidential_write-in"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
                         },
                         {
-                            "@type": "ElectionResults.OrderedContest",
-                            "ContestId": "ballotmeasure-1",
-                            "OrderedContestSelectionIds": [
-                                "ballotmeasure-1_yes",
-                                "ballotmeasure-1_no"
-                            ]
+                            "HeaderId": "header_state",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_6",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_6.1",
+                                        "selection_6.2"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_county",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_4",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_smith",
+                                        "selection_gomez",
+                                        "selection_davis",
+                                        "selection_tsi",
+                                        "selection_orotund",
+                                        "selection_4.6",
+                                        "selection_4.7",
+                                        "selection_4.8"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                },
+                                {
+                                    "ContestId": "contest_3",
+                                    "OrderedContestSelectionIds": [
+                                        "contest_3_yes",
+                                        "contest_3_no"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_district",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest-orbit-city-mayor",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_spacely",
+                                        "selection_cogswell",
+                                        "selection_writein_1"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
                         }
-                    ]
+                    ],
+                    "@type": "ElectionResults.BallotStyle"
+                },
+                {
+                    "GpUnitIds": ["precinct_2_spacetown"],
+                    "OrderedContent": [
+                        {
+                            "HeaderId": "header_national",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_9",
+                                    "OrderedContestSelectionIds": [
+                                        "lepton_ticket",
+                                        "hadron_ticket",
+                                        "presidential_write-in"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_state",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_6",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_6.1",
+                                        "selection_6.2"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_county",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_4",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_smith",
+                                        "selection_gomez",
+                                        "selection_davis",
+                                        "selection_tsi",
+                                        "selection_orotund",
+                                        "selection_4.6",
+                                        "selection_4.7",
+                                        "selection_4.8"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                },
+                                {
+                                    "ContestId": "contest_3",
+                                    "OrderedContestSelectionIds": [
+                                        "contest_3_yes",
+                                        "contest_3_no"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_district",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest-orbit-city-mayor",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_spacely",
+                                        "selection_cogswell",
+                                        "selection_writein_1"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                },
+                                {
+                                    "ContestId": "contest_2",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_jetson",
+                                        "selection_ellis",
+                                        "selection_indexer",
+                                        "selection_writein_2",
+                                        "selection_writein_3"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        }
+                    ],
+                    "@type": "ElectionResults.BallotStyle"
+                },
+                {
+                    "GpUnitIds": ["precinct_3_spaceport"],
+                    "OrderedContent": [
+                        {
+                            "HeaderId": "header_national",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_9",
+                                    "OrderedContestSelectionIds": [
+                                        "lepton_ticket",
+                                        "hadron_ticket",
+                                        "presidential_write-in"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_state",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_6",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_6.1",
+                                        "selection_6.2"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_county",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_4",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_smith",
+                                        "selection_gomez",
+                                        "selection_davis",
+                                        "selection_tsi",
+                                        "selection_orotund",
+                                        "selection_4.6",
+                                        "selection_4.7",
+                                        "selection_4.8"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                },
+                                {
+                                    "ContestId": "contest_3",
+                                    "OrderedContestSelectionIds": [
+                                        "contest_3_yes",
+                                        "contest_3_no"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_district",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_2",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_jetson",
+                                        "selection_ellis",
+                                        "selection_indexer",
+                                        "selection_writein_2",
+                                        "selection_writein_3"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        }
+                    ],
+                    "@type": "ElectionResults.BallotStyle"
+                },
+                {
+                    "GpUnitIds": ["precinct_4_bedrock"],
+                    "OrderedContent": [
+                        {
+                            "HeaderId": "header_national",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_9",
+                                    "OrderedContestSelectionIds": [
+                                        "lepton_ticket",
+                                        "hadron_ticket",
+                                        "presidential_write-in"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_state",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_6",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_6.1",
+                                        "selection_6.2"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        },
+                        {
+                            "HeaderId": "header_county",
+                            "OrderedContent": [
+                                {
+                                    "ContestId": "contest_4",
+                                    "OrderedContestSelectionIds": [
+                                        "selection_smith",
+                                        "selection_gomez",
+                                        "selection_davis",
+                                        "selection_tsi",
+                                        "selection_orotund",
+                                        "selection_4.6",
+                                        "selection_4.7",
+                                        "selection_4.8"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                },
+                                {
+                                    "ContestId": "contest_3",
+                                    "OrderedContestSelectionIds": [
+                                        "contest_3_yes",
+                                        "contest_3_no"
+                                    ],
+                                    "@type": "ElectionResults.OrderedContest"
+                                }
+                            ],
+                            "@type": "ElectionResults.OrderedHeader"
+                        }
+                    ],
+                    "@type": "ElectionResults.BallotStyle"
                 }
             ],
-            "Contest": [
+           
+           "Contest": [
                 {
                     "OfficeIds": ["office_mayor"],
                     "VotesAllowed": 1,
                     "@type": "ElectionResults.CandidateContest",
-                    "@id": "contest_1",
+                    "@id": "contest-orbit-city-mayor",
                     "ContestSelection": [
                         {
                             "CandidateIds": ["candidate_spacely"],
@@ -719,7 +1066,7 @@
                             {
                                 "@type": "ElectionResults.LanguageString",
                                 "Language": "en",
-                                "Content": "Do you approve amending the Constitution to legalize the controlled use of helium balloons?\nOnly adults at least 21 years of age could use helium. The State commission created to oversee the State’s medical helium program would also oversee the new, personal use helium market.\nHelium balloons would be subject to the State sales tax. If authorized by the Legislature, a municipality may pass a local ordinance to charge a local tax on helium balloons."
+                                "Content": "Do you approve amending the Constitution to legalize the controlled use of helium balloons?\nOnly adults at least 21 years of age could use helium. The State commission created to oversee the State\u2019s medical helium program would also oversee the new, personal use helium market.\nHelium balloons would be subject to the State sales tax. If authorized by the Legislature, a municipality may pass a local ordinance to charge a local tax on helium balloons."
                             }
                         ]
                     },
@@ -729,11 +1076,9 @@
                             {
                                 "@type": "ElectionResults.LanguageString",
                                 "Language": "en",
-                                "Content": "Willie Makeit, Director of Advocacy for the Family Policy Alliance of Farallon:'The detrimental effect recreational helium will have in our fair state is undeniable. Study after study shows legalizing helium balloons will put the public safety of Farallonians at risk. If our legislators continue to support this measure, they are ignoring the historical trends of harmful youth usage and the extensive negative effect legalized helium has had on communities of color.'\nBetty Dont, president of SAM: 'It’s time to finally take action on the social justice concerns the promoters of legalization have raised, but they will not be solved by creating a commercial helium market in Farallon. Helium commercialization is indeed a social injustice and polling has routinely shown Farallon residents don’t want helium balloons floating around in their back yards. It’s time to end this reckless push once and for all.'"
-                                
+                                "Content": "Willie Makeit, Director of Advocacy for the Family Policy Alliance of Farallon:'The detrimental effect recreational helium will have in our fair state is undeniable. Study after study shows legalizing helium balloons will put the public safety of Farallonians at risk. If our legislators continue to support this measure, they are ignoring the historical trends of harmful youth usage and the extensive negative effect legalized helium has had on communities of color.'\nBetty Dont, president of SAM: 'It\u2019s time to finally take action on the social justice concerns the promoters of legalization have raised, but they will not be solved by creating a commercial helium market in Farallon. Helium commercialization is indeed a social injustice and polling has routinely shown Farallon residents don\u2019t want helium balloons floating around in their back yards. It\u2019s time to end this reckless push once and for all.'"
                             }
                         ]
-                        
                     },
                     "ProStatement": {
                         "@type": "ElectionResults.InternationalizedText",
@@ -741,7 +1086,7 @@
                             {
                                 "@type": "ElectionResults.LanguageString",
                                 "Language": "en",
-                                "Content": "Sparky Brighton, a lawyer who focuses on helium law: 'If we didn’t need the money before, we certainly need it post-pandemic with all the austerity measures that are being talked about at the state level due to certain budget issues because of the pandemic.'\nState Sen. Jennifer Woo: 'It will be an economic engine for Farallon when it gets going. The greater impact on society is going to be the job opportunities, people getting employed and paying their employment tax, people not getting arrested. It’ll be a whole new industry.'"
+                                "Content": "Sparky Brighton, a lawyer who focuses on helium law: 'If we didn\u2019t need the money before, we certainly need it post-pandemic with all the austerity measures that are being talked about at the state level due to certain budget issues because of the pandemic.'\nState Sen. Jennifer Woo: 'It will be an economic engine for Farallon when it gets going. The greater impact on society is going to be the job opportunities, people getting employed and paying their employment tax, people not getting arrested. It\u2019ll be a whole new industry.'"
                             }
                         ]
                     },
@@ -751,10 +1096,10 @@
                             {
                                 "@type": "ElectionResults.LanguageString",
                                 "Language": "en",
-                                "Content": "This amendment would legalize a controlled form of helium to be used to inflate balloons.  Only persons at least 21 years of age could inflate helium balloons legally.The Helium Regulatory Commission would oversee the new adult helium market. This commission was created in 2045 to oversee the State’s medical helium program. The scope of the commission’s new authority would be detailed in laws enacted by the Legislature.\nAll retail sales of helium products in the new adult helium market would be subject to the State’s sales tax. If authorized by the Legislature, a municipality may pass a local ordinance to charge a local tax on helium products."
+                                "Content": "This amendment would legalize a controlled form of helium to be used to inflate balloons.  Only persons at least 21 years of age could inflate helium balloons legally.The Helium Regulatory Commission would oversee the new adult helium market. This commission was created in 2045 to oversee the State\u2019s medical helium program. The scope of the commission\u2019s new authority would be detailed in laws enacted by the Legislature.\nAll retail sales of helium products in the new adult helium market would be subject to the State\u2019s sales tax. If authorized by the Legislature, a municipality may pass a local ordinance to charge a local tax on helium products."
                             }
                         ]
-                    },     
+                    },
                     "ContestSelection": [
                         {
                             "@type": "ElectionResults.BallotMeasureSelection",
@@ -795,6 +1140,7 @@
                     "ContestSelection": [
                         {
                             "CandidateIds": ["candidate_smith"],
+
                             "@type": "ElectionResults.CandidateSelection",
                             "@id": "selection_smith",
                             "SequenceOrder": 1
@@ -853,7 +1199,7 @@
                             "Selection": {
                                 "Text": [
                                     {
-                                        "Content": "yes",
+                                        "Content": "Yes",
                                         "Language": "en",
                                         "@type": "ElectionResults.LanguageString"
                                     }
@@ -868,7 +1214,7 @@
                             "Selection": {
                                 "Text": [
                                     {
-                                        "Content": "no",
+                                        "Content": "No",
                                         "Language": "en",
                                         "@type": "ElectionResults.LanguageString"
                                     }
