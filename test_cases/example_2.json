@@ -178,7 +178,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Spaceport precinct",
+                        "Content": "Spaceport Precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -193,7 +193,7 @@
             "Name": {
                 "Text": [
                     {
-                        "Content": "Bedrock precinct",
+                        "Content": "Bedrock Precinct",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -228,7 +228,7 @@
             "Description": {
                 "Text": [
                     {
-                        "Content": "Mayor of Orbit City.",
+                        "Content": "Mayor of Orbit City",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
@@ -493,7 +493,7 @@
                     "BallotName": {
                         "Text": [
                             {
-                                "Content": "Sally smith",
+                                "Content": "Sally Smith",
                                 "Language": "en",
                                 "@type": "ElectionResults.LanguageString"
                             }
