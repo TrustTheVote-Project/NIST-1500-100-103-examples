@@ -454,6 +454,7 @@
                 },
                 {
                     "@id": "candidate_jetson",
+                    "PersonId": "person_jetson",
                     "BallotName": {
                         "Text": [
                             {
