@@ -68,6 +68,22 @@
     ],
     "GpUnit": [
         {
+            "@type": "ElectionResults.ReportingUnit",
+            "Type": "country",
+            "@id": "country_usa",
+            "ComposingGpUnitIds": ["state_farallon"],
+                        "Name": {
+                "Text": [
+                    {
+                        "Content": "United States of America",
+                        "Language": "en",
+                        "@type": "ElectionResults.LanguageString"
+                    }
+                ],
+                "@type": "ElectionResults.InternationalizedText"
+            }
+        },
+        {
             "Type": "state",
             "@type": "ElectionResults.ReportingUnit",
             "@id": "state_farallon",
@@ -123,7 +139,7 @@
             }
         },
         {
-            "Type": "city",
+            "Type": "other",
             "@type": "ElectionResults.ReportingUnit",
             "@id": "district_aldrin_spaceport",
             "ComposingGpUnitIds": [
@@ -225,16 +241,6 @@
     "Office": [
         {
             "@id": "office_mayor",
-            "Description": {
-                "Text": [
-                    {
-                        "Content": "Mayor of Orbit City",
-                        "Language": "en",
-                        "@type": "ElectionResults.LanguageString"
-                    }
-                ],
-                "@type": "ElectionResults.InternationalizedText"
-            },
             "ElectionDistrictId": "district_orbit_city",
             "IsPartisan": true,
             "Name": {
@@ -319,7 +325,7 @@
                         "@type": "ElectionResults.LanguageString"
                     }
                 ],
-                "Label": "Lepton",
+                "Label": "Leptonicon",
 
                 "@type": "ElectionResults.InternationalizedText"
             },
@@ -337,7 +343,7 @@
                         "@type": "ElectionResults.LanguageString"
                     }
                 ],
-                "Label": "Hadron",
+                "Label": "Hadronicrat",
                 "@type": "ElectionResults.InternationalizedText"
             },
 
@@ -448,6 +454,7 @@
                 },
                 {
                     "@id": "candidate_jetson",
+                    "PersonId": "person_jetson",
                     "BallotName": {
                         "Text": [
                             {
@@ -1070,26 +1077,6 @@
                             }
                         ]
                     },
-                    "ConStatement": {
-                        "@type": "ElectionResults.InternationalizedText",
-                        "Text": [
-                            {
-                                "@type": "ElectionResults.LanguageString",
-                                "Language": "en",
-                                "Content": "Willie Makeit, Director of Advocacy for the Family Policy Alliance of Farallon:'The detrimental effect recreational helium will have in our fair state is undeniable. Study after study shows legalizing helium balloons will put the public safety of Farallonians at risk. If our legislators continue to support this measure, they are ignoring the historical trends of harmful youth usage and the extensive negative effect legalized helium has had on communities of color.'\nBetty Dont, president of SAM: 'It\u2019s time to finally take action on the social justice concerns the promoters of legalization have raised, but they will not be solved by creating a commercial helium market in Farallon. Helium commercialization is indeed a social injustice and polling has routinely shown Farallon residents don\u2019t want helium balloons floating around in their back yards. It\u2019s time to end this reckless push once and for all.'"
-                            }
-                        ]
-                    },
-                    "ProStatement": {
-                        "@type": "ElectionResults.InternationalizedText",
-                        "Text": [
-                            {
-                                "@type": "ElectionResults.LanguageString",
-                                "Language": "en",
-                                "Content": "Sparky Brighton, a lawyer who focuses on helium law: 'If we didn\u2019t need the money before, we certainly need it post-pandemic with all the austerity measures that are being talked about at the state level due to certain budget issues because of the pandemic.'\nState Sen. Jennifer Woo: 'It will be an economic engine for Farallon when it gets going. The greater impact on society is going to be the job opportunities, people getting employed and paying their employment tax, people not getting arrested. It\u2019ll be a whole new industry.'"
-                            }
-                        ]
-                    },
                     "SummaryText": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
@@ -1261,8 +1248,8 @@
                             "@id": "presidential_write-in"
                         }
                     ],
-                    "ElectionDistrictId": "state_farallon",
-                    "Name": "Contest for Governor of Farallon",
+                    "ElectionDistrictId": "country_usa",
+                    "Name": "President of the United States",
                     "VoteVariation": "plurality"
                 }
             ]
