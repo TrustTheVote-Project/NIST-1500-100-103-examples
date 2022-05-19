@@ -102,7 +102,9 @@
             ],
             "Candidate": [
                 {
+                    "@type": "ElectionResults.Candidate",
                     "@id": "candidate_spacely",
+                    "PersonId": "Person_Spacely-Cosmo",
                     "BallotName": {
                         "Text": [
                             {
@@ -113,11 +115,12 @@
                         ],
                         "@type": "ElectionResults.InternationalizedText"
                     },
-                    "PartyId": "lepton_party",
-                    "@type": "ElectionResults.Candidate"
+                    "PartyId": "lepton_party"
                 },
                 {
+                    "@type": "ElectionResults.Candidate",
                     "@id": "candidate_cogswell",
+                    "PersonId": "Person_Cogswell-Spencer",
                     "BallotName": {
                         "Text": [
                             {
@@ -128,8 +131,7 @@
                         ],
                         "@type": "ElectionResults.InternationalizedText"
                     },
-                    "PartyId": "hadron_party",
-                    "@type": "ElectionResults.Candidate"
+                    "PartyId": "hadron_party"
                 },
                 {
                     "@id": "candidate_jetson",
@@ -143,11 +145,12 @@
                         ],
                         "@type": "ElectionResults.InternationalizedText"
                     },
-                    "PersonId": "person_jetson",
+                    "PersonId": "Person_Jetson-Jane",
                     "@type": "ElectionResults.Candidate"
                 },
                 {
                     "@id": "candidate_ellis",
+                    "PersonId": "Person_Ellis-Harlan",
                     "BallotName": {
                         "Text": [
                             {
@@ -162,6 +165,7 @@
                 },
                 {
                     "@id": "candidate_indexer",
+                    "PersonId": "Person_Indexer-Rudy",
                     "BallotName": {
                         "Text": [
                             {
@@ -500,6 +504,7 @@
             "@type": "ElectionResults.Office"
         },
         {
+            "@type": "ElectionResults.Office",
             "@id": "office_control_board",
             "ElectionDistrictId": "district_aldrin_spaceport",
             "Name": {
@@ -512,7 +517,7 @@
                 ],
                 "@type": "ElectionResults.InternationalizedText"
             },
-            "@type": "ElectionResults.Office"
+            "IsPartisan": false
         }
     ],
     "Party": [
@@ -569,55 +574,85 @@
     ],
     "Person": [
         {
-            "@id": "person_jetson",
-            "ContactInformation": [
-                {
-                    "Email": [
-                        {
-                            "Annotation": "email",
-                            "Content": "jjetson@jetsonconsulting.com",
-                            "@type": "ElectionResults.AnnotatedString"
-                        }
-                    ],
-                    "@type": "ElectionResults.ContactInformation"
-                }
-            ],
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Jetson-Jane",
             "DateOfBirth": "2030-02-15",
             "FirstName": "Jane",
-            "FullName": {
-                "Text": [
-                    {
-                        "Content": "Jane Caroline Jetson",
-                        "Language": "en",
-                        "@type": "ElectionResults.LanguageString"
-                    }
-                ],
-                "@type": "ElectionResults.InternationalizedText"
-            },
-            "MiddleName": ["Caroline"],
-            "Nickname": "Sparky",
-            "Prefix": "Mx",
+            "LastName": "Jetson",
             "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
                 "Text": [
                     {
-                        "Content": "Consultant",
+                        "@type": "ElectionResults.LanguageString",
                         "Language": "en",
-                        "@type": "ElectionResults.LanguageString"
+                        "Content": "Consultant"
                     }
-                ],
-                "@type": "ElectionResults.InternationalizedText"
-            },
-            "Title": {
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Ellis-Harlan",
+            "FirstName": "Harlan",
+            "LastName": "Ellis",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
                 "Text": [
                     {
-                        "Content": "Independent Consultant",
+                        "@type": "ElectionResults.LanguageString",
                         "Language": "en",
-                        "@type": "ElectionResults.LanguageString"
+                        "Content": "Electrician"
                     }
-                ],
-                "@type": "ElectionResults.InternationalizedText"
-            },
-            "@type": "ElectionResults.Person"
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Indexer-Rudy",
+            "FirstName": "Rudy",
+            "LastName": "Indexer",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Lawyer"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Spacely-Cosmo",
+            "FirstName": "Cosmo",
+            "LastName": "Spacely",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Magnate"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Cogswell_Spencer",
+            "FirstName": "Spencer",
+            "LastName": "Cogswell",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Surgeon"
+                    }
+                ]
+            }
         }
     ],
     "SequenceEnd": 1,
