@@ -242,7 +242,6 @@
         {
             "@id": "office_mayor",
             "ElectionDistrictId": "district_orbit_city",
-            "IsPartisan": true,
             "Name": {
                 "Text": [
                     {
@@ -257,6 +256,7 @@
         },
         {
             "@id": "office_control_board",
+            "IsPartisan": false,
             "ElectionDistrictId": "district_aldrin_spaceport",
             "Name": {
                 "Text": [
@@ -273,6 +273,7 @@
         {
             "@id": "office_school_board",
             "ElectionDistrictId": "district_unified_school_district",
+            "IsPartisan": false,
             "Name": {
                 "Text": [
                     {
@@ -354,34 +355,10 @@
     "Person": [
         {
             "@type": "ElectionResults.Person",
-            "@id": "person_jetson",
-            "ContactInformation": [
-                {
-                    "@type": "ElectionResults.ContactInformation",
-                    "Email": [
-                    {
-                        "@type": "ElectionResults.AnnotatedString",
-                        "Annotation": "email",
-                        "Content": "jjetson@jetsonconsulting.com"                        
-                    }
-                    ]
-                }
-            ],
+            "@id": "Person_Jetson-Jane",
             "DateOfBirth": "2030-02-15",
             "FirstName": "Jane",
-            "FullName": {
-                "@type": "ElectionResults.InternationalizedText",
-                "Text": [
-                {
-                    "@type": "ElectionResults.LanguageString",
-                    "Language": "en",
-                    "Content": "Jane Caroline Jetson"                    
-                }
-                ]               
-            },
-            "MiddleName": [ "Caroline" ],
-            "Nickname": "Sparky",
-            "Prefix": "Mx",
+            "LastName": "Jetson",
             "Profession": {
                 "@type": "ElectionResults.InternationalizedText",
                 "Text": [
@@ -391,18 +368,216 @@
                         "Content": "Consultant"
                     }
                 ]
-            },
-            "Title": {
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Ellis-Harlan",
+            "FirstName": "Harlan",
+            "LastName": "Ellis",
+            "Profession": {
                 "@type": "ElectionResults.InternationalizedText",
                 "Text": [
                     {
                         "@type": "ElectionResults.LanguageString",
                         "Language": "en",
-                        "Content": "Independent Consultant"
+                        "Content": "Electrician"
                     }
                 ]
-            } 
-        }
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Indexer-Rudy",
+            "FirstName": "Rudy",
+            "LastName": "Indexer",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Lawyer"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Spacely-Cosmo",
+            "FirstName": "Cosmo",
+            "LastName": "Spacely",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Magnate"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Cogswell_Spencer",
+            "FirstName": "Spencer",
+            "LastName": "Cogswell",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Surgeon"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Smith-Sally",
+            "FirstName": "Sally",
+            "LastName": "Smith",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Professor"
+                    }
+                ]
+            }
+        },
+                {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Gomez-Hector",
+            "FirstName": "Hector",
+            "LastName": "Gomez",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Artist"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Davis-Rosashawn",
+            "FirstName": "Hector",
+            "LastName": "Gomez",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Writer"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Tsi-Oliver",
+            "FirstName": "Oliver",
+            "LastName": "Tsi",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Industrialist"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Orotund-Glavin",
+            "FirstName": "Glavin",
+            "LastName": "Orotund",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Baker"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Alpha-Anthony",
+            "FirstName": "Anthony",
+            "LastName": "Alpha",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "US Senator"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Beta-Betty",
+            "FirstName": "Betty",
+            "LastName": "Beta",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Lawyer"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Gamma-Gloria",
+            "FirstName": "Gloria",
+            "LastName": "Gamma",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Doctor"
+                    }
+                ]
+            }
+        },
+                       {
+            "@type": "ElectionResults.Person",
+            "@id": "Person_Delta-David",
+            "FirstName": "David",
+            "LastName": "Delta",
+            "Profession": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "Business Owner"
+                    }
+                ]
+            }
+        }        
     ],
     "Election": [
         {
@@ -424,6 +599,7 @@
             "Candidate": [
                 {
                     "@id": "candidate_spacely",
+                    "PersonId": "Person_Spacely-Cosmo",
                     "BallotName": {
                         "Text": [
                             {
@@ -439,6 +615,7 @@
                 },
                 {
                     "@id": "candidate_cogswell",
+                    "PersonId": "Person_Cogswell-Spencer",
                     "BallotName": {
                         "Text": [
                             {
@@ -454,7 +631,7 @@
                 },
                 {
                     "@id": "candidate_jetson",
-                    "PersonId": "person_jetson",
+                    "PersonId": "Person_Jetson-Jane",
                     "BallotName": {
                         "Text": [
                             {
@@ -469,6 +646,7 @@
                 },
                 {
                     "@id": "candidate_ellis",
+                    "PersonId": "Person_Ellis-Harlan",
                     "BallotName": {
                         "Text": [
                             {
@@ -483,6 +661,7 @@
                 },
                 {
                     "@id": "candidate_indexer",
+                    "PersonId": "Person_Indexer-Rudy",
                     "BallotName": {
                         "Text": [
                             {
@@ -497,6 +676,7 @@
                 },
                 {
                     "@id": "candidate_smith",
+                    "PersonId": "Person_Smith-Sally",
                     "BallotName": {
                         "Text": [
                             {
@@ -511,6 +691,7 @@
                 },
                 {
                     "@id": "candidate_gomez",
+                    "PersonId": "Person_Gomez-Hector",
                     "BallotName": {
                         "Text": [
                             {
@@ -525,6 +706,7 @@
                 },
                 {
                     "@id": "candidate_davis",
+                    "PersonId": "Person_Davis-Rosashawn",
                     "BallotName": {
                         "Text": [
                             {
@@ -539,6 +721,7 @@
                 },
                 {
                     "@id": "candidate_tsi",
+                    "PersonId": "Person_Tsi-Oliver",
                     "BallotName": {
                         "Text": [
                             {
@@ -553,6 +736,7 @@
                 },
                 {
                     "@id": "candidate_orotund",
+                    "PersonId": "Person_Orotund-Glavin",
                     "BallotName": {
                         "Text": [
                             {
@@ -567,6 +751,7 @@
                 },
                 {
                     "@id": "candidate_alpha",
+                    "PersonId": "Person_Alpha-Anthony",
                     "BallotName": {
                         "Text": [
                             {
@@ -583,6 +768,7 @@
                 },
                 {
                     "@id": "candidate_gamma",
+                    "PersonId": "Person_Gamma-Gloria",
                     "BallotName": {
                         "Text": [
                             {
@@ -599,6 +785,7 @@
                 },
                 {
                     "@id": "candidate_beta",
+                    "PersonId": "Person_Beta-Betty",
                     "BallotName": {
                         "Text": [
                             {
@@ -614,6 +801,7 @@
                 },
                 {
                     "@id": "candidate_delta",
+                    "PersonId": "Person_Delta-David",
                     "BallotName": {
                         "Text": [
                             {
