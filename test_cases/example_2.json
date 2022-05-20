@@ -599,6 +599,7 @@
             "Candidate": [
                 {
                     "@id": "candidate_spacely",
+                    "PersonId": "Person_Spacely-Cosmo",
                     "BallotName": {
                         "Text": [
                             {
@@ -614,6 +615,7 @@
                 },
                 {
                     "@id": "candidate_cogswell",
+                    "PersonId": "Person_Cogswell-Spencer",
                     "BallotName": {
                         "Text": [
                             {
@@ -644,6 +646,7 @@
                 },
                 {
                     "@id": "candidate_ellis",
+                    "PersonId": "Person_Ellis-Harlan",
                     "BallotName": {
                         "Text": [
                             {
@@ -658,6 +661,7 @@
                 },
                 {
                     "@id": "candidate_indexer",
+                    "PersonId": "Person_Indexer-Rudy",
                     "BallotName": {
                         "Text": [
                             {
@@ -672,6 +676,7 @@
                 },
                 {
                     "@id": "candidate_smith",
+                    "PersonId": "Person_Smith-Sally",
                     "BallotName": {
                         "Text": [
                             {
@@ -686,6 +691,7 @@
                 },
                 {
                     "@id": "candidate_gomez",
+                    "PersonId": "Person_Gomez-Hector",
                     "BallotName": {
                         "Text": [
                             {
@@ -700,6 +706,7 @@
                 },
                 {
                     "@id": "candidate_davis",
+                    "PersonId": "Person_Davis-Rosashawn",
                     "BallotName": {
                         "Text": [
                             {
@@ -714,6 +721,7 @@
                 },
                 {
                     "@id": "candidate_tsi",
+                    "PersonId": "Person_Tsi-Oliver",
                     "BallotName": {
                         "Text": [
                             {
@@ -728,6 +736,7 @@
                 },
                 {
                     "@id": "candidate_orotund",
+                    "PersonId": "Person_Orotund-Glavin",
                     "BallotName": {
                         "Text": [
                             {
@@ -742,6 +751,7 @@
                 },
                 {
                     "@id": "candidate_alpha",
+                    "PersonId": "Person_Alpha-Anthony",
                     "BallotName": {
                         "Text": [
                             {
@@ -758,6 +768,7 @@
                 },
                 {
                     "@id": "candidate_gamma",
+                    "PersonId": "Person_Gamma-Gloria",
                     "BallotName": {
                         "Text": [
                             {
@@ -774,6 +785,7 @@
                 },
                 {
                     "@id": "candidate_beta",
+                    "PersonId": "Person_Beta-Betty",
                     "BallotName": {
                         "Text": [
                             {
@@ -789,6 +801,7 @@
                 },
                 {
                     "@id": "candidate_delta",
+                    "PersonId": "Person_Delta-David",
                     "BallotName": {
                         "Text": [
                             {
