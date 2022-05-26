@@ -22,6 +22,16 @@
                         "Content": "The Hadron Party of Farallon"
                     }
                 ]
+            },
+            "Abbreviation": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "HAD"
+                    }
+                ]
             }
         },
         {
@@ -35,6 +45,16 @@
                         "@type": "ElectionResults.LanguageString",
                         "Language": "en",
                         "Content": "The Lepton Party"
+                    }
+                ]
+            },
+            "Abbreviation": {
+                "@type": "ElectionResults.InternationalizedText",
+                "Text": [
+                    {
+                        "@type": "ElectionResults.LanguageString",
+                        "Language": "en",
+                        "Content": "LEP"
                     }
                 ]
             }
