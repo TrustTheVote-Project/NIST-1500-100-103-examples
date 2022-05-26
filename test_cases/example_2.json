@@ -240,7 +240,7 @@
     ],
     "Office": [
         {
-            "@id": "office_mayor",
+            "@id": "Office_Mayor__GpUnit_Orbit-City",
             "ElectionDistrictId": "district_orbit_city",
             "Name": {
                 "Text": [
@@ -882,7 +882,7 @@
                             "HeaderId": "header_district",
                             "OrderedContent": [
                                 {
-                                    "ContestId": "contest-orbit-city-mayor",
+                                    "ContestId": "Contest_Office_Mayor__GpUnit_Orbit-City",
                                     "OrderedContestSelectionIds": [
                                         "selection_spacely",
                                         "selection_cogswell",
@@ -960,7 +960,7 @@
                             "HeaderId": "header_district",
                             "OrderedContent": [
                                 {
-                                    "ContestId": "contest-orbit-city-mayor",
+                                    "ContestId": "Contest_Office_Mayor__GpUnit_Orbit-City",
                                     "OrderedContestSelectionIds": [
                                         "selection_spacely",
                                         "selection_cogswell",
@@ -1132,10 +1132,10 @@
            
            "Contest": [
                 {
-                    "OfficeIds": ["office_mayor"],
+                    "OfficeIds": ["Office_Mayor__GpUnit_Orbit-City"],
                     "VotesAllowed": 1,
                     "@type": "ElectionResults.CandidateContest",
-                    "@id": "contest-orbit-city-mayor",
+                    "@id": "Contest_Office_Mayor__GpUnit_Orbit-City",
                     "ContestSelection": [
                         {
                             "CandidateIds": ["candidate_spacely"],
