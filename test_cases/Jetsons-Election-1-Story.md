@@ -1,4 +1,4 @@
-
+# Welcome to Orbit City
 The Jetsons live in Orbit City, in Gadget County.
 
 The Gadget County Elections Board runs elections for the electoral district that is the county itself (including statewide and state level elections), as well as the two jurisdictions within the county: Orbit City with its offices for City Council and for Mayor; and the Spaceport District, with its offices for the Spaceport Control Board that regulates the use of the SpacePort and who supervise staff actitvity to collect landing fees and use funds for spaceport upkeep.
@@ -20,3 +20,6 @@ Spacetown Precinct: Orbit City Mayor, Spaceport Control Board, county ballot que
 Downtown Precinct: Orbit City Mayor, county ballot question 1
 
 Orbit City elections are partisan contests, with Spacely in the Lepton Party, and Cogswell in the Hadron Party. Both of them are listed on the ballot with the party affiliation. Spaceport Control Board elections are non partisan, and candidates are listed by profession rather than party: Jane as Independent Consultant, Harlan as Author, and Rudi as Sentient Search Engine. Both contests include a write-in option. The text of the ballot question is “Shall Gadget County increase its sales tax from 1% to 1.1% for the purpose of raising additional revenue to fund expanded air traffic control operations?” and the answers are “Yes” and “No”.
+
+## Preparing for the Election
+Rex Officio is a Gadget County election official whose job is to prepare the ballots for the election.
