@@ -394,7 +394,7 @@
     "Header": [
         {
             "@type": "ElectionResults.Header",
-            "@id": "Header_County_Gadget",
+            "@id": "Header_County-Gadget",
             "Name": {
                 "@type": "ElectionResults.InternationalizedText",
                 "Text": [
