@@ -490,6 +490,7 @@
                     "OfficeIds": ["Office_Mayor__GpUnit_Orbit-City"],
                     "ElectionDistrictId": "GpUnit_Orbit-City",
                     "VotesAllowed": 1,
+                    "VoteVariation": "plurality",
                     "ContestSelection": [
                         {
                             "@type": "ElectionResults.CandidateSelection",
