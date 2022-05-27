@@ -394,7 +394,7 @@
     "Header": [
         {
             "@type": "ElectionResults.Header",
-            "@id": "Header_County-Gadget",
+            "@id": "Header_County_Gadget",
             "Name": {
                 "@type": "ElectionResults.InternationalizedText",
                 "Text": [
@@ -406,7 +406,7 @@
                 ]
             }
         },
-        {
+                {
             "@type": "ElectionResults.Header",
             "@id": "Header_Orbit-City",
             "Name": {
@@ -420,7 +420,7 @@
                 ]
             }
         }
-    ],
+        ],
     "Election": [
         {
             "@type": "ElectionResults.Election",
@@ -456,25 +456,31 @@
                             "HeaderId": "Header_Orbit-City",
                             "OrderedContent": [
                                 {
-                                    "@type": "ElectionResults.OrderedContest",
-                                    "ContestId": "Contest_Office_Mayor__GpUnit_Orbit-City",
-                                    "OrderedContestSelectionIds": [
-                                        "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Spacely-Cosmo",
-                                        "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Cogswell-Spencer"
+                                    "@type": "ElectionResults.OrderedHeader",
+                                    "HeaderId": "Header_Office_Mayor__GpUnit_Orbit-City",
+                                    "OrderedContent": [
+                                        {
+                                            "@type": "ElectionResults.OrderedContest",
+                                            "ContestId": "Contest_Office_Mayor__GpUnit_Orbit-City",
+                                            "OrderedContestSelectionIds": [
+                                                "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Spacely-Cosmo",
+                                                "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Cogswell-Spencer"
+                                            ]
+                                        }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "@type": "ElectionResults.OrderedHeader",
-                            "HeaderId": "Header_County_Gadget",
-                            "OrderedContent": [
+                                },
                                 {
-                                    "@type": "ElectionResults.OrderedContest",
-                                    "ContestId": "Contest_BallotMeasure-1",
-                                    "OrderedContestSelectionIds": [
-                                        "Selection__Contest_BallotMeasure-1__yes",
-                                        "Selection__Contest_BallotMeasure-1__no"
+                                    "@type": "ElectionResults.OrderedHeader",
+                                    "HeaderId": "Header_County-Gadget",
+                                    "OrderedContent": [
+                                        {
+                                            "@type": "ElectionResults.OrderedContest",
+                                            "ContestId": "Contest_BallotMeasure-1",
+                                            "OrderedContestSelectionIds": [
+                                                "Selection__Contest_BallotMeasure-1__yes",
+                                                "Selection__Contest_BallotMeasure-1__no"
+                                            ]
+                                        }
                                     ]
                                 }
                             ]
@@ -490,6 +496,7 @@
                     "OfficeIds": ["Office_Mayor__GpUnit_Orbit-City"],
                     "ElectionDistrictId": "GpUnit_Orbit-City",
                     "VotesAllowed": 1,
+                    "VoteVariation": "plurality",
                     "ContestSelection": [
                         {
                             "@type": "ElectionResults.CandidateSelection",
@@ -516,6 +523,7 @@
                     "@id": "Contest_BallotMeasure-1",
                     "ElectionDistrictId": "GpUnit_County-Gadget",
                     "Name": "Air Traffic Control Tax Increase",
+                    "VoteVariation": "plurality",
                     "FullText": {
                         "@type": "ElectionResults.InternationalizedText",
                         "Text": [
