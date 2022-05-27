@@ -1,0 +1,689 @@
+#+STARTUP: indent
+
+#+title: TTV EDF Profile
+#+date: <2022-05-06 Fri>
+#+author: Clifford Wulfman
+#+email: cliff@osetfoundation.org
+
+* Preface
+Who the document is for.  How the document is organized.  Conventions used in this document.
+* Part I: Overview
+What is a schema.  What is a profile.  Why they matter.
+
+** The Election Results Common Data Format (ERCDF)
+Use scenarios.  The TTV use cases.  Election Definition vs Election Report.  The need for XML and JSON serialization formats.
+
+/EDF/ is an acronym for /Election Definition File:/ an abstract concept that refers to a collection of data about the structure and composition of an election, serialized as a stream of bytes.  Using the term /file/ to designate that byte stream can be confusing to programmers, because for them a /file/ is collection of bytes recorded on a storage device, with a variety of properties.  Files can be opened, closed, read, written, moved, and so forth.
+
+To avoid confusion, we're going to use the term /File/ to refer to stored bytes and the term /Document/ to refer to the contents of a file.  So an election-management application might be used to define an election, using the elements and attributes defined by NIST 1500-100; it might compile those definitions into a schema-compliant /document/ and save that document by writing it to a file.  Another application might read that file and parse it into a document; check that document for correctness and validity; transmit the document or parts of the document to other programs, and so on.
+
+In the election world, the acronym /EDF/ is conventionally used to refer to both the file and the document, so we will continue to use it that way except when context requires disambiguation.
+
+NIST 1500-100 was designed to support three election-related use cases: pre-election, election night, and post-election.
+
+** Schemas, Profiles, and Validation
+A deeper look at schemas.  Well-formedness vs. Validity.  JSON Schema.  Does order matter? What is a Profile? Processing considerations.
+
+TTV's use of the ERCDF encompasses only the first use scenario described in the NIST 1500-100 specification: reporting general data about geo-political entities, offices, and parties, as well as election-specific data about contests, candidates, ballot measures, and ballot styles.  Many of the elements and attributes defined in the NIST 1500-100 specification pertain to the election-night and post-election use cases, when the Election Report is used to report the results of voting, not just the structure of the election.  These elements and attributes are not part of the TTV profile, although they are part of the schema.  Put formally, these elements and attributes are valid with respect to the schema, but they are not valid with respect to the profile.
+*** JSON Schema
+What it is.  Objects, Elements, Attributes, and Values.  
+
+
+*** An Example: the Minimum Valid EDF
+In order to understand schemas and profiles better, let's look at an example: the minimum valid EDF.
+#+begin_src json
+  {
+      "@type": "ElectionResults.ElectionReport",
+      "Issuer": "",
+      "IssuerAbbreviation": "",
+      "VendorApplicationId": "",
+      "SequenceStart": 1,
+      "SequenceEnd": 1,
+      "Format": "precinct-level",
+      "Status": "pre-election",
+      "GeneratedDate": "2062-01-01T12:00:00-08:00"
+  }
+#+end_src
+
+Example 1 shows an election report, serialized as JSON and valid with respect to the schema.  It is a JSON object with nine key/value pairs which represent an /element/ with nine /attributes/ or /properties/ (we will use these terms interchangeably).  All nine of these attributes are /required/ by the schema: if an ElectionReport object lacks any one of them, it is not valid.
+
+The /@type/ property defines this JSON object as an ElectionReport object in the ElectionResults schema.
+
+The next three attributes, "Issuer", "IssuerAbbreviation", and "Vendorapplicationid", must be present, even if they have no values; if they do have values, those values must be strings.
+
+The last four attributes must be present, and they must have values.  "SequenceStart" and "SequenceEnd" are integers that situate the document within a sequence of reports: "1 of 1" for a single report; "1 of 2" for the first in a two-report sequence and "2 of 2" for the second in a two-report sequence, and so on.
+
+TTV applications do not produce or consume sequences of reports, so why do we need to include these attributes?
+
+We must include them because the schema says we must; that is, /SequenceStart and SequenceEnd are required by the schema./ But because TTV applications don't work with sequences of reports, the values of SequenceStart and SequenceEnd will always be 1 -- in fact, the profile declares that they *must* be 1.
+
+So there are two layers of validity: valid with respect to the schema, and valid with respect to the profile. For example,
+
+#+begin_src json
+  { "@type": "ElectionResults.ElectionReport", "Issuer": "", "IssuerAbbreviation": "", "VendorApplicationId": "",
+    "SequenceStart": 1, "SequenceEnd": 2,
+    "Format": "precinct-level", "Status": "pre-election", "GeneratedDate": "2062-01-01T12:00:00-08:00" }
+#+end_src
+
+is /valid with respect to the schema/ but /invalid with respect to the
+profile/, because the SequenceEnd is not 1.
+
+* Part II: The TTV EDF Profile
+The rest of this document describes the TTV EDF profile.  We begin with a description of the profile's target use cases and its general restrictions on NIST 1500-100.
+
+** Scope and the TTV EDF Use Case
+NIST-1500-100 is designed to support documents that encapsulate information about multiple elections taking place in many geo-political regions. The TTV use case makes a fundamental restriction: *An ElectionReport contains information pertinent to one and only one election, for one and only one precinct.* This restriction makes some of the design decisions for NIST-1500-100 awkward or superfluous, especially the reliance on ID/IDREF associations to minimize data redundancy.  Keep that in mind when encountering those mechanisms.
+
+For example:
+
+The Election element relies on data that is defined in the supporting sections of the Report: offices, persons, parties, and geo-political units.  The components of the Election refer to the supporting elements via identifier references.  This reference mechanism makes parsing more complicated, but it reduces the size of the overall ElectionReport when it carries definitions for many precincts.  In the TTV Profile, an ElectionReport contains definitions and information about the ballot in a single precinct, so the ID/IDREF mechanism can seem unnecessarily complex.
+
+The ID/IDREF indirection also makes this documentation difficult, because top-level elements must be described using low-level elements, so the low-level elements need to be described first; without context, though, the descriptions of low-level elements can seem arbitrary.  We are going to mix approaches and rely on the reader's patience (and the ability to skip around in this document to follow cross-references) as the context becomes clearer.
+
+Another thing to bear in mind: the XML schema for NIST-1500-100 insists that elements appear in alphabetical order (a shortcoming of this schema, not of XML itself, which does not insist on element order), but the JSON schema makes no such demands, so we are free to express them in whatever order makes the document most human-readable.
+** Identifiers: Naming Conventions
+Because EDFs are likely to be read by humans as well as by machines, the TTV profile requires that all identifiers be human readable.  Although the NIST 1500-100 schema requires only that identifiers be NCNames, the TTV profile insists that identifiers be composed using the following patterns and rules.
+
+*** Every identifier must begin with the type of object it identifies
+Every identifier is composed of the /type/ of object and some type-specific distinguishing string, connected by an underscore. E.g.,
+
+#+begin_src json
+  {
+      "@type": "ElectionResults.Person",
+      "@id": "Person_Jetson-Jane",
+      "FirstName": "Jane",
+      "LastName": "Jetson"    
+  }
+#+end_src
+
+In the case of a Person object, the identifier *must* begin with /Person_/; the TTV profile suggests that the distinguishing string for Persons be composed of the last and first names of the person, joined with a hyphen (if there are two /Jane Jetsons/ in the election, an integer should be appended to the token: e.g., /Person_Jetson-Jane1/.  The lastname-firstname pattern is a suggestion, not a requirement, but implementers are encouraged to follow the profile's suggestions.
+
+*** Compound identifiers
+The identifiers of some objects will be composed from other identifiers, separated by a double underscore (__).  For example,
+
+** The Top-Level Containing Object: ElectionReport
+The ElectionReport document is divided into three logical groups: metadata about the Report itself; supporting data for describing the election; and a description of the election.
+
+#+begin_src json
+  {
+    "@type": "ElectionResults.ElectionReport",
+    "Format": "precinct-level",
+    "GeneratedDate": "2062-01-01T12:00:00-08:00",
+    "VendorApplicationId": "TTV",
+    "Issuer": "Gadget County",
+    "IssuerAbbreviation": "gc",
+    "SequenceStart": 1,
+    "SequenceEnd": 1,
+    "Status": "pre-election",
+    "Party": [],
+    "GpUnit": [],
+    "Office": [],
+    "Person": [],
+    "Header": [],
+    "Election": []
+  }
+#+end_src
+
+The ElectionReport element *must* contain a "@type" attribute with the value "ElectionResults.ElectionReport" to identify it as an ElectionReport element in the schema.  It *must* also contain one "Issuer" attribute, one "IssuerAbbreviation", and one "VendorApplicationId", each of which may be empty.
+
+It *must* contain a "SequenceStart" and a "SequenceEnd" attribute, and both *must* have a value of 1.  Although in some applications a NIST 1500-100 ElectionReport may be one of many such reports being processed at an election center, A TTV EDF defines a single election, independently of any other election definition, so there will always be one and only one ElectionReport.
+
+It *must* contain a "Format" attribute, whose value *must* be "precinct-level".  In the election-night and post-election use scenarios, the NIST 1500-100 schema is used to report counts; these counts may be precinct-by-precinct or they may be aggregated.  Both values are superfluous in the pre-election scenario the TTV EDF profile supports, but because it is required by the schema, it must be included in any valid TTV EDF.  Processors should ignore its value.
+
+The ElectionReport element *must* contain a "Status" attribute, whose value *must* be "pre-election".
+
+It *must* contain a "GeneratedDate" attribute, whose value *must* be a valid xsd:DateWithTimeZone string.
+
+The NIST 1500-100 schema does not require anything other than these metadata elements to be valid, but the TTV EDF profile is stricter.
+
+An ElectionReport document that does not contain the following elements will be valid with respect to the NIST 1500-100 schema, but it will *not* be valid with respect to the TTV EDF profile.  Processors *cannot* rely on JSON Schema validation to catch documents that conform with the NIST schema's requirements but fail to conform with the TTV EDF profile.
+
+- A TTV EDF *must* contain an "Election" attribute whose value is an array containing one and only one "ElectionResults.Election" element.  (See the details of the Election element below.)
+
+- If the Election entails selecting one or more people (candidates) to one or more positions (offices), the ElectionReport *must* contain an "Office" attribute whose value is an array containing one or more "Office" elements, one for each position being voted on, and it *must* contain a "Person" element whose value is an array containing one "Person" element for each candidate.  If any of the offices is partisan, the ElectionReport *must* contain a "Party" attribute whose content is an array containing one more "Party" elements.
+
+** Election
+In the TTV EDF profile, an ElectionReport *must* contain one and only one Election element.
+
+#+begin_src json
+  {
+    "@type": "ElectionResults.Election",
+    "Type": "general",
+    "StartDate": "",
+    "EndDate": "",
+    "ElectionScopeId": "",
+    "Name": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Label": "",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "",
+          "Content": ""
+        }
+      ]
+    }
+  }
+#+end_src
+
+The Election element has two informal subsections: a metadata section and a definitions section.
+
+*** Election Metadata Section
+#+begin_src json
+  {
+    "Election": [
+      {
+        "@type": "ElectionResults.Election",
+        "Type": "general",
+        "ElectionScopeId": "",
+        "Name": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+            {
+              "@type": "ElectionResults.LanguageString",
+              "Language": "",
+              "Content": ""
+            }
+          ]
+        },
+        "StartDate": "",
+        "EndDate": ""
+      }
+    ]
+  }
+#+end_src
+
+The "Type" attribute *must* contain one and only one value from the following list:
+
+- general
+- partisan-primary-closed
+- partisan-primary-open
+- primary
+- runoff
+- special
+- other
+
+  (If the type is "other", there *must* be an "OtherType" attribute containing a string used by external processors to identify the type of election.)
+
+The "Name" attribute *must* contain an array with *at least one* LanguageString element containing a language identifier ("en", "es", etc.) and a Content text string.
+
+The "ElectionScopeId" attribute *must* contain one and only one geopolitical unit identifier, and that identifier *must* be the identifier of a "GpUnit" element in the "GpUnit" array.
+
+The "StartDate" and "EndDate" attributes *must* contain valid xsd:DateTime strings.
+
+*** Election Definitions Section
+This is the heart of the report; it contains the ballot styles that describe the layout of the actual ballot for each precinct.  Supporting the ballot style are definitions of the candidates and contests in the election, which link to the persons and offices being contested.
+**** BallotStyle Array
+For the pre-election scenario supported by TTV apps, the BallotStyle array is the primary element; all the rest of the elements in the ElectionReport are included to support ballot styles.
+
+**** Contest Array
+An Election *must* contain a "Contest" attribute whose value is an array containing one or more contest elements.  There are four types of contest: ballot-measure contests; candidate contests; party contests; and retention contests.  Each contest type has a different set of attributes, and values of these attributes are often links to objects defined elsewhere in the ElectionReport: a candidate contest, for example, contains an array of OfficeIds whose values are the @id values of Office objects; the ContestSelection array contains CandidateSelection objects whose CandidateIds array contains @id values of Candidate objects.
+
+#+begin_src json
+  {
+    "Contest": [
+      {
+        "@type": "ElectionResults.CandidateContest",
+        "@id": "Contest_Office_Mayor__GpUnit_Orbit-City",
+        "Name": "Contest for Mayor of Orbit City",
+        "OfficeIds": [
+          "Office_Mayor__GpUnit_Orbit-City"
+        ],
+        "ElectionDistrictId": "GpUnit_Orbit-City",
+        "VotesAllowed": 1,
+        "VoteVariation": "plurality",
+        "ContestSelection": [
+          {
+            "@type": "ElectionResults.CandidateSelection",
+            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Spacely-Cosmo",
+            "CandidateIds": [
+              "Candidate_Person_Spacely-Cosmo"
+            ],
+            "SequenceOrder": 1
+          },
+          {
+            "@type": "ElectionResults.CandidateSelection",
+            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Cogswell-Spencer",
+            "CandidateIds": [
+              "Candidate_Person_Cogswell-Spencer"
+            ],
+            "SequenceOrder": 2
+          },
+          {
+            "IsWriteIn": true,
+            "@type": "ElectionResults.CandidateSelection",
+            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_writein",
+            "SequenceOrder": 3
+          }
+        ]
+      }
+    ]
+  }
+#+end_src
+
+***** Ballot-Measure Contest
+BallotMeasureContest objects have different attributes from CandidateContests.  They *must* contain the full text of the ballot measure, and the ContestSelection array contains ElectionResults.BallotMeasureSelection objects, each of which contains a Selection property, an InternationalizedText object with one or more Text objects in different languages.
+
+#+begin_src json
+  {
+    "@type": "ElectionResults.BallotMeasureContest",
+    "@id": "Contest_BallotMeasure-1",
+    "ElectionDistrictId": "GpUnit_State-Farallon",
+    "Name": "2062 Farallon State Ballot Measure 1",
+    "FullText": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "en",
+          "Content": "Full text description"
+        }
+      ]
+    },
+    "ContestSelection": [
+      {
+        "Selection": {
+          "Text": [
+            {
+              "Content": "Yes",
+              "Language": "en",
+              "@type": "ElectionResults.LanguageString"
+            }
+          ],
+          "@type": "ElectionResults.InternationalizedText"
+        },
+        "@type": "ElectionResults.BallotMeasureSelection",
+        "@id": "Selection__Contest_BallotMeasure-1__yes",
+        "SequenceOrder": 1
+      },
+      {
+        "Selection": {
+          "Text": [
+            {
+              "Content": "No",
+              "Language": "en",
+              "@type": "ElectionResults.LanguageString"
+            }
+          ],
+          "@type": "ElectionResults.InternationalizedText"
+        },
+        "@type": "ElectionResults.BallotMeasureSelection",
+        "@id": "Selection__Contest_BallotMeasure-1__no",
+        "SequenceOrder": 2
+      }
+    ]
+  }
+#+end_src
+
+**** Candidate Array
+If the Contest array includes a CandidateContest element, then the Election *must* contain a "Candidate" element whose value is an array containing one Candidate element for each candidate running for the office.
+*** Offices
+
+*** Persons
+
+*** Parties
+
+*** Geo-political Units
+
+*** Election-wide Headers
+
+*** Report Metadata
+
+** Ballot Style
+The BallotStyle element is the primary ERCDF element used by TTV applications. Its major sub-elements are an array of OrderedContest elements containing definitions of candidates, contests, and/or ballot measures appearing on the ballot; an array of Geopolitical Unit identifiers linking to the precinct or precincts to which the ballot style applies; and a link to the ballot PDF.
+#+begin_src json
+  {
+    "BallotStyle": [
+      {
+        "@type": "ElectionResults.BallotStyle",
+        "GpUnitIds": [
+          "precinct_11"
+        ],
+        "ImageUri": [
+          {
+            "@type": "ElectionResults.AnnotatedUri",
+            "Annotation": "application/pdf",
+            "Content": ""
+          }
+        ],
+        "OrderedContent": [
+          {
+            "@type": "ElectionResults.OrderedContest",
+            "ContestId": ""
+          }
+        ]
+      }
+    ]
+  }
+#+end_src
+The GpUnitIds array *must* contain one and only one precinct identifier, and that precinct identifier *must* refer to a GpUnit element in the ElectionReport's GpUnit array.
+
+The ImageUri array *must* contain an AnnotatedUri whose Annotation property is the mime type of the image document and whose Content property is a URL pointing to the image file.
+
+*** Headers and Contests
+The primary content of a BallotStyle object is an array of OrderedContent that is displayed on the ballot. The OrderedContent array is a layout specification: it specifies the order and composition of contests and headers, which are defined in the Election object.
+
+The elements in the NIST specification are poorly named.  In the spec there are two kinds of OrderedContent: OrderedHeader, which, the specification says, is "used for the appearance of a header, optionally with the inclusion of contests," and OrderedContest, used for the appearance of a contest.  In fact, OrderedHeaders may optionally include any kind of OrderedContent, including other OrderedHeaders, enabling a nested structure of contests and headers.  A better name for OrderedHeader might have been OrderedSection, or OrderedDiv, to follow the naming convention of HTML and other structured-document languages.
+
+Here's an example.  Imagine a ballot for a state-wide election with two contests: a Candidate contest for Governor and a state-wide referendum (a ballot measure). The structure is this:
+
+- State Contests
+  - For Governor
+  - Statewide Ballot Measure
+
+Most developers are familiar with HTML.  In simple, well-structured HTML, one might represent such a ballot this way:
+
+#+begin_src html
+  <!DOCTYPE html>
+  <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+          <title>Ballot</title>
+      </head>
+      <body>
+          <article class="BallotStyle" id="BallotStyle_Precinct-9">
+              <dl class="GpUnitIds">
+                  <dt>Precinct</dt>
+                  <dd>9</dd>
+              </dl>
+              <a class="ImageUri" href="http://awslink">Ballot Image</a>
+              <div class="OrderedContent">
+                  <section class="OrderedHeader">
+                      <header>
+                          <h1>State Contests</h1>
+                      </header>
+                      <section class="OrderedHeader">
+                          <header>
+                              <h2>For Governor</h2>
+                          </header>
+                          <div class="OrderedContest">
+                              <form id="Contest_Governor">
+                                  <ol class="ContestSelections">
+                                      <li><input type="radio" name="Contest_Governor__Selection"
+                                              value="Contest_Governor__Selection-1" /> Jane
+                                          Jetson</li>
+                                      <li><input type="radio" name="Contest_Governor_Selection"
+                                              value="Contest_Governor__Selection_2" /> Fred
+                                          Flintstone</li>
+                                  </ol>
+                              </form>
+                          </div>
+                      </section>
+                      <section class="OrderedHeader">
+                          <header>
+                              <h2>Ballot Measure 1</h2>
+                          </header>
+                          <div class="OrderedContest">
+                              <form id="Contest_BallotMeasure-1">
+                                  <ol class="ContestSelections">
+                                      <li><input type="radio"
+                                              name="Contest_BallotMeasure-1__Selection"
+                                              value="Contest_BallotMeasure-1__Selection_1" /> Yes</li>
+                                      <li><input type="radio"
+                                              name="Contest_BallotMeasure-1__Selection"
+                                              value="Contest_BallotMeasure-1__Selection_2" /> No</li>
+                                  </ol>
+                              </form>
+                          </div>
+                      </section>
+                  </section>
+              </div>
+          </article>
+      </body>
+  </html>
+#+end_src
+
+Using NIST-1500-100, one might specify such a ballot style this way:
+
+#+begin_src json
+  {
+    "BallotStyle": [
+      {
+        "@type": "ElectionResults.BallotStyle",
+        "GpUnitIds": [
+          "GPUnit_precinct-9"
+        ],
+        "ImageUri": [
+          {
+            "@type": "ElectionResults.AnnotatedUri",
+            "Content": "https://someURI"
+          }
+        ],
+        "OrderedContent": [
+          {
+            "@type": "ElectionResults.OrderedHeader",
+            "HeaderId": "Header_State",
+            "OrderedContent": [
+              {
+                "@type": "ElectionResults.OrderedHeader",
+                "HeaderId": "Header_Office_Mayor__GpUnit_Orbit-City",
+                "OrderedContent": [
+                  {
+                    "@type": "ElectionResults.OrderedContest",
+                    "ContestId": "Contest_Office_Mayor__GpUnit_Orbit-City",
+                    "OrderedContestSelectionIds": [
+                      "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Spacely-Cosmo",
+                      "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Cogswell-Spencer"
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "ElectionResults.OrderedHeader",
+                "HeaderId": "Header_BallotMeasure-1",
+                "OrderedContent": [
+                  {
+                    "@type": "ElectionResults.OrderedContest",
+                    "ContestId": "Contest_BallotMeasure-1",
+                    "OrderedContestSelectionIds": [
+                      "Selection__Contest_BallotMeasure-1__yes",
+                      "Selection__Contest_BallotMeasure-1__no"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+#+end_src
+
+* Part III: Prescriptive Section
+In this part of the document, we condense the prescriptive statements about each object type.  Only those classes with specific TTV profile restrictions are listed.
+** Types
+*** AnnotatedUri
+In the TTV profile, the Annotation property of the object is used to specify the mime type of the resource indicated by the Content property.
+
+#+begin_src json
+  {"@type": "ElectionResults.AnnotatedUri",
+   "Annotation": "application/pdf",
+   "Content": "<URL>"}
+#+end_src
+*** BallotMeasureContest
+In addition to the requirements of a Contest, a BallotMeasureContest *must* contain the full text of the ballot measure under consideration.
+*** BallotMeasureSelection
+*** BallotStyle
+In the TTV profile, an EDF *must* contain one and only one BallotStyle object.
+#+begin_src json
+  {
+    "BallotStyle": [
+      {
+        "@type": "ElectionResults.BallotStyle",
+        "GpUnitIds": ["GpUnit_Precinct-11"],
+        "ImageUri": [{"@type": "ElectionResults.AnnotatedUri",
+                      "Annotation": "application/pdf",
+                      "Content": "<URL>"}],
+        "OrderedContent": []
+      }
+    ]
+  }
+#+end_src
+The GpUnitIds array *must* contain one and only one precinct identifier, and that precinct identifier *must* refer to a GpUnit element in the ElectionReport's GpUnit array.
+
+The ImageUri array *must* contain an AnnotatedUri whose Annotation property is the mime type of the image document and whose Content property is a URL pointing to the image file.
+
+The OrderedContent array *must* contain an OrderedContest object for each Contest or Ballot Measure in the Elections' Contest array.  These *may* be organized into groups by OrderedHeader.
+*** Candidate
+A Candidate object *must* include a PersonId property whose value is the @id of the Person whose candidacy it represents.  The @id property of the Candidate object is composed of the string "Candidate_" and the @id of the Person whose candidacy it represents.  For example:
+#+begin_src json
+  {
+      {
+      "@type": "ElectionResults.Person",
+      "@id": "Person_Orotund-Glavin"
+  },
+      {
+      "@type": "ElectionResults.Candidate",
+      "@id": "Candidate_Person_Orotund-Glavin",
+      "PersonId": "Person_Orotund-Glavin"
+  }
+  }
+#+end_src
+*** CandidateContest
+**** Requirements
+- It *must* contain an OfficeIds array containing the @id values of the offices being contested.
+- It *must* contain an @id that follows TTV naming conventions:
+  - The id begins with the string "Contest_"
+  - if the contest is for an office, the string "Contest_" is followed by the id of the first contested office in the OfficeIds array: for example:
+
+    #+begin_src json
+      {
+          { "@type": "ElectionResults.Office",
+            "@id": "Office_Mayor__GpUnit_Orbit-City"
+          },
+          {
+              "@type": "ElectionResults.CandidateContest",
+              "@id": "Contest_Office_Mayor__GpUnit_Orbit-City",
+              "OfficeIds": ["Office_Mayor__GpUnit_Orbit-City"]
+          }
+      }
+    #+end_src
+
+*** CandidateSelection
+*** Contest
+Contest is an abstract class with two subclasses that may be used to define a contest:
+
+- BallotMeasureContest
+- CandidateContest
+
+See entries for these subclasses for additional requirements.
+
+**** Requirements
+- A Contest object of whatever subclass *must* include an ElectionDistrict reference to a GpUnit defiing the geographic scope of the contest.
+- It *must* include a Name attribute
+- It *must* include a VotesAllowed attribute whose value *must* be an integer
+  It *must* include a VoteVariation attribute whose value *must* be either "plurality" or "n-of-m"
+- It *must* contain a ContestSelection array
+  
+*** ContestSelection
+*** Election
+*** ElectionReport
+*** ExternalIdentifier
+*** GpUnit
+The ElectionReport *must* contain an array having a GpUnit for the precinct whose ballot is being defined, as well as one describing the scope of the election.
+
+#+begin_src json
+  {
+    "GpUnit": [
+      {
+        "@type": "ElectionResults.ReportingUnit",
+        "@id": "GpUnit_Farallon",
+        "Type": "state"
+      },
+      {
+        "@type": "ElectionResults.ReportingUnit",
+        "@id": "GpUnit_Precinct-11",
+        "Type": "precinct"
+      }
+    ]
+  }
+#+end_src
+
+*** Office
+The EDF *must* contain an Office object for each contested office in the election.
+
+Each Office object *must* contain a name and an id, and a boolean value for the IsPartisan property.
+
+#+begin_src json
+  {
+    "@type": "ElectionResults.Office",
+    "@id": "Office_Mayor__GpUnit_Orbit-City",
+    "IsPartisan": true,
+    "Name": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "en",
+          "Content": "Mayor"
+        }
+      ]
+    }
+  }
+#+end_src
+
+*** OrderedContent
+*** OrderedContest
+*** Party
+If the EDF contains a partisan contest, it *must* contain an array of
+Party elements, one for each party appearing on the ballot.
+
+#+begin_src json
+  {
+    "Party": [
+      {
+        "@type": "ElectionResults.Party",
+        "@id": "Party_Hadron",
+        "Name": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Label": "Hadronicrat",
+          "Text": [
+            {
+              "@type": "ElectionResults.LanguageString",
+              "Language": "en",
+              "Content": "The Hadron Party of Farallon"
+            }
+          ]
+        }
+      }
+    ]
+  }
+#+end_src
+
+A Party object *must* contain a Name object, which *must* contain a Text and a Label property.
+
+NIST-1500-100 states that the text the Name should be the official name of the Party, and that it /can/ appear on the ballot; however, the official name may be rather long and so display poorly on mobile devices; therefore the TTV profile insists that the Name object *must* also include a Label property whose value is no longer than 8 characters.
+
+*** Person
+While optional in the schema, the TTV profile *requires* a Person object for every candidate appearing in a contest.  In the Schema, the minimal Person object contains nothing more than a type and an id, but the TTV profile requires more.
+
+- A Person object *must* contain a FirstName and a LastName.
+
+- If a Person is a candidate in a partisan contest, the Person object *must* include a PartyId, and the value of PartyId *must* be the id of a Party object in the document.
+
+- If a Person is a candidate in a non-partisan contest, the Person object *must* contain a Profession attribute.
+
+#+begin_src json
+  {
+    "@type": "ElectionResults.Person",
+    "@id": "Person_Ellis-Harlan",
+    "FirstName": "Harlan",
+    "LastName": "Ellis",
+    "Profession": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "en",
+          "Content": "Electrician"
+        }
+      ]
+    },
+    "PartyId": "Party_Hadron"
+  }
+#+end_src
+
+
+* Appendix
+List of classes and attributes used in the profile.
+* References
