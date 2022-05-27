@@ -561,12 +561,10 @@ A Candidate object *must* include a PersonId property whose value is the @id of 
 
 *** CandidateSelection
 *** Contest
-Contest is an abstract class with four subclasses that may be used to define a contest:
+Contest is an abstract class with two subclasses that may be used to define a contest:
 
 - BallotMeasureContest
 - CandidateContest
-- PartyContest
-- RetentionContest
 
 See entries for these subclasses for additional requirements.
 
@@ -574,6 +572,7 @@ See entries for these subclasses for additional requirements.
 - A Contest object of whatever subclass *must* include an ElectionDistrict reference to a GpUnit defiing the geographic scope of the contest.
 - It *must* include a Name attribute
 - It *must* include a VotesAllowed attribute whose value *must* be an integer
+  It *must* include a VoteVariation attribute whose value *must* be either "plurality" or "n-of-m"
 - It *must* contain a ContestSelection array
   
 *** ContestSelection
