@@ -70,6 +70,7 @@
                 "Text": [
                     {
                         "Content": "State of Farallon",
+                        "Label": "Farallon",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
