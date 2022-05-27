@@ -1,0 +1,49 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title:A Special Election
+#+date: <2022-05-26 Thu>
+#+author: Clifford Wulfman
+#+email: cwulfman@PU-C02C37EKMD6T
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.1 (Org mode 9.5.2)
+#+cite_export:
+
+
+In Gadget County, a special election has been called because the
+mayor, the venerable Montague Jetson, announced early retirement.  Two
+candidates are running for the seat: Cosmo Spacely and Spencer
+Cogswell.  Since each had to resign his seat on Spaceport Control
+Board in order to run for Mayor, there are two open seats on the
+Board, and three candidates running: Jane Jetson, Harlan Ellis, Rudi
+Indexer.
+
+In addition, the Gadget County Board of Supervisors have placed a
+ballot question on raising the county sales tax.
+
+The ballots in the upcoming election, therefore, are:
+
+- Bedrock Precinct: county ballot question 1
+- Port Precinct: Spaceport Control Board, county ballot question 1
+- Spacetown Precinct: Orbit City Mayor, Spaceport Control Board,
+  county ballot question 1
+- Downtown Precinct: Orbit City Mayor, county ballot question 1
+
+Orbit City elections are partisan contests, with Spacely in the Lepton
+Party, and Cogswell in the Hadron Party. Both of them are listed on
+the ballot with the party affiliation. Spaceport Control Board
+elections are non partisan, and candidates are listed by profession
+rather than party: Jane as Independent Consultant, Harlan as Author,
+and Rudi as Sentient Search Engine. Both contests include a write-in
+option. The text of the ballot question is “Shall Gadget County
+increase its sales tax from 1% to 1.1% for the purpose of raising
+additional revenue to fund expanded air traffic control operations?”
+and the answers are “Yes” and “No”.
+
+* Preparing for the Election
+Rex Officio is a Gadget County election official whose job is to
+prepare the ballots for the election.
