@@ -585,19 +585,46 @@ The ElectionReport *must* contain an array having a GpUnit for the precinct whos
 #+begin_src json
   {
     "GpUnit": [
-      {
+        {
         "@type": "ElectionResults.ReportingUnit",
-        "@id": "GpUnit_Farallon",
-        "Type": "state"
-      },
-      {
-        "@type": "ElectionResults.ReportingUnit",
-        "@id": "GpUnit_Precinct-11",
-        "Type": "precinct"
+        "@id": "GpUnit_State-Farallon",
+        "Type": "state",
+        "Name": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+                {
+                "@type": "ElectionResults.LanguageString"
+                "Content": "State of Farallon",
+                "Label": "Farallon",
+                "Language": "en",
+
+            }
+            ]
+        }
+    },
+
+        {
+          "@type": "ElectionResults.ReportingUnit",
+          "@id": "GpUnit_Precinct-Downtown-Orbit-City",
+          "Type": "precinct",
+          "Name": {
+              "@type": "ElectionResults.InternationalizedText",
+              "Text": [
+                  {
+                  "@type": "ElectionResults.LanguageString",
+                  "Content": "Downtown Orbit City",
+                  "Label": "Downtown",
+                  "Language": "en"
+                  }
+              ]
+          }
       }
-    ]
   }
 #+end_src
+
+Each GpUnit *must* have a Type, whose value must come from the list of ReportingUnitTypes
+Each GpUnit *must* have a Name. For display purposes, each Name (an InternationalizedText object)
+*must* include a Label property.
 
 *** Office
 The EDF *must* contain an Office object for each contested office in the election.
@@ -630,29 +657,37 @@ Party elements, one for each party appearing on the ballot.
 
 #+begin_src json
   {
-    "Party": [
-      {
-        "@type": "ElectionResults.Party",
-        "@id": "Party_Hadron",
-        "Name": {
-          "@type": "ElectionResults.InternationalizedText",
-          "Label": "Hadronicrat",
-          "Text": [
-            {
-              "@type": "ElectionResults.LanguageString",
-              "Language": "en",
-              "Content": "The Hadron Party of Farallon"
-            }
-          ]
+    "@type": "ElectionResults.Party",
+    "@id": "Party_Hadron",
+    "Name": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Label": "Hadronicrat",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "en",
+          "Content": "The Hadron Party of Farallon"
         }
-      }
-    ]
+      ]
+    },
+    "Abbreviation": {
+      "@type": "ElectionResults.InternationalizedText",
+      "Text": [
+        {
+          "@type": "ElectionResults.LanguageString",
+          "Language": "en",
+          "Content": "HAD"
+        }
+      ]
+    }
   }
 #+end_src
 
 A Party object *must* contain a Name object, which *must* contain a Text and a Label property.
 
 NIST-1500-100 states that the text the Name should be the official name of the Party, and that it /can/ appear on the ballot; however, the official name may be rather long and so display poorly on mobile devices; therefore the TTV profile insists that the Name object *must* also include a Label property whose value is no longer than 8 characters.
+
+A Party object *must* contain an Abbreviation.
 
 *** Person
 While optional in the schema, the TTV profile *requires* a Person object for every candidate appearing in a contest.  In the Schema, the minimal Person object contains nothing more than a type and an id, but the TTV profile requires more.
