@@ -469,8 +469,8 @@
                        {
             "@type": "ElectionResults.Person",
             "@id": "Person_Davis-Rosashawn",
-            "FirstName": "Hector",
-            "LastName": "Gomez",
+            "FirstName": "Rosashawn",
+            "LastName": "Davis",
             "Profession": {
                 "@type": "ElectionResults.InternationalizedText",
                 "Text": [
