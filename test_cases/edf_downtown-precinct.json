@@ -8,7 +8,7 @@
     "SequenceStart": 1,
     "SequenceEnd": 1,
     "Status": "pre-election",
-    "Party": [
+    "Party": [  
         {
             "@type": "ElectionResults.Party",
             "@id": "Party_Hadron",
@@ -67,10 +67,10 @@
             "Type": "state",
             "Name": {
                 "@type": "ElectionResults.InternationalizedText",
+                "Label": "Farallon",
                 "Text": [
                     {
                         "Content": "State of Farallon",
-                        "Label": "Farallon",
                         "Language": "en",
                         "@type": "ElectionResults.LanguageString"
                     }
