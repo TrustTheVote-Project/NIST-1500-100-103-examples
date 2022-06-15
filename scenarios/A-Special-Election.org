@@ -46,4 +46,10 @@ and the answers are “Yes” and “No”.
 
 * Preparing for the Election
 Rex Officio is a Gadget County election official whose job is to
-prepare the ballots for the election.
+prepare the ballots for the election.  Gadget County uses an
+open-source election-management system that allows him to compile
+information about precincts and offices; candidates and contests; and
+all the information required to build an Election Definition.
+
+Farallon maintains a state-wide database of geopolitical units:
+counties, cities, precincts, school districts, and so on.
