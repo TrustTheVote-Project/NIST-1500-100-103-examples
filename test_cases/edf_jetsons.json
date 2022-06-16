@@ -107,7 +107,7 @@
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
                             "OtherType": "ttv",
-                            "Value": "BallotStyle_precinct-Downtown-Precinct"
+                            "Value": "precinct_1_downtown"
                         }
                     ],
                     "GpUnitIds": ["recFIehh5Aj0zGTn6"],
@@ -138,7 +138,7 @@
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
                             "OtherType": "ttv",
-                            "Value": "BallotStyle_precinct-Bedrock-Precinct"
+                            "Value": "precinct_4_bedrock"
                         }
                     ],
                     "GpUnitIds": ["recSQ3ZpvJlTll1Ve"],
@@ -160,7 +160,7 @@
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
                             "OtherType": "ttv",
-                            "Value": "BallotStyle_precinct-Port-Precinct"
+                            "Value": "precinct_3_spaceport"
                         }
                     ],
                     "GpUnitIds": ["rec7dCergEa3mzqxy"],
@@ -193,7 +193,7 @@
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
                             "OtherType": "ttv",
-                            "Value": "BallotStyle_precinct-Spacetown-Precinct"
+                            "Value": "precinct_2_spacetown"
                         }
                     ],
                     "GpUnitIds": ["recUuJTc3tUIUvgF1"],
