@@ -1,7 +1,7 @@
 {
   "@type": "ElectionResults.ElectionReport",
   "Format": "precinct-level",
-  "GeneratedDate": "2022-06-15T19:12:12Z",
+  "GeneratedDate": "2022-06-16T11:30:31Z",
   "VendorApplicationId": "ElectionReporter",
   "Issuer": "TrustTheVote",
   "IssuerAbbreviation": "TTV",
@@ -437,6 +437,16 @@
           }
         ],
         "Label": "Leptonican"
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "LEP",
+            "Language": "en"
+          }
+        ]
       }
     },
     {
@@ -452,6 +462,16 @@
           }
         ],
         "Label": "Hadronicrat"
+      },
+      "Abbreviation": {
+        "@type": "ElectionResults.InternationalizedText",
+        "Text": [
+          {
+            "@type": "ElectionResults.LanguageString",
+            "Content": "HAD",
+            "Language": "en"
+          }
+        ]
       }
     }
   ],
