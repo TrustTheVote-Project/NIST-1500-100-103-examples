@@ -1,7 +1,7 @@
 {
   "@type": "ElectionResults.ElectionReport",
   "Format": "precinct-level",
-  "GeneratedDate": "2022-06-17T10:45:53Z",
+  "GeneratedDate": "2022-06-17T16:01:57Z",
   "VendorApplicationId": "ElectionReporter",
   "Issuer": "TrustTheVote",
   "IssuerAbbreviation": "TTV",
@@ -596,7 +596,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "rec1zWmGWlgKKmUO4",
-      "IsPartisan": true,
+      "IsPartisan": false,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
@@ -628,7 +628,7 @@
     {
       "@type": "ElectionResults.Office",
       "@id": "recBAG7iuOZ1MER6i",
-      "IsPartisan": true,
+      "IsPartisan": false,
       "Name": {
         "@type": "ElectionResults.InternationalizedText",
         "Text": [
