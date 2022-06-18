@@ -1,7 +1,7 @@
 {
   "@type": "ElectionResults.ElectionReport",
   "Format": "precinct-level",
-  "GeneratedDate": "2022-06-17T22:11:28Z",
+  "GeneratedDate": "2022-06-18T09:29:52Z",
   "VendorApplicationId": "ElectionReporter",
   "Issuer": "TrustTheVote",
   "IssuerAbbreviation": "TTV",
@@ -107,16 +107,18 @@
             },
             {
               "@type": "ElectionResults.CandidateSelection",
-              "@id": "recjOtvP35vCRfXCw",
+              "@id": "recQK3J9IJq42hz2n",
               "CandidateIds": [
-                "reczKIKk81RshXkd9"
+                "reczKIKk81RshXkd9",
+                "recLB4X1sLL2q1bSW"
               ]
             },
             {
               "@type": "ElectionResults.CandidateSelection",
-              "@id": "recr40gk7pMLsMWIj",
+              "@id": "reccUkUdEznfODgeL",
               "CandidateIds": [
-                "recopGzcpflkyhwdN"
+                "recopGzcpflkyhwdN",
+                "recBEqMDC9w5AnKxh"
               ]
             }
           ]
@@ -194,40 +196,6 @@
               "@type": "ElectionResults.CandidateSelection",
               "@id": "recFiGYjGCIyk5LBe",
               "IsWriteIn": true
-            }
-          ]
-        },
-        {
-          "@type": "ElectionResults.CandidateContest",
-          "@id": "recY9Uh36QDxYj0lD",
-          "Name": "Vice-President of the United States",
-          "OfficeIds": [
-            "recIR57LPmJ0VvtEo"
-          ],
-          "VoteVariation": "plurality",
-          "VotesAllowed": 1,
-          "ElectionDistrictId": "recTXCMIfa5VQJju2",
-          "ContestSelection": [
-            {
-              "@type": "ElectionResults.CandidateSelection",
-              "@id": "rec4nf1pqdWj2t2i9",
-              "CandidateIds": [
-                "recLB4X1sLL2q1bSW"
-              ]
-            },
-            {
-              "@type": "ElectionResults.CandidateSelection",
-              "@id": "recPpSPYqMZQ4UHca",
-              "CandidateIds": [
-                "recBEqMDC9w5AnKxh"
-              ]
-            },
-            {
-              "@type": "ElectionResults.CandidateSelection",
-              "@id": "recBOzCTdKVXNeBzv",
-              "CandidateIds": [
-                "recQr6V2lWsHTx9Il"
-              ]
             }
           ]
         },
@@ -359,17 +327,8 @@
               "ContestId": "recsoZy7vYhS3lbcK",
               "OrderedContestSelectionIds": [
                 "recPod2L8VhwagiDl",
-                "recjOtvP35vCRfXCw",
-                "recr40gk7pMLsMWIj"
-              ]
-            },
-            {
-              "@type": "ElectionResults.OrderedContest",
-              "ContestId": "recY9Uh36QDxYj0lD",
-              "OrderedContestSelectionIds": [
-                "rec4nf1pqdWj2t2i9",
-                "recPpSPYqMZQ4UHca",
-                "recBOzCTdKVXNeBzv"
+                "recQK3J9IJq42hz2n",
+                "reccUkUdEznfODgeL"
               ]
             },
             {
@@ -423,17 +382,8 @@
               "ContestId": "recsoZy7vYhS3lbcK",
               "OrderedContestSelectionIds": [
                 "recPod2L8VhwagiDl",
-                "recjOtvP35vCRfXCw",
-                "recr40gk7pMLsMWIj"
-              ]
-            },
-            {
-              "@type": "ElectionResults.OrderedContest",
-              "ContestId": "recY9Uh36QDxYj0lD",
-              "OrderedContestSelectionIds": [
-                "rec4nf1pqdWj2t2i9",
-                "recPpSPYqMZQ4UHca",
-                "recBOzCTdKVXNeBzv"
+                "recQK3J9IJq42hz2n",
+                "reccUkUdEznfODgeL"
               ]
             },
             {
@@ -484,17 +434,8 @@
               "ContestId": "recsoZy7vYhS3lbcK",
               "OrderedContestSelectionIds": [
                 "recPod2L8VhwagiDl",
-                "recjOtvP35vCRfXCw",
-                "recr40gk7pMLsMWIj"
-              ]
-            },
-            {
-              "@type": "ElectionResults.OrderedContest",
-              "ContestId": "recY9Uh36QDxYj0lD",
-              "OrderedContestSelectionIds": [
-                "rec4nf1pqdWj2t2i9",
-                "recPpSPYqMZQ4UHca",
-                "recBOzCTdKVXNeBzv"
+                "recQK3J9IJq42hz2n",
+                "reccUkUdEznfODgeL"
               ]
             },
             {
@@ -568,17 +509,8 @@
               "ContestId": "recsoZy7vYhS3lbcK",
               "OrderedContestSelectionIds": [
                 "recPod2L8VhwagiDl",
-                "recjOtvP35vCRfXCw",
-                "recr40gk7pMLsMWIj"
-              ]
-            },
-            {
-              "@type": "ElectionResults.OrderedContest",
-              "ContestId": "recY9Uh36QDxYj0lD",
-              "OrderedContestSelectionIds": [
-                "rec4nf1pqdWj2t2i9",
-                "recPpSPYqMZQ4UHca",
-                "recBOzCTdKVXNeBzv"
+                "recQK3J9IJq42hz2n",
+                "reccUkUdEznfODgeL"
               ]
             },
             {
@@ -758,6 +690,22 @@
         },
         {
           "@type": "ElectionResults.Candidate",
+          "@id": "recLB4X1sLL2q1bSW",
+          "PersonId": "recUSqUnlKb63WT3F",
+          "PartyId": "recBiK9LZXeZmmFEg",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "Betty Beta",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
           "@id": "recopGzcpflkyhwdN",
           "PersonId": "rec1R5Sy3JzkIC2Di",
           "PartyId": "reckpEKRtLuDdt03n",
@@ -767,6 +715,22 @@
               {
                 "@type": "ElectionResults.LanguageString",
                 "Content": "Gloria Gamma",
+                "Language": "en"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ElectionResults.Candidate",
+          "@id": "recBEqMDC9w5AnKxh",
+          "PersonId": "rec4Z3OQJv0YY8hhR",
+          "PartyId": "reckpEKRtLuDdt03n",
+          "BallotName": {
+            "@type": "ElectionResults.InternationalizedText",
+            "Text": [
+              {
+                "@type": "ElectionResults.LanguageString",
+                "Content": "David Delta",
                 "Language": "en"
               }
             ]
@@ -886,52 +850,6 @@
               {
                 "@type": "ElectionResults.LanguageString",
                 "Content": "Write-in for Control Board 2",
-                "Language": "en"
-              }
-            ]
-          }
-        },
-        {
-          "@type": "ElectionResults.Candidate",
-          "@id": "recLB4X1sLL2q1bSW",
-          "PersonId": "recUSqUnlKb63WT3F",
-          "PartyId": "recBiK9LZXeZmmFEg",
-          "BallotName": {
-            "@type": "ElectionResults.InternationalizedText",
-            "Text": [
-              {
-                "@type": "ElectionResults.LanguageString",
-                "Content": "Betty Beta",
-                "Language": "en"
-              }
-            ]
-          }
-        },
-        {
-          "@type": "ElectionResults.Candidate",
-          "@id": "recBEqMDC9w5AnKxh",
-          "PersonId": "rec4Z3OQJv0YY8hhR",
-          "PartyId": "reckpEKRtLuDdt03n",
-          "BallotName": {
-            "@type": "ElectionResults.InternationalizedText",
-            "Text": [
-              {
-                "@type": "ElectionResults.LanguageString",
-                "Content": "David Delta",
-                "Language": "en"
-              }
-            ]
-          }
-        },
-        {
-          "@type": "ElectionResults.Candidate",
-          "@id": "recQr6V2lWsHTx9Il",
-          "BallotName": {
-            "@type": "ElectionResults.InternationalizedText",
-            "Text": [
-              {
-                "@type": "ElectionResults.LanguageString",
-                "Content": "Write-in for Vice President",
                 "Language": "en"
               }
             ]
