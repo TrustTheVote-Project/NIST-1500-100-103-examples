@@ -19,8 +19,6 @@ To avoid confusion, we're going to use the term /File/ to refer to stored bytes 
 
 In the election world, the acronym /EDF/ is conventionally used to refer to both the file and the document, so we will continue to use it that way except when context requires disambiguation.
 
-NIST 1500-100 was designed to support three election-related use cases: pre-election, election night, and post-election.
-
 ** Schemas, Profiles, and Validation
 A deeper look at schemas.  Well-formedness vs. Validity.  JSON Schema.  Does order matter? What is a Profile? Processing considerations.
 
@@ -49,7 +47,7 @@ Example 1 shows an election report, serialized as JSON and valid with respect to
 
 The /@type/ property defines this JSON object as an ElectionReport object in the ElectionResults schema.
 
-The next three attributes, "Issuer", "IssuerAbbreviation", and "Vendorapplicationid", must be present, even if they have no values; if they do have values, those values must be strings.
+The next three attributes, "Issuer", "IssuerAbbreviation", and "VendorApplicationId", must be present, even if they have no values; if they do have values, those values must be strings.
 
 The last four attributes must be present, and they must have values.  "SequenceStart" and "SequenceEnd" are integers that situate the document within a sequence of reports: "1 of 1" for a single report; "1 of 2" for the first in a two-report sequence and "2 of 2" for the second in a two-report sequence, and so on.
 
@@ -68,23 +66,18 @@ So there are two layers of validity: valid with respect to the schema, and valid
 is /valid with respect to the schema/ but /invalid with respect to the
 profile/, because the SequenceEnd is not 1.
 
+
 * Part II: The TTV EDF Profile
-The rest of this document describes the TTV EDF profile.  We begin with a description of the profile's target use cases and its general restrictions on NIST 1500-100.
+The rest of this document describes the TTV EDF profile.  Although Version 2 of the ERCDF is defined using both XML Schema and JSON Schema, our examples will all be rendered as JSON.  There are two reasons for this:  (1) The TTV developers currently working with the ERCDF are unfamiliar with XML and use JSON in their applications; (2) The XML schema for NIST-1500-100 insists that elements appear in alphabetical order (a shortcoming of this schema, not of XML itself, which does not insist on element order), but the JSON schema makes no such demands, so we are free to express them in whatever order makes the document most human-readable.
 
-** Scope and the TTV EDF Use Case
-NIST-1500-100 is designed to support documents that encapsulate information about multiple elections taking place in many geo-political regions. The TTV use case makes a fundamental restriction: *An ElectionReport contains information pertinent to one and only one election, for one and only one precinct.* This restriction makes some of the design decisions for NIST-1500-100 awkward or superfluous, especially the reliance on ID/IDREF associations to minimize data redundancy.  Keep that in mind when encountering those mechanisms.
+Part II attempts to describe elements and attributes (or objects and properties) in a sensible way, beginning with the top-level ElectionReport object, and then discussing the object classes that are used to encode information that is needed by the Election definition via identifier/pointers  but which are not directly part of it.  With those defined, the discussion of the Election, BallotStyle, Contest, and Candidate elements becomes clearer.  An alphabetical listing of all the classes with terse definitions comprises Part III.
 
-For example:
-
-The Election element relies on data that is defined in the supporting sections of the Report: offices, persons, parties, and geo-political units.  The components of the Election refer to the supporting elements via identifier references.  This reference mechanism makes parsing more complicated, but it reduces the size of the overall ElectionReport when it carries definitions for many precincts.  In the TTV Profile, an ElectionReport contains definitions and information about the ballot in a single precinct, so the ID/IDREF mechanism can seem unnecessarily complex.
-
-The ID/IDREF indirection also makes this documentation difficult, because top-level elements must be described using low-level elements, so the low-level elements need to be described first; without context, though, the descriptions of low-level elements can seem arbitrary.  We are going to mix approaches and rely on the reader's patience (and the ability to skip around in this document to follow cross-references) as the context becomes clearer.
-
-Another thing to bear in mind: the XML schema for NIST-1500-100 insists that elements appear in alphabetical order (a shortcoming of this schema, not of XML itself, which does not insist on element order), but the JSON schema makes no such demands, so we are free to express them in whatever order makes the document most human-readable.
 ** Identifiers: Naming Conventions
+One more thing before we begin.
+
 Because EDFs are likely to be read by humans as well as by machines, the TTV profile requires that all identifiers be human readable.  Although the NIST 1500-100 schema requires only that identifiers be NCNames, the TTV profile insists that identifiers be composed using the following patterns and rules.
 
-*** Every identifier must begin with the type of object it identifies
+**** Every identifier must begin with the type of object it identifies
 Every identifier is composed of the /type/ of object and some type-specific distinguishing string, connected by an underscore. E.g.,
 
 #+begin_src json
@@ -98,8 +91,9 @@ Every identifier is composed of the /type/ of object and some type-specific dist
 
 In the case of a Person object, the identifier *must* begin with /Person_/; the TTV profile suggests that the distinguishing string for Persons be composed of the last and first names of the person, joined with a hyphen (if there are two /Jane Jetsons/ in the election, an integer should be appended to the token: e.g., /Person_Jetson-Jane1/.  The lastname-firstname pattern is a suggestion, not a requirement, but implementers are encouraged to follow the profile's suggestions.
 
-*** Compound identifiers
-The identifiers of some objects will be composed from other identifiers, separated by a double underscore (__).  For example,
+**** Compound identifiers
+The identifiers of some objects will be composed from other identifiers, separated by a double underscore (__). 
+
 
 ** The Top-Level Containing Object: ElectionReport
 The ElectionReport document is divided into three logical groups: metadata about the Report itself; supporting data for describing the election; and a description of the election.
@@ -115,11 +109,10 @@ The ElectionReport document is divided into three logical groups: metadata about
     "SequenceStart": 1,
     "SequenceEnd": 1,
     "Status": "pre-election",
-    "Party": [],
     "GpUnit": [],
+    "Party": [],
     "Office": [],
     "Person": [],
-    "Header": [],
     "Election": []
   }
 #+end_src
@@ -141,30 +134,115 @@ An ElectionReport document that does not contain the following elements will be 
 - A TTV EDF *must* contain an "Election" attribute whose value is an array containing one and only one "ElectionResults.Election" element.  (See the details of the Election element below.)
 
 - If the Election entails selecting one or more people (candidates) to one or more positions (offices), the ElectionReport *must* contain an "Office" attribute whose value is an array containing one or more "Office" elements, one for each position being voted on, and it *must* contain a "Person" element whose value is an array containing one "Person" element for each candidate.  If any of the offices is partisan, the ElectionReport *must* contain a "Party" attribute whose content is an array containing one more "Party" elements.
+** Data Supporting an Election Definition: GpUnits, Offices, Persons, and Parties
+As discussed above, a single ERCDF can contain definitions of hundreds of BallotStyles, each containing definitions of dozens of contests.  To minimize data duplication and reduce file size, the NIST-1500-100 schema uses the common system of Identifiers and Identifier References (ID/IDRef) to create pointers from one element to another.  A particular Contest with a set of Candidates may appear on many ballots in the EDF; rather than repeating the names of the candidates, offices, and geopolitical regions, each ballot contains the /identifiers/ of Candidates, Offices, and GpUnits defined elsewhere in the report; those identifiers can be used like keys to look up the objects to which they refer.
 
-** Election
-In the TTV EDF profile, an ElectionReport *must* contain one and only one Election element.
+The data in GpUnits, Offices, Persons, and Parties often comes from external data sources (county databases, etc.) and, in the NIST-1500-100 schema, can be quite rich.  The TTV profile eliminates many properties it does not need, in order to simplify processing.
+
+*** Geopolitical Units
+Somewhat confusingly, the NIST-1500-100 schema defines two kinds of geopolitical entity: /ReportingUnits/, which are bound geographical regions like cities, districts, and precincts, and /ReportingDevices/, which are vote-capture machines.  The conflation makes sense in the election-day and post-election scenarios, where both are used to associate vote counts and ballot counts with their "point of origin".  However, the ReportingUnit element is used in the pre-election scenario to indicate where a particular ballot style should be used, as well as the scope of a contest or ballot measure.
+
+The TTV profile eliminates ReportingDevice, and it reduces the properties of ReportingUnit to include only its Name and its Type.
 
 #+begin_src json
   {
-    "@type": "ElectionResults.Election",
-    "Type": "general",
-    "StartDate": "",
-    "EndDate": "",
-    "ElectionScopeId": "",
-    "Name": {
-      "@type": "ElectionResults.InternationalizedText",
-      "Label": "",
-      "Text": [
-        {
-          "@type": "ElectionResults.LanguageString",
-          "Language": "",
-          "Content": ""
-        }
-      ]
-    }
+      "@type": "ElectionResults.ReportingUnit",
+      "@id": "ReportingUnit_Port",
+      "Type": "precinct",
+      "Name": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+              {
+              "@type": "ElectionResults.LanguageString",
+              "Content": "Port Precinct",
+              "Language": "en"
+          }
+          ],
+          "Label": "Port"
+      }
   }
 #+end_src
+
+Be sure not to confuse "@type" with "Type".  "@type" is the type of object in the JSON schema (its class), while "Type" is the kind of geopolitical unit being identified, a value that comes from an enumerated set of types (see below).
+
+The value of the "Name" property needs some explanation.  In order to support multilingual ballots, the Name of many elements is represented as an InternationalizedText element, which may contain string representations in different languages (particularly if a language uses a non-Roman alphabet or character set).  An InternationalizedText element  *must* also include a Label property (which may be used by software to display an identifying string on a small screen).
+
+*** Offices
+Like ReportingUnits, Offices have identifiers (@id properties) and Names; they also have a mandatory "IsPartisan" property, a boolean value indicating whether or not the office is partisan.  Somewhat confusingly, the NIST-1500-100 schema permits "IsPartisan" to be omitted if the office is partisan (that is, the default value of "IsPartisan" is true); for legibility, the TTV profile requires that the IsPartisan property be specified, with either a true or a false value.
+
+#+begin_src json
+  {
+      "@type": "ElectionResults.Office",
+      "@id": "Office_Mayor",
+      "Name": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+              {
+              "@type": "ElectionResults.LanguageString",
+              "Content": "Mayor of Orbit City",
+              "Language": "en"
+          }
+          ],
+          "Label": "Mayor"
+      },
+      "IsPartisan": true    
+
+  }
+
+#+end_src
+*** Persons
+The Person element may carry lots of information in the NIST-1500-100 schema; in the TTV profile, it contains only a LastName, a FirstName, and, if the person is a candidate in a non-partisan election, a Profession property.
+
+#+begin_src json
+  {
+      "@type": "ElectionResults.Person",
+      "@id": "Person_Jetson",
+      "FirstName": "Jane",
+      "LastName": "Jetson",
+      "Profession": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+              {
+              "@type": "ElectionResults.LanguageString",
+              "Content": "consultant",
+              "Language": "en"
+          }
+          ]
+      }
+  }
+#+end_src
+*** Parties
+Parties must have a Name and an Abbreviation.
+#+begin_src json
+  {
+      "@type": "ElectionResults.Party",
+      "@id": "Party_Hadronicrat",
+      "Name": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+              {
+              "@type": "ElectionResults.LanguageString",
+              "Content": "The Hadron Party of Farallon",
+              "Language": "en"
+          }
+          ],
+          "Label": "Hadronicrat"
+      },
+      "Abbreviation": {
+          "@type": "ElectionResults.InternationalizedText",
+          "Text": [
+              {
+              "@type": "ElectionResults.LanguageString",
+              "Content": "HAD",
+              "Language": "en"
+          }
+          ]
+      }
+  }
+#+end_src
+
+** Defining the Election: the Election Element
+In the TTV EDF profile, an ElectionReport *must* contain one and only one Election element.
 
 The Election element has two informal subsections: a metadata section and a definitions section.
 
@@ -203,7 +281,9 @@ The "Type" attribute *must* contain one and only one value from the following li
 - special
 - other
 
-  (If the type is "other", there *must* be an "OtherType" attribute containing a string used by external processors to identify the type of election.)
+(If the type is "other", there *must* be an "OtherType" attribute containing a string used by external processors to identify the type of election.)
+  
+The ElectionScopeId *must* contain one and only one identifier, and that identifier *must* correspond with a Geopolitical Unit defined in the GPUnit section of the Report.
 
 The "Name" attribute *must* contain an array with *at least one* LanguageString element containing a language identifier ("en", "es", etc.) and a Content text string.
 
@@ -317,17 +397,16 @@ BallotMeasureContest objects have different attributes from CandidateContests.  
 
 **** Candidate Array
 If the Contest array includes a CandidateContest element, then the Election *must* contain a "Candidate" element whose value is an array containing one Candidate element for each candidate running for the office.
-*** Offices
+** Offices
 
-*** Persons
+** Persons
 
-*** Parties
+** Parties
 
-*** Geo-political Units
 
-*** Election-wide Headers
+** Election-wide Headers
 
-*** Report Metadata
+** Report Metadata
 
 ** Ballot Style
 The BallotStyle element is the primary ERCDF element used by TTV applications. Its major sub-elements are an array of OrderedContest elements containing definitions of candidates, contests, and/or ballot measures appearing on the ballot; an array of Geopolitical Unit identifiers linking to the precinct or precincts to which the ballot style applies; and a link to the ballot PDF.
