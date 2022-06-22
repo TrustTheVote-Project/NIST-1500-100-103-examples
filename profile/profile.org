@@ -241,6 +241,7 @@ Parties must have a Name and an Abbreviation.
   }
 #+end_src
 
+
 ** Defining the Election: the Election Element
 In the TTV EDF profile, an ElectionReport *must* contain one and only one Election element.
 
@@ -397,16 +398,6 @@ BallotMeasureContest objects have different attributes from CandidateContests.  
 
 **** Candidate Array
 If the Contest array includes a CandidateContest element, then the Election *must* contain a "Candidate" element whose value is an array containing one Candidate element for each candidate running for the office.
-** Offices
-
-** Persons
-
-** Parties
-
-
-** Election-wide Headers
-
-** Report Metadata
 
 ** Ballot Style
 The BallotStyle element is the primary ERCDF element used by TTV applications. Its major sub-elements are an array of OrderedContest elements containing definitions of candidates, contests, and/or ballot measures appearing on the ballot; an array of Geopolitical Unit identifiers linking to the precinct or precincts to which the ballot style applies; and a link to the ballot PDF.
@@ -598,8 +589,6 @@ In the TTV profile, an EDF *must* contain one and only one BallotStyle object.
     ]
   }
 #+end_src
-The GpUnitIds array *must* contain one and only one precinct identifier, and that precinct identifier *must* refer to a GpUnit element in the ElectionReport's GpUnit array.
-
 The ImageUri array *must* contain an AnnotatedUri whose Annotation property is the mime type of the image document and whose Content property is a URL pointing to the image file.
 
 The OrderedContent array *must* contain an OrderedContest object for each Contest or Ballot Measure in the Elections' Contest array.  These *may* be organized into groups by OrderedHeader.
