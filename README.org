@@ -4,6 +4,6 @@
   To ensure adaptability, interoperability, and customization, and to lower costs, the ElectOS framework is designed in conformance with open election standards devised by the National Institute of Standards and Technology (NIST):
 
   - [[https://pages.nist.gov/ElectionResultsReporting/][NIST 1500-100]] for defining elections and reporting on them
-  - [[https://pages.nist.gov/VoterRecordsInterchange/][NIST 1500-103]] for recording cast votes
+  - [[https://pages.nist.gov/CastVoteRecords/][NIST 1500-103]] for recording cast votes
 
   Both standards have been well documented, but both are large and complex.  To help developers become familiar with them, this repository contains examples and tutorials that show how each standard is used in ElectOS.
