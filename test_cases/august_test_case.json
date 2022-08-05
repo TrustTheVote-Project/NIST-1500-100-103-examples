@@ -96,11 +96,6 @@
                     "ContestSelection": [
                         {
                             "@type": "ElectionResults.CandidateSelection",
-                            "@id": "recPod2L8VhwagiDl",
-                            "IsWriteIn": true
-                        },
-                        {
-                            "@type": "ElectionResults.CandidateSelection",
                             "@id": "recQK3J9IJq42hz2n",
                             "CandidateIds": [
                                 "reczKIKk81RshXkd9",
@@ -114,6 +109,11 @@
                                 "recopGzcpflkyhwdN",
                                 "recBEqMDC9w5AnKxh"
                             ]
+                        },
+                        {
+                            "@type": "ElectionResults.CandidateSelection",
+                            "@id": "recPod2L8VhwagiDl",
+                            "IsWriteIn": true
                         }
                     ]
                 },
@@ -304,9 +304,9 @@
                             "@type": "ElectionResults.OrderedContest",
                             "ContestId": "recsoZy7vYhS3lbcK",
                             "OrderedContestSelectionIds": [
-                                "recPod2L8VhwagiDl",
                                 "recQK3J9IJq42hz2n",
-                                "reccUkUdEznfODgeL"
+                                "reccUkUdEznfODgeL",
+                                "recPod2L8VhwagiDl"
                             ]
                         },
                         {
@@ -357,9 +357,9 @@
                             "@type": "ElectionResults.OrderedContest",
                             "ContestId": "recsoZy7vYhS3lbcK",
                             "OrderedContestSelectionIds": [
-                                "recPod2L8VhwagiDl",
                                 "recQK3J9IJq42hz2n",
-                                "reccUkUdEznfODgeL"
+                                "reccUkUdEznfODgeL",
+                                "recPod2L8VhwagiDl"
                             ]
                         },
                         {
@@ -407,9 +407,9 @@
                             "@type": "ElectionResults.OrderedContest",
                             "ContestId": "recsoZy7vYhS3lbcK",
                             "OrderedContestSelectionIds": [
-                                "recPod2L8VhwagiDl",
                                 "recQK3J9IJq42hz2n",
-                                "reccUkUdEznfODgeL"
+                                "reccUkUdEznfODgeL",
+                                "recPod2L8VhwagiDl"
                             ]
                         },
                         {
@@ -480,9 +480,9 @@
                             "@type": "ElectionResults.OrderedContest",
                             "ContestId": "recsoZy7vYhS3lbcK",
                             "OrderedContestSelectionIds": [
-                                "recPod2L8VhwagiDl",
                                 "recQK3J9IJq42hz2n",
-                                "reccUkUdEznfODgeL"
+                                "reccUkUdEznfODgeL",
+                                "recPod2L8VhwagiDl"
                             ]
                         },
                         {
