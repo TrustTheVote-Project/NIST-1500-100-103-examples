@@ -92,7 +92,7 @@ Every identifier is composed of the /type/ of object and some type-specific dist
       "@type": "ElectionResults.Person",
       "@id": "Person_Jetson-Jane",
       "FirstName": "Jane",
-      "LastName": "Jetson"    
+      "LastName": "Jetson"
   }
 #+end_src
 
@@ -100,6 +100,14 @@ In the case of a Person object, the identifier *must* begin with /Person_/; the 
 
 *** Compound identifiers
 The identifiers of some objects will be composed from other identifiers, separated by a double underscore (__).  For example,
+
+#+begin_src json
+          {
+            "@type": "ElectionResults.CandidateSelection",
+            "IsWriteIn": true,
+            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_writein"
+          }
+#+end_src
 
 ** The Top-Level Containing Object: ElectionReport
 The ElectionReport document is divided into three logical groups: metadata about the Report itself; supporting data for describing the election; and a description of the election.
@@ -238,22 +246,19 @@ An Election *must* contain a "Contest" attribute whose value is an array contain
             "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Spacely-Cosmo",
             "CandidateIds": [
               "Candidate_Person_Spacely-Cosmo"
-            ],
-            "SequenceOrder": 1
+            ]
           },
           {
             "@type": "ElectionResults.CandidateSelection",
             "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_Person_Cogswell-Spencer",
             "CandidateIds": [
               "Candidate_Person_Cogswell-Spencer"
-            ],
-            "SequenceOrder": 2
+            ]
           },
           {
             "IsWriteIn": true,
             "@type": "ElectionResults.CandidateSelection",
-            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_writein",
-            "SequenceOrder": 3
+            "@id": "Selection_Contest_Office_Mayor__GpUnit_Orbit-City__Candidate_writein"
           }
         ]
       }
@@ -293,8 +298,7 @@ BallotMeasureContest objects have different attributes from CandidateContests.  
           "@type": "ElectionResults.InternationalizedText"
         },
         "@type": "ElectionResults.BallotMeasureSelection",
-        "@id": "Selection__Contest_BallotMeasure-1__yes",
-        "SequenceOrder": 1
+        "@id": "Selection__Contest_BallotMeasure-1__yes"
       },
       {
         "Selection": {
@@ -308,8 +312,7 @@ BallotMeasureContest objects have different attributes from CandidateContests.  
           "@type": "ElectionResults.InternationalizedText"
         },
         "@type": "ElectionResults.BallotMeasureSelection",
-        "@id": "Selection__Contest_BallotMeasure-1__no",
-        "SequenceOrder": 2
+        "@id": "Selection__Contest_BallotMeasure-1__no"
       }
     ]
   }
