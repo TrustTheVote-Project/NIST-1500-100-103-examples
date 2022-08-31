@@ -1,0 +1,15 @@
+#+title:A Primary Election
+
+* Primary Election
+In this year's state-wide general election, Farallon voters will choose a new Senator (Senator Flosshilde Feinstine is running for re-election); they will also, of course, choose all the state's representatives in the US House of Representatives. Gadget County is in the Fourth Congressional District, which two years ago sent newcomer Gussie Garabaldi of the Lepton Party to Washington.
+
+Both the Lepton and Hadron parties are holding closed primary elections to determine who will appear on the general ballot in November.  Garabaldi is running unopposed, but there is a large field of Hadrocrats vying for the seat.  In the Senate contest, Feinstine is being challenged in her own party by the young Suri Sciatia; on the Lepton side, three candidates have accumulated enough signatures to be placed on the primary ballot.
+
+This year, the Farallon Hadrocrats are trying something new.  The state's demographic diversity and vibrant civic culture has persuaded the party leaders to use the ranked-choice method to select candidates for seats in the House of Representatives.  The Leptonicans, reluctant to innovate,  will conduct their primary as they always have.
+
+** Preparing for the Elections
+Edwina Electionofficial is in charge of preparing the Gadget County ballots.  She goes to her workstation and logs into the Versa system and begins to define the Hadron primary election.  She creates a new election in Versa; Versa provides her with an on-screen form into which she enters the type of election (closed partisan primary); the date of the election (2022-06-07); the scope of the election (the state of Farallon); and a working name ("Hadron Primary").
+
+Next, she defines the two primary contests.
+
+
