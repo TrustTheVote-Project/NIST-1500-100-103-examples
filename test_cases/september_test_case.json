@@ -1,7 +1,7 @@
 {
     "@type": "ElectionResults.ElectionReport",
     "Format": "precinct-level",
-    "GeneratedDate": "2022-09-02T12:44:05Z",
+    "GeneratedDate": "2022-09-03T15:18:52Z",
     "VendorApplicationId": "ElectionReporter",
     "Issuer": "TrustTheVote",
     "IssuerAbbreviation": "TTV",
@@ -325,8 +325,9 @@
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
+                            "Value": "precinct_1_downtown",
                             "OtherType": "TTV",
-                            "Value": "precinct_1_downtown"
+                            "Label": "downtown_precinct_style"
                         }
                     ]
                 },
@@ -378,8 +379,9 @@
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
+                            "Value": "precinct_4_bedrock",
                             "OtherType": "TTV",
-                            "Value": "precinct_4_bedrock"
+                            "Label": "bedrock_precinct_style"
                         }
                     ]
                 },
@@ -428,8 +430,9 @@
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
+                            "Value": "precinct_3_spaceport",
                             "OtherType": "TTV",
-                            "Value": "precinct_3_spaceport"
+                            "Label": "spaceport_precinct_style"
                         }
                     ]
                 },
@@ -501,8 +504,9 @@
                         {
                             "@type": "ElectionResults.ExternalIdentifier",
                             "Type": "other",
+                            "Value": "precinct_2_spacetown",
                             "OtherType": "TTV",
-                            "Value": "precinct_2_spacetown"
+                            "Label": "spacetown_precinct_style"
                         }
                     ]
                 }
@@ -1102,7 +1106,16 @@
                     }
                 ],
                 "Label": "POTUS"
-            }
+            },
+            "ExternalIdentifier": [
+                {
+                    "@type": "ElectionResults.ExternalIdentifier",
+                    "Type": "other",
+                    "Value": "https://viaf.org/viaf/129529146",
+                    "OtherType": "viaf",
+                    "Label": "potus_id_viaf"
+                }
+            ]
         },
         {
             "@type": "ElectionResults.Office",
