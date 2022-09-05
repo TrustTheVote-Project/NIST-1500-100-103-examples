@@ -1,7 +1,7 @@
 {
     "@type": "ElectionResults.ElectionReport",
     "Format": "precinct-level",
-    "GeneratedDate": "2022-09-03T15:18:52Z",
+    "GeneratedDate": "2022-09-05T09:41:21Z",
     "VendorApplicationId": "ElectionReporter",
     "Issuer": "TrustTheVote",
     "IssuerAbbreviation": "TTV",
@@ -29,6 +29,15 @@
                 {
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "recthF6jdx5ybBNkC",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Type": "other",
+                            "Value": "school_board_contest",
+                            "OtherType": "TTV",
+                            "Label": "school_board_contest"
+                        }
+                    ],
                     "Name": "Gadget County School Board",
                     "OfficeIds": ["rec1zWmGWlgKKmUO4"],
                     "VoteVariation": "n-of-m",
@@ -80,6 +89,15 @@
                 {
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "recsoZy7vYhS3lbcK",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Type": "other",
+                            "Value": "https://viaf.org/viaf/129529146",
+                            "OtherType": "viaf",
+                            "Label": "potus_id_viaf"
+                        }
+                    ],
                     "Name": "President of the United States",
                     "OfficeIds": [
                         "recFr8nr6uAZsD2r8",
@@ -115,6 +133,15 @@
                 {
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "recIj8OmzqzzvnDbM",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Type": "other",
+                            "Value": "mayoral_contest",
+                            "OtherType": "TTV",
+                            "Label": "mayoral_contest"
+                        }
+                    ],
                     "Name": "Contest for Mayor of Orbit City",
                     "OfficeIds": ["rec7N0cboW3L1Mv0I"],
                     "VoteVariation": "plurality",
@@ -141,6 +168,15 @@
                 {
                     "@type": "ElectionResults.CandidateContest",
                     "@id": "recXNb4zPrvC1m6Fr",
+                    "ExternalIdentifier": [
+                        {
+                            "@type": "ElectionResults.ExternalIdentifier",
+                            "Type": "other",
+                            "Value": "spaceport_control_board_contest",
+                            "OtherType": "TTV",
+                            "Label": "spaceport_control_board_contest"
+                        }
+                    ],
                     "Name": "Spaceport Control Board",
                     "OfficeIds": ["recBAG7iuOZ1MER6i"],
                     "VoteVariation": "n-of-m",
@@ -1106,16 +1142,7 @@
                     }
                 ],
                 "Label": "POTUS"
-            },
-            "ExternalIdentifier": [
-                {
-                    "@type": "ElectionResults.ExternalIdentifier",
-                    "Type": "other",
-                    "Value": "https://viaf.org/viaf/129529146",
-                    "OtherType": "viaf",
-                    "Label": "potus_id_viaf"
-                }
-            ]
+            }
         },
         {
             "@type": "ElectionResults.Office",
